@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>千丁互联</title>
+		<script type="text/javascript" src="/static/common/jquery-1.9.1.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/thirdparty/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/thirdparty/bootstrap-notify/js/bootstrap-notify.js"></script>
+		<script type="text/javascript" src="/static/common/qd.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/validator.js" charset="utf-8"></script>
+
+		<link href="/static/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/static/common/login.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<div class="container fix-p">
+			<div class="col-md-12">
+				<section class="main-col" style="margin: 50px auto 0;">
+					<div class="login" style="text-align: center;">
+						<h2 class="page-heading" style="font-size: 20px;">
+                    <img alt="logo" src="/static/common/imgs/logo.png" width="40" style="margin: -10px 5px 0 0;">小亲象管理平台</h2>
+						<form class="form-signin login-form">
+							<h2 class="form-signin-heading"></h2>
+							<div class="input-group">
+								<div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+								<input type="text" class="form-control" placeholder="帐号" required="" name="user_name" autocomplete="off" disableautocomplete />
+							</div>
+							<div class="input-group">
+								<div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+								<input type="password" class="form-control" placeholder="密码" required="" name="password" autocomplete="off" disableautocomplete />
+							</div>
+							<p id="ieif" style="color: red; font-weight: bold; display: none;">为了更好的体验，请使用谷歌浏览器</p>
+							<button type="button" class="btn btn-block btn-login">登 录</button>
+						</form>
+						<p class="vright">2017 @千丁互联 版权所有 </p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="notifications" align="center"> </div>
+		<script>
+			$(document).ready(function() {
+				var login = function() {
+					var params = qd.utils.serialize("form");
+					qd.rpc("mgr.MgrUserApi.login", params)
+						.success(function(result) {
+							if(result.err == 0) {
+								window.location.href = "/manage/";
+							}
+						});
+				};
+				$("form input").bind("keyup", function(evt) {
+					if(evt.keyCode != 13) { return; }
+					login();
+				});
+
+				$("form button.btn-login").bind("click", function(evt) {
+					login();
+				});
+				 if(!!window.ActiveXObject || "ActiveXObject" in window) {
+                    $("#ieif").css('display', 'block')
+                    if(!window.confirm("为了更好的体验，请使用谷歌浏览器，是否下载谷歌浏览器？")) {return;}
+                    window.location.href= 'http://rj.baidu.com/soft/detail/14744.html?ald';
+			   };
+			})
+		</script>
+	</body>
+
+</html>

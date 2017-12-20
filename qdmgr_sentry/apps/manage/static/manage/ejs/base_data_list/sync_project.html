@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">城市</span></th>
+            <th><span class="text-muted">楼盘</span></th>
+            <th><span class="text-muted">project_id</span></th>
+            <th><span class="text-muted">操作</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+            <tr class="sync-project-list" data-project-id="<%= list[i].projectId %>">
+                <td><span><%= list[i].cityName %></span></td>
+                <td><span><%= list[i].projectName %></span></td>
+                <td><span><%= list[i].projectId %></span></td>
+                <td align="center">
+                    <button class="btn btn-info sync-project-data-btn">同步数据</button>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>

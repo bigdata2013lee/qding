@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+
+        <title>{% block title_content %}千丁互联{% endblock title_content %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="renderer" content="webkit">
+        <meta name="keywords" content="{% block keywords_content %}{% endblock keywords_content %}" />
+        <meta name="description" content="{% block description_content %}{% endblock description_content %}" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="/static/common/img/favicon.ico" media="screen" />
+
+        <!-- viewport scalable -->
+        {% block viewport_content %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endblock viewport_content %}
+
+        <!-- JQuery -->
+        <script src="/static/common/thirdparty/jquery/jquery-1.9.1.min.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/jquery.form.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/jquery.json-2.4.min.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/jquery.md5.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/pagination/jquery.pagination.js" charset="utf-8"></script>
+        <!-- 
+        <script src="/static/common/thirdparty/jquery/jquery.address-1.5.js" charset="utf-8"></script>
+         -->
+        <!-- 
+        <script src="/static/common/thirdparty/jquery/jquery.timers-1.2.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/jquery-sortable-min.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/jquery.cookie.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/jquery.qrcode.min.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/jquery/url.min.js" charset="utf-8"></script>
+        -->
+
+        <!-- Backbonejs -->
+        <script src="/static/common/thirdparty/backbonejs/underscore-1.7.0.min.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/backbonejs/backbone-1.1.2.min.js" charset="utf-8"></script>
+
+        <!-- Holder -->
+        <script src="/static/common/thirdparty/holder/holder.min.js" charset="utf-8"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/bootstrap/css/jasny-bootstrap.css"/>
+        <script src="/static/common/thirdparty/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="/static/common/thirdparty/bootstrap/js/jasny-bootstrap.min.js" charset="utf-8"></script>
+
+        <!-- Bootstrap Switch -->
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/switch-master/css/bootstrap3/bootstrap-switch.min.css"/>
+        <script src="/static/common/thirdparty/switch-master/js/bootstrap-switch.min.js" charset="utf-8"></script>
+
+        <!-- Bootstrap Notify -->
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/bootstrap-notify/css/bootstrap-notify.css"/>
+        <script src="/static/common/thirdparty/bootstrap-notify/js/bootstrap-notify.js" charset="utf-8"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/font-awesome-4.3.0/css/font-awesome.min.css">
+
+        <!-- Buttons -->
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/buttons/buttons.css"/>
+        <script src="/static/common/thirdparty/buttons/buttons.js" charset="utf-8"></script>
+
+        <!-- EJS -->
+        <script src="/static/common/thirdparty/ejs/ejs.js" charset="utf-8"></script>
+
+        <!-- common -->
+        <script src="/static/common/js/common.js?_v={{ CONST.base.version }}" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="/static/common/css/common.css?_v={{ CONST.base.version }}"/>
+
+        <script src="/static/common/js/qd.js?_v={{ CONST.base.version }}" charset="utf-8"></script>
+        <script type="text/javascript">
+        	<!--document.domain = window.location.host.split('.').slice(1).join('.');-->
+	        var CONST = {
+	            'version': '{{ CONST.base.version }}',
+	            'domain': {
+	                'oss': '{{ CONST.domain.oss }}'
+	            },
+	            'static_url': '{{ CONST.static.url }}'
+	        };
+	        function versionify(url) { return (!!url ? url:'') + ('?_v='+CONST.version); }
+        </script>
+
+
+        {% block head_js_css %}{% endblock head_js_css %}
+
+        <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/bsie/bootstrap-ie6.min.css">
+        <![endif]-->
+
+        <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="/static/common/thirdparty/bsie/ie.css">
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+        <script src="/static/common/thirdparty/html5/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        {% block base_content %}{% endblock base_content %}
+    </body>
+
+    <!--[if lte IE 6]>
+    <script src="/static/common/thirdparty/bsie/bootstrap-ie.js" charset="utf-8"></script>
+    <![endif]-->
+</html>

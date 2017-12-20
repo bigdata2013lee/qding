@@ -1,0 +1,51 @@
+upstream qding-machine {
+    server 127.0.0.1:8005;
+}
+
+upstream qding-sentry-web {
+    server 127.0.0.1:8003;
+}
+
+
+
+server {
+	server_name www.qding.cloud;
+	server_name qding.cloud;
+
+
+    location ^~ /qdsmart/ {
+	    root /data/qding;
+	    index index.html index.htm;
+    }
+
+    location / {
+        root /data/qding/qdmgr_sentry_web;
+        proxy_pass http://qding-sentry-web;
+	    include /etc/nginx/uwsgi_params;
+    }
+
+
+    location = /crossdomain.xml {
+        root /data/qding/qdmgr_sentry_web/static/common/files;
+        access_log on;
+    }   
+
+    location = /favicon.ico {
+        root /data/qding/qdmgr_sentry_web/apps/common/static/common/img;
+        access_log on;
+    }
+
+#    location = /static {
+#        root /data/qding/qdmgr_sentry_web/static;
+#        access_log on;
+#    }
+}
+
+server{
+	server_name doc.qding.cloud;
+	
+	location / {
+		root /data/qding/qdmgr_sentry_web/api_doc;
+		index index.html index.htm;
+	}
+}

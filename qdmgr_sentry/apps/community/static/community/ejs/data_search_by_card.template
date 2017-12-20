@@ -1,0 +1,173 @@
+<script type="text/template" name="tx_rec_template">
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>
+                <span class="text-muted">地区</span>
+            </th>
+            <th>
+                <span class="text-muted">小区</span>
+            </th>
+            <th>
+                <span class="text-muted">类型</span>
+            </th>
+            <th>
+                <span class="text-muted">时间</span>
+            </th>
+            <th>
+                <span class="text-muted">通行位置</span>
+            </th>
+            <th style="with:3em;">
+                <span class="text-muted">进/出</span>
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <%=qd.render_empty_tr(data.brake_pass_list)%>
+        <%for(var i=0; i < data.brake_pass_list.length; i++){ var obj = data.brake_pass_list[i];%>
+        <tr>
+            <td><%=obj.city%></td>
+            <td><%=obj.community%></td>
+            <% if(obj.user_type=="0") {%>
+            <td>业主</td>
+            <%} else {%>
+            <td>访客</td>
+            <% } %>
+            <td><%=obj.created_time_str%></td>
+            <td><%=obj.position%></td>
+            <% if(obj.direction=="I") {%>
+            <td>入</td>
+            <% }else{ %>
+            <td>出</td>
+            <% } %>
+        </tr>
+        <%}%>
+        </tbody>
+    </table>
+
+</script>
+
+
+<script type="text/template" name="brake_device_template">
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>
+                <span class="text-muted">城市</span>
+            </th>
+            <th>
+                <span class="text-muted">位置</span>
+            </th>
+            <th>
+                <span class="text-muted">MAC</span>
+            </th>
+            <th>
+                <span class="text-muted">版本</span>
+            </th>
+            <th>
+                <span class="text-muted">门级别</span>
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <%= qd.render_empty_tr(data.door_list)%>
+        <%for(var i=0;i
+        <data.door_list.length
+                ;i++){var obj=data.door_list[i];%>
+            <tr>
+                <td><%=obj.position.city%></td>
+                <td><%=obj.position_str%></td>
+                <td><%=obj.mac%></td>
+                <td><%=obj.version%></td>
+                <td><%=obj.position.level%></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+</script>
+
+<script type="text/template" name="card_info_template">
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th><span class="text-muted">卡号</span></th>
+            <th><span class="text-muted">城市</span></th>
+            <th><span class="text-muted">楼盘</span></th>
+            <th><span class="text-muted">组团</span></th>
+            <th><span class="text-muted">楼栋</span></th>
+            <th><span class="text-muted">单元</span></th>
+            <th><span class="text-muted">房间</span></th>
+            <th><span class="text-muted">有效期</span></th>
+            <th><span class="text-muted">姓名</span></th>
+            <th><span class="text-muted">年龄</span></th>
+            <th><span class="text-muted">性别</span></th>
+            <th><span class="text-muted">手机号</span></th>
+            <th><span class="text-muted">用户类型</span></th>
+            <th><span class="text-muted">角色</span></th>
+            <th><span class="text-muted">卡类型</span></th>
+            <th><span class="text-muted">状态</span></th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><%=data.card_obj.card_no%></td>
+                <td><%=data.card_obj.card_area[0].city%></td>
+                <td><%=data.card_obj.card_area[0].project%></td>
+
+                <td>
+                    <%for(i=0;i<data.card_obj.card_area.length;i++) {%>
+                        <%=data.card_obj.card_area[i].group%>
+                        <br>
+                    <% } %>
+                </td>
+
+                <td>
+                    <%for(i=0;i<data.card_obj.card_area.length;i++) {%>
+                        <%=data.card_obj.card_area[i].build%>
+                        <br>
+                    <% } %>
+                </td>
+
+                <td>
+                    <%for(i=0;i<data.card_obj.card_area.length;i++) {%>
+                        <%=data.card_obj.card_area[i].unit%>
+                        <br>
+                    <% } %>
+                </td>
+
+                <td>
+                    <%for(i=0;i<data.card_obj.card_area.length;i++) {%>
+                        <%=data.card_obj.card_area[i].room%>
+                        <br>
+                    <% } %>
+                </td>
+
+                <td><%=data.card_obj.card_validity%></td>
+                <td><%=data.card_obj.card_owner.name%></td>
+                <td><%=data.card_obj.card_owner.age_str%></td>
+                <td><%=data.card_obj.card_owner.gender_str%></td>
+                <td><%=data.card_obj.card_owner.phone%></td>
+                <td><%=data.card_obj.card_owner.type_str%></td>
+                <td><%=data.card_obj.card_owner.role_str%></td>
+                <td><%=data.card_obj.card_type_str%></td>
+                <% if(data.card_obj.status == '1') {%>
+                    <td>使用中</td>
+                <%} else if(data.card_obj.status == '2') {%>
+                    <td>注销中</td>
+                <%} else if(data.card_obj.status == '3') {%>
+                    <td>已注销</td>
+                <%} else if(data.card_obj.status == '4'){%>
+                    <td>激活中</td>
+                <%}%>
+            </tr>
+        </tbody>
+    </table>
+
+</script>

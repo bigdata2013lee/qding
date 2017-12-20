@@ -1,0 +1,38 @@
+<table class="table table-hover" style="margin:0px;">
+	<thead>
+	    <tr>
+	        <th><span class="text-muted">旧版本号</span></th>
+	        <th><span class="text-muted">新版本号</span></th>
+	        <th><span class="text-muted">升级文件路径</span></th>
+	        <th><span class="text-muted">版本信息</span></th>
+			<th><span class="text-muted">发布时间</span></th>
+	        <th><span class="text-muted">操作</span></th>
+	    <tr>
+	</thead>
+	<tbody>
+		<%for(i=0;i<version_list.length;i++){%>
+		<tr class="version-item" data-version-id="<%= version_list[i].id %>" data-version-fileuri="<%= version_list[i].file_uri %>">
+			<td>
+				<span><%= version_list[i].former_version %></span>
+			</td>
+			<td>
+				<span><%= version_list[i].version %></span>
+			</td>
+			<td>
+				<span title="<%= version_list[i].file_uri %>"><%= version_list[i].file_uri %></span>
+			</td>
+			<td>
+				<span title="<%= version_list[i].message %>"><%= version_list[i].message.truncate(20) %></span>
+			</td>
+			<td>
+				<span><%= new Date(version_list[i].created_time).format("yyyy-MM-dd hh:mm:ss")%></span>
+			</td>
+			<td>
+                <a class="version-a remove-version-btn" href="javascript:void(0);">
+                    <i class="fa fa-remove text-muted"></i>
+                </a>
+			</td>
+		</tr>
+		<%}%>
+	</tbody>
+</table>

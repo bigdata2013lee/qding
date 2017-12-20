@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="cache-control" content="private">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>APP使用说明</title>
+    <!--<link rel="shortcut icon" href="../commons/images/favicon.ico" type="image/x-icon">-->
+
+    <script type="text/javascript">
+        (function(d,w){
+            var htmlObj =  document.getElementsByTagName("html")[0],
+                    event = "orientationchange" in window ? "orientationchange":"resize",
+                    handler = function(){
+                        var objWidth= d.documentElement.clientWidth;
+                        objWidth && (htmlObj.style.fontSize=20*(objWidth/320)+"px",
+                        (objWidth > 640) && (htmlObj.style.fontSize="40px"))
+                    };
+            d.addEventListener && (w.addEventListener(event, handler, false));
+            handler();
+        })(document, window);
+    </script>
+
+    <!-- build:css css/xqx.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/QA.css">
+    <!-- /build -->
+</head>
+<body>
+    <section class="conts">
+       <table cellpadding="0" cellspacing="0" class="tab1">
+           <!--<tr>
+               <td><span class="index">1.</span></td>
+               <td><span class="font-w">设备选择：</span>
+                   <p>点击“我的设备”可切换功能菜单</p>
+                   <div style="margin: 1rem;"><img class="lazy img-responsive" src="imgs/1.png" width="100%" alt=""></div>
+               </td>
+           </tr>
+           <tr><td class="fix-h"></td><td></td></tr>
+
+           <tr>
+               <td><span class="index">2.</span></td>
+               <td><span class="font-w">房屋绑定：</span>
+                   <p class="">方法1：到物业管理处绑定</p>
+                   <p class="fix-indent">方法2：进入设置-账号-房屋管理-二维码绑定房屋，扫描家庭管理员分享的房屋二维码</p>
+                   <p class="">方法3：进入设置-配置报警网关WiFi，配置WiFi时根据提示绑定</p>
+                   <p class="fix-indent">方法4：进入设置-账号-房屋管理-向物业申请绑定，等待物业审核</p>
+               </td>
+           </tr>
+           <tr><td class="fix-h"></td><td></td></tr>
+
+           <tr>
+               <td><span class="index">3.</span></td>
+               <td><span class="font-w">家庭管理员：</span>
+                   <p class="">家庭管理员有权分享房屋二维码、删除家庭成员、修改对讲接听顺序等。第一个绑定房屋者为管理员，管理员可转让，也可联系物业指定管理员</p>
+               </td>
+           </tr>
+           <tr><td class="fix-h"></td><td></td></tr>-->
+
+           <tr>
+               <td><span class="index">1.</span></td>
+               <td><span class="font-w">防区信息查看：</span>
+                   <p>点击防区信息可查看防区详情</p>
+                   <div style="margin: 1rem;"><img class="lazy img-responsive" data-original="imgs/2.png" width="100%" alt=""></div>
+                   <br>
+                   <p>报警网关离线时无法报警，需尽快检查并恢复设备网络连接</p>
+                   <p>红外等防盗报警可单路布撤防</p>
+                   <div style="margin: 1rem;"><img class="lazy img-responsive" data-original="imgs/3.png" width="100%" alt=""></div>
+               </td>
+           </tr>
+           <tr><td class="fix-h"></td><td></td></tr>
+
+           <tr>
+               <td><span class="index">2.</span></td>
+               <td><span class="font-w">远程布撤防：</span>
+                   <p>点击布撤防图标可远程布撤防，外出不再担心房屋安全</p>
+                   <div style="margin: 1rem;"><img class="lazy img-responsive" data-original="imgs/4.png" width="100%" alt=""></div>
+               </td>
+           </tr>
+           <tr><td class="fix-h"></td><td></td></tr>
+
+           <tr>
+               <td><span class="index">3.</span></td>
+               <td><span class="font-w">报警通知及记录：</span>
+                   <p>进入设置可订阅报警通知类型，通知会及时下发到手机通知栏</p>
+                   <div style="margin: 1rem;"><img class="lazy img-responsive" data-original="imgs/5.png" width="100%" alt=""></div>
+                   <br>
+                   <p>未读报警记录会有图标提示，点击可查看所有类型的报警记录</p>
+                   <div style="margin: 1rem;"><img class="lazy img-responsive" data-original="imgs/13.png" width="100%" alt=""></div>
+               </td>
+           </tr>
+           <tr><td class="fix-h"></td><td></td></tr>
+       </table>
+    </section>
+    <script src="libs/jQuery_1.x.min.js"></script>
+    <script src="libs/lazyload.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            $("img.lazy").lazyload({
+                effect : "fadeIn"
+            });
+        });
+    </script>
+</body>
+</html>

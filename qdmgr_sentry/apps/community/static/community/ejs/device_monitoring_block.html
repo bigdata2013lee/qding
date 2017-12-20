@@ -1,0 +1,128 @@
+<style>
+.status_online{ width: 12px; height: 12px; background-color: #449D44; display: inline-block; border-radius: 50%;}
+.status_offline{ width: 12px; height: 12px; background-color: #f00; display: inline-block; border-radius: 50%;}
+.edit-add-email-btn{ font-size: 32px; color: #5cb85c; cursor: pointer;}
+.edit-del-email-btn{ font-size: 32px; color: #f00; cursor: pointer;}
+.operate-edit{ color: #777;}
+.edit-item-btn{ cursor: pointer;}
+.bootstrap-switch.bootstrap-switch-mini{ min-width: 66px}
+</style>
+<div class="page-header clearfix">
+    <b class="" style="font-size:18px;">设备监控 - 设备管理</b>
+    <div class="pull-right">在线数：<span id="onlineNum" class="text-success">0</span>，掉线数：<span id="offlineNum" class="text-success">0</span></div>
+</div>
+<div class="operate-box check-usertype">
+	<div class="form-group monitor-manage clearfix">
+		<a class="btn btn-info pull-right" href="#/monitor_manage">
+	        <i class="fa"></i>
+	        <span>监控人管理</span>
+	    </a>
+    </div>
+	<div class="form-group clearfix">
+		<div class="col-xs-3">
+			<select class="form-control search-brake-type">
+				<option value="">--门禁类型--</option>
+				<option value="1">大门</option>
+				<option value="2">非大门</option>
+			</select>
+		</div>
+		<div class="col-xs-3">
+			<select class="form-control search-brake-group"></select>
+		</div>
+		<div class="col-xs-3">
+			<select class="form-control search-brake-build"></select>
+		</div>
+		<div class="col-xs-3">
+			<select class="form-control search-brake-unit"></select>
+		</div>
+	</div>
+	<div class="form-group clearfix">
+		<div class="col-xs-3">
+            <input class="form-control search-brake-mac" type="text" placeholder="mac">
+        </div>
+        <div class="col-xs-3">
+            <select class="form-control search-brake-pass">
+                <option value="">--最近无通行--</option>
+                <option value="1">最近1天无通行</option>
+                <option value="3">最近3天无通行</option>
+                <option value="7">最近7天无通行</option>
+                <option value="30">最近30天无通行</option>
+            </select>
+        </div>
+		<div class="col-xs-2">
+            <select class="form-control search-brake-status">
+                <option value="1">在网设备</option>
+                <option value="2">已删除设备</option>
+            </select>
+        </div>
+		<div class="col-xs-2 brake_count"></div>
+		<div class="col-xs-2 brake_dump">
+			<a class="btn btn-info btn-block dump-brake-btn">导出</a>
+		</div>
+	</div>
+</div>
+
+<div class="list-block"></div>
+<div class="pagination-wrap">
+    <div class="pagination-con" id="pagination"></div>
+</div>
+
+
+<div id="edit_modal" class="modal fade"  data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog" style="width:400px;margin-top:100px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<b class="text-muted">编辑设备监控</b>
+				<button class="close" data-dismiss="modal" title="关闭">
+					<i class="fa fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<input name="edit_item_id" type="hidden" value="" />
+				<div class="form-horizontal">
+					<div class="form-group modify-phone-div">
+						<span class="col-xs-3 control-label text-muted">报警间隔</span>
+						<span class="col-xs-6">
+							<input name="heart_time" type="number" value="" class="form-control" id="heart_time" placeholder="请输入正有理数">
+						</span>
+						<span class="pull-left" style="padding-top:7px">小时</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a class="btn btn-info edit-submit-btn">
+					<span>确定</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="monitor_edit_modal" class="modal fade" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog" style="width:600px;margin-top:100px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<b class="text-muted">监控人管理</b>
+				<button class="close" data-dismiss="modal" title="关闭">
+					<i class="fa fa-times"></i>
+				</button>
+			</div>
+			<div id="alert_email_list">
+				<div class="modal-body">
+					<div class="form-group" id="email_0">
+						<span class="col-xs-3 control-label text-muted">报警邮件接收人</span>
+						<div class="col-xs-7">
+							<input name="alert_email" type='text' value='' class='form-control'>
+						</div>
+						<i class="fa fa-plus-circle edit-add-email-btn" title="添加报警邮件接收人"></i>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a class="btn btn-info monitor-edit-submit-btn">
+					<span>确定</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

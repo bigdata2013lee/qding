@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="cache-control" content="private">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>基础功能使用说明</title>
+    <!--<link rel="shortcut icon" href="../commons/images/favicon.ico" type="image/x-icon">-->
+
+    <script type="text/javascript">
+        (function(d,w){
+            var htmlObj =  document.getElementsByTagName("html")[0],
+                    event = "orientationchange" in window ? "orientationchange":"resize",
+                    handler = function(){
+                        var objWidth= d.documentElement.clientWidth;
+                        objWidth && (htmlObj.style.fontSize=20*(objWidth/320)+"px",
+                        (objWidth > 640) && (htmlObj.style.fontSize="40px"))
+                    };
+            d.addEventListener && (w.addEventListener(event, handler, false));
+            handler();
+        })(document, window);
+    </script>
+
+    <!-- build:css css/xqx.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/QA.css">
+    <!-- /build -->
+</head>
+<body>
+<section class="conts">
+
+    <table cellpadding="0" cellspacing="0" class="tab1">
+        <!--<tr>
+            <td><span class="index">1.</span></td>
+            <td><span class="font-w">设备选择：</span>
+                <p>点击“我的设备”可切换功能菜单</p>
+                <div style="margin: 1rem;"><img class="lazy img-responsive" src="imgs/12.png" width="100%" alt=""></div>
+            </td>
+        </tr>
+        <tr><td class="fix-h"></td><td></td></tr>
+
+        <tr>
+            <td><span class="index">2.</span></td>
+            <td><span class="font-w">房屋绑定：</span>
+                <p class="">方法1：到物业管理处绑定</p>
+                <p class="fix-indent">方法2：进入设置-账号-房屋管理-二维码绑定房屋，扫描家庭管理员分享的房屋二维码</p>
+                <p class="">方法3：进入设置-账号-房屋管理-向物业申请绑定，等待物业审核</p>
+            </td>
+        </tr>
+        <tr><td class="fix-h"></td><td></td></tr>
+
+        <tr>
+            <td><span class="index">3.</span></td>
+            <td><span class="font-w">家庭管理员：</span>
+                <p class="">家庭管理员有权分享房屋二维码、删除家庭成员、修改对讲接听顺序等。第一个绑定房屋者为管理员，管理员可转让，也可联系物业指定管理员</p>
+            </td>
+        </tr>
+        <tr><td class="fix-h"></td><td></td></tr>-->
+
+        <tr>
+            <td><span class="index">1.</span></td>
+            <td><span class="font-w">门口机呼叫：</span>
+                <p class="">单元机呼叫住户：输入房号+#</p>
+                <p class="fix-indent">如呼叫302室，输入：302#</p><br>
+                <p class="">围墙机呼叫住户：输入栋号#+单元#+房号#</p>
+                <p class="fix-indent">如呼叫2栋10单元302室，输入：2#10#302#</p>
+            </td>
+        </tr>
+        <tr><td class="fix-h"></td><td></td></tr>
+
+        <tr>
+            <td><span class="index">2.</span></td>
+            <td><span class="font-w">接听来电及开锁：</span>
+                <p>来电时界面自动弹出，接听后可开锁，若直接开锁会立即开锁并挂断，点击忽略会转呼至其他家人。若是转呼到电话，接听后按#键开锁</p>
+                <div style="margin: 1rem;"><img class="lazy img-responsive" data-original="imgs/9.png" width="100%" alt=""></div>
+            </td>
+        </tr>
+        <tr><td class="fix-h"></td><td></td></tr>
+
+    </table>
+</section>
+
+<script src="libs/jQuery_1.x.min.js"></script>
+<script src="libs/lazyload.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+    });
+</script>
+
+</body>
+</html>

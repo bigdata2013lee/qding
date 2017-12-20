@@ -1,0 +1,19 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">位置</span></th>
+            <th><span class="text-muted">MAC</span></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+        <tr data-device-mac="<%= list[i].mac %>">
+            <td><span> <%= list[i].position_str %></span></td>
+            <td><span><%= list[i].mac %></span></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

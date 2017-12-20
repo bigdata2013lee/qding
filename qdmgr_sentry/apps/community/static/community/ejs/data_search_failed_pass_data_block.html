@@ -1,0 +1,60 @@
+<div class="page-header clearfix" xmlns="http://www.w3.org/1999/html">
+    <b class="" style="font-size:18px;">数据查询 - 失败日志</b>
+</div>
+
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <select class="form-control pass-data-type">
+            	<option value="">通行类型</option>
+                <option value="0">蓝牙</option>
+                <option value="1">WIFI</option>
+                <option value="9">密码</option>
+                <option value="10">卡</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-group">
+            	<option value="">组团</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-build">
+            	<option value="">楼栋</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-unit">
+            	<option value="">单元</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control pass-data-mac" type="text" placeholder="mac">
+        </div>
+    </div>
+</div>
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <input class="form-control pass-data-phone" type="text" placeholder="手机">
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control pass-data-date start-time"  type="text" placeholder="-- 开始时间 --" readonly="">
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control pass-data-date end-time"  type="text" placeholder="-- 结束时间 --" readonly="">
+        </div>
+
+        <div class="col-xs-2">
+            <button type="button" class="btn btn-primary pass-data-query">查 询</button>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="failed-pass-data-list"></div>
+<div class="pagination-wrap">
+    <div class="pagination-con" id="pagination"></div>
+</div>
+
+<div class="template_div" style="display: none"></div>

@@ -1,0 +1,45 @@
+<div class="page-header clearfix">
+    <b class="" style="font-size:18px;">监控人管理</b>
+    <div class="qr-block" style="float:right"></div>
+</div>
+<div class="operate-box">
+    <div class="form-group clearfix">
+        <a class="btn btn-info add-monitor-btn pull-right">
+           <i class="fa"></i>
+           <span>添加监控人</span>
+       </a>
+    </div>
+</div>
+
+<div class="list-block">
+
+</div>
+
+<div id="edit_modal" class="modal fade"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:400px;margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted" id="edit_title">添加监控人</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input name="edit_item_id" type="hidden" value="" />
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <span class="col-xs-4 control-label text-muted">报警邮件接收人</span>
+                        <span class="col-xs-8">
+                            <input name="alert_email" type="text" value="" class="form-control" id="alert_email">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info edit-submit-btn">
+                    <span>确定</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

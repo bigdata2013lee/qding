@@ -1,0 +1,110 @@
+<table class="table table-hover" style="margin:0px;">
+    <thead>
+    <tr>
+        <th data-field="position.province", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">地区</span>
+            <% if(sort_field == 'position.province') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="position", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted brake_position">位置</span>
+            <% if(sort_field == 'position') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="mac", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">mac</span>
+            <% if(sort_field == 'mac') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="firmware_version", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">固件版本</span>
+            <% if(sort_field == 'firmware_version') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="hardware_version", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">硬件版本</span>
+            <% if(sort_field == 'hardware_version') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="bluetooth_rssi", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">蓝牙 RSI</span>
+            <% if(sort_field == 'bluetooth_rssi') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="wifi_rssi", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">WiFi RSI</span>
+            <% if(sort_field == 'wifi_rssi') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="open_time", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">开门时间</span>
+            <% if(sort_field == 'open_time') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="position.level", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">门级别</span>
+            <% if(sort_field == 'position.level') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th data-field="updated_time", data-direction="<%= sort_direction %>" class="sortable">
+            <span class="text-muted">最近通行时间</span>
+            <% if(sort_field == 'updated_time') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+            <% } %>
+        </th>
+        <th>
+            <span class="text-muted">配置时间</span>
+        </th>
+        <th>
+            <span class="text-muted">配置账户</span>
+        </th>
+        <th>
+            <center><span class="text-muted">操作</span></center>
+        </th>
+    <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<brake_machine_list.length ;i++) { %>
+        <tr class="brake-item" data-brake-id="<%= brake_machine_list[i].id %>">
+            <td>
+                <span title="<%= brake_machine_list[i].position.province %>"><%= brake_machine_list[i].position.province.truncate(4) %></span>
+                <% if (brake_machine_list[i].position.province != brake_machine_list[i].position.city) { %>
+                <span title="<%= brake_machine_list[i].position.city %>"> - <%= brake_machine_list[i].position.city.truncate(4) %></span>
+                <% } %>
+            </td>
+            <td><span title="<%= brake_machine_list[i].position_str %>"><%= brake_machine_list[i].position_str %></span></td>
+            <td><%= brake_machine_list[i].mac %></td>
+            <td><%= brake_machine_list[i].firmware_version %></td>
+            <td><%= brake_machine_list[i].hardware_version %></td>
+            <td><%= brake_machine_list[i].bluetooth_rssi %></td>
+            <td><%= brake_machine_list[i].wifi_rssi %></td>
+            <td><%= brake_machine_list[i].open_time %></td>
+            <td><%= brake_machine_list[i].position.level %></td>
+            <td><%= brake_machine_list[i].updated_time_str %></td>
+            <td><%= new Date(brake_machine_list[i].configure_time * 1000).format("yyyy-MM-dd hh:mm:ss") %></td>
+            <td><%= brake_machine_list[i].configure_user %></td>
+            <td align="center">
+                <a class="site-a edit-brake-btn" href="javascript:void(0);">
+                    <i class="fa fa-edit text-info"></i>
+                </a>
+                <span class="text-muted" style="margin:0px 5px;">|</span>
+                <a class="site-a remove-brake-btn" href="javascript:void(0);">
+                    <i class="fa fa-remove text-muted"></i>
+                </a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

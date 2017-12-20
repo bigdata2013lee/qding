@@ -1,0 +1,59 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">outer app user id</span></th>
+            <th><span class="text-muted">手机号</span></th>
+            <th><span class="text-muted">app user id</span></th>
+            <th><span class="text-muted">绑定房屋</span></th>
+            <th><span class="text-muted">绑定门禁</span></th>
+            <th><span class="text-muted">非绑定门禁</span></th>
+            <th><span class="text-muted">操作</span></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+        <tr data-app_user_phone="<%= list[i].phone %>">
+            <td><span><%= list[i].outer_app_user_id %></span></td>
+            <td><span><%= list[i].phone %></span></td>
+            <td><span><%= list[i].app_user_id %></span></td>
+            <td>
+                <% for (var j=0;j<list[i].room_data_list.length;j++) { %>
+                    <%= list[i].room_data_list[j].province %>
+                    <%= list[i].room_data_list[j].city %>
+                    <%= list[i].room_data_list[j].project %>
+                    <%= list[i].room_data_list[j].group %>
+                    <%= list[i].room_data_list[j].build %>栋
+                    <%= list[i].room_data_list[j].unit %>单元
+                    <%= list[i].room_data_list[j].room %>
+                <% } %>
+            </td>
+            <td>
+                <% for (var j=0;j<list[i]._bind_door_list.length;j++) { %>
+                    <%= list[i]._bind_door_list[j].position.province %>
+                    <%= list[i]._bind_door_list[j].position.city %>
+                    <%= list[i]._bind_door_list[j].position_str %>
+                    <%= list[i]._bind_door_list[j].mac %>
+                    </br>
+                <% } %>
+            </td>
+            <td>
+                <% for (var j=0;j<list[i]._door_list.length;j++) { %>
+                    <%= list[i]._door_list[j].position.province %>
+                    <%= list[i]._door_list[j].position.city %>
+                    <%= list[i]._door_list[j].position_str %>
+                    <%= list[i]._door_list[j].mac %>
+                    </br>
+                <% } %>
+            </td>
+            <td>
+                <a class="btn btn-info btn-block app-user-update-btn">
+                    <i class="fa fa-update">更新</i>
+                </a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

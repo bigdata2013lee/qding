@@ -1,0 +1,21 @@
+<root>
+  <property/>
+  <project>
+    <id>1864</id>
+    <name>千丁内购会</name>
+    <cityId>23</cityId>
+    <cityName>中陲</cityName>
+    <provinceName>中陲省</provinceName>
+    <propertyInfoId>86</propertyInfoId>
+    <developerId>371</developerId>
+    <developerName>龙湖</developerName>
+    <lon></lon>
+    <lat></lat>
+  </project>
+  <communityRegionList/>
+  <buildingList/>
+  <roomList/>
+  <ownerList/>
+  <ownerRoomList/>
+  <gateAccessList/>
+</root>

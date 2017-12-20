@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="cache-control" content="private">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>常见问题</title>
+    <!--<link rel="shortcut icon" href="../commons/images/favicon.ico" type="image/x-icon">-->
+
+    <script type="text/javascript">
+        (function(d,w){
+            var htmlObj =  document.getElementsByTagName("html")[0],
+                    event = "orientationchange" in window ? "orientationchange":"resize",
+                    handler = function(){
+                        var objWidth= d.documentElement.clientWidth;
+                        objWidth && (htmlObj.style.fontSize=20*(objWidth/320)+"px",
+                        (objWidth > 640) && (htmlObj.style.fontSize="40px"))
+                    };
+            d.addEventListener && (w.addEventListener(event, handler, false));
+            handler();
+        })(document, window);
+    </script>
+
+    <!-- build:css css/xqx.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/QA.css">
+    <!-- /build -->
+</head>
+<body>
+    <div class="conts">
+
+        <table cellpadding="0" cellspacing="0" class="tab1">
+            <tr>
+                <td><span class="index">1.</span></td>
+                <td><span class="font-w">为什么无法使用云对讲功能？</span>
+                    <p>云对讲功能必须绑定房屋，请确认APP是否与您的房屋正确绑定，若没绑定或绑定错误，请联系物业绑定</p>
+                </td>
+            </tr>
+            <tr><td class="fix-h"></td><td></td></tr>
+
+            <tr>
+                <td><span class="index">2.</span></td>
+                <td><span class="font-w">为什么收不到门口机呼叫？</span>
+                    <p class="">请确认手机已联网</p>
+                    <p class="fix-indent">部分手机会清除后台APP，导致手机无法接收通知。请确保在安装本APP时允许所有权限申请</p>
+                    <p class="">房屋绑定了多个家人时，会按顺序依次呼叫，接听或开锁后不再呼叫</p>
+                    <p class="fix-indent">请确认是否开通了免打扰功能</p>
+                    <p class="">当APP都呼不通时会转呼到该电话，接听后按#键开锁</p>
+                </td>
+            </tr>
+            <tr><td class="fix-h"></td><td></td></tr>
+
+            <tr>
+                <td><span class="index">3.</span></td>
+                <td><span class="font-w">如何调整接听顺序？</span>
+                    <p>绑定房屋顺序即接听顺序，可进入“云对讲设置-接听顺序”调整接听顺序</p>
+                </td>
+            </tr>
+            <tr><td class="fix-h"></td><td></td></tr>
+
+            <tr>
+                <td><span class="index">4.</span></td>
+                <td><span class="font-w">如何更换转呼电话号码？</span>
+                    <p>转呼电话号码默认为第一个绑定房屋的手机号，可进入“设置-接听顺序-转接电话”更换号码</p>
+                </td>
+            </tr>
+            <tr><td class="fix-h"></td><td></td></tr>
+
+            <tr>
+                <td><span class="index">5.</span></td>
+                <td><span class="font-w">为什么门口机呼叫没有视频？</span>
+                    <p class="">为了节省流量，系统默认处在3G/4G联网时采用语音对讲，可在“设置-3G、4G视频对讲”更改</p>
+                    <p class="fix-indent">为了保证对讲效果，当手机网络不畅时会自动切换至语音对讲</p>
+                </td>
+            </tr>
+            <tr><td class="fix-h"></td><td></td></tr>
+
+        </table>
+
+    </div>
+</body>
+</html>

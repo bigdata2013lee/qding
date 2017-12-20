@@ -1,0 +1,205 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+
+	<head>
+		{% include "js_css_lib.html" %}
+		<script type="text/javascript" src="/static/common/common.js"></script>
+		<script type="text/javascript" src="/static/common/qd.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/qdui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/validator.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/choices_map.js" charset="utf-8"></script>
+
+		<script type="text/javascript" src="/static/agw/agw_device_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/agw/agw_alarm_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/aptm/project_aptm_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/talk/gates_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/talk/calls_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/talk/locks_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/maintain/card_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/upgrade/upgrade_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/dashborad/dashborad_views.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/setting/setting_views.js" charset="utf-8"></script>
+
+		<script type="text/javascript" src="/static/common/choices_map.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/manage.js" charset="utf-8"></script>
+
+		<link href="/static/common/css/left_menu.css" rel="stylesheet" />
+		<link href="/static/common/common.css" rel="stylesheet" />
+		<link href="/static/common/css/font-awesome.min.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+        <header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:">
+                        <img src="/static/common/imgs/logo.png" style="display:inline-block;height: 30px;"/>
+                        <span style="font-size: 1.0em;color:#fff;">小亲象管理平台(物业)</span>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right pull-right" style="margin-right: 1em;">
+                        <p class="navbar-text"><span style="color:#fff;">社区: {{select_project_name}}</span></p>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false"> 设置 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#setting/modify_passwd">修改密码</a></li>
+                                <li><a href="/wuye_logout/">退出系统</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </header>
+
+		<div class="main" style="z-index: 0;">
+			<div class="inner container">
+				<div id="page_content">
+					<h2 class="fix-p">欢迎登陆对讲系统</h2>
+				</div>
+			</div>
+
+			<div class="slider_nav">
+				<div class="list">
+					<ul class="yiji sidebar">
+						<li>
+							<a href="#dashborad/analysis" class="active fa fa-angle-right fa-angle-down">首页</a>
+						</li>
+						<li>
+							<a href="javascript:" class="fa fa-angle-right"><i class="fa fa-cog"></i>管理
+								<span class="glyphicon glyphicon-volume-up tip" aria-hidden="true"></span></a>
+							<ul style="display: none">
+								<li class="last">
+									<a href="#maintain/card">小区门卡</a>
+								</li>
+								<li class="last">
+									<a href="#project/aptm">管理房屋</a>
+								</li>
+								<li class="last">
+									<a href="#aptm/reviewed" class="reviewed">绑定审批</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:" class="fa fa-angle-right"><i class="fa fa-list"></i>记录</a>
+							<ul style="display: none">
+								<li class="last">
+									<a href="#agw/alarm">报警记录</a>
+								</li>
+								<li class="last">
+									<a href="#talk/calls">通话记录</a>
+								</li>
+								<li class="last">
+									<a href="#talk/locks">开锁记录</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:" class="fa fa-angle-right"><i class="fa fa-cogs"></i>设备</a>
+							<ul style="display: none">
+								<li class="last">
+									<a href="#agw/device">网关设备</a>
+								</li>
+								<li class="last">
+									<a href="#talk/gates">门口机</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:" class="fa fa-angle-right"><i class="fa fa-info-circle"></i>帮助</a>
+							<ul style="display: none">
+								<li class="last">
+									<a href="#/aptm/help">房屋模板</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="view_templates" style="display: none"></div>
+
+		{% include "pagination.html" %}
+		<div class="notifications" align="center" style="width:100%;top:0px;z-index: 1060;"> </div>
+		<div class="ws-notice">您有新的房屋绑定审批</div>
+
+		<!--    <footer>
+            <div class="inner container">
+                <div class="text-center">
+                    Copyrights: 2014-2017 Qianding. All Rights Reserved.<br/>京ICP备 20140049483 号
+                </div>
+            </div>
+        </footer>-->
+
+		<script>
+			var select_project_id = "{{select_project_id}}";
+
+			function msgHandler(msg) {
+				console.log(msg);
+				if(msg.indexOf("topic") > -1) {
+					msg = JSON.parse(msg);
+					var notice = (msg.topic === "user_application_aptm_bind") ? "您有新的房屋绑定审批" : msg.data.name;
+					var ws = $(".ws-notice").removeClass("animate-down").addClass("animate-up").html(notice);
+					if(location.href.indexOf("dashborad/analysis") > -1) {
+						var initView = function(viewCls) {
+							if(app_router.view && app_router.view.destroy) {
+								app_router.view.destroy();
+							}
+							app_router.view = new viewCls();
+						};
+						initView(qd.views.dashborad.DashboradView);
+					}
+					setTimeout(function() {
+						ws.removeClass("animate-up").addClass("animate-down");
+					}, 7000);
+				}
+			}
+
+			$(document).ready(function() {
+				setInterval(function() {
+					var dh = $(document).height() - $(window).height();
+					if(dh >= 1) {
+						$("body>footer").css({ position: "relative" });
+					} else {
+						$("body>footer").css({ position: "fixed" });
+					}
+				}, 400);
+
+				qd.ws('ws://devwyxqx.qdingnet.com:9557', { "project": window.select_project_id, "topic": "user_application_aptm_bind" }, function(msg) {
+					//$("span.tip").show();
+					msgHandler(msg);
+				});
+
+				qd.ws('ws://devwyxqx.qdingnet.com:9557', { "project": window.select_project_id, "topic": "trigger_agw_alarm" }, function(msg) {
+					//$("span.tip").show();
+					msgHandler(msg);
+				});
+
+				$("a.reviewed").click(function() {
+					$("span.tip").hide();
+					$(".ws-notice").removeClass("animate-up");
+				});
+
+				$('.fa').click(function() {
+					if($(this).siblings('ul').css('display') == 'none') {
+						$(this).addClass('fa-angle-down');
+						$(this).parent('li').siblings('li').children('a').removeClass('fa-angle-down');
+						$(this).parent('li').siblings('li').children('ul').slideUp(100);
+						$(this).siblings('ul').slideDown(100).children('li');
+					}
+				});
+
+				$(".last a").click(function(e) {
+					$(".last a").removeClass("nav");
+					$(this).addClass("nav");
+				});
+
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+
+{% block viewport_content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock viewport_content %}
+
+{% block head_js_css %}
+
+
+<!-- UEditor -->
+<script src="/static/common/thirdparty/ueditor/ueditor.config.js" charset="utf-8"></script>
+<script src="/static/common/thirdparty/ueditor/ueditor.all.min.js" charset="utf-8"></script>
+<script src="/static/common/thirdparty/ueditor/lang/zh-cn/zh-cn.js" charset="utf-8"></script>
+
+<!-- Zabuto Calendar -->
+<link rel="stylesheet" type="text/css"
+      href="/static/common/thirdparty/zabuto_calendar/zabuto_calendar.min.css"/>
+<script src="/static/common/thirdparty/zabuto_calendar/zabuto_calendar.js"></script>
+
+<!-- Chart -->
+<script src="/static/common/thirdparty/chart/chart.js"></script>
+
+<!-- Datetime Picker -->
+<link rel="stylesheet" type="text/css"
+      href="/static/common/thirdparty/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+<script src="/static/common/thirdparty/datetimepicker/js/bootstrap-datetimepicker.min.js?_v=1.0.0"></script>
+<script src="/static/common/thirdparty/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="/static/common/thirdparty/highcharts/highcharts.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/static/common/css/common.css"/>
+<script src="/static/common/js/common.js"></script>
+<script src="/static/common/js/qd.js"></script>
+<script src="/static/common/js/qdui.js"></script>
+{% endblock head_js_css %}
+
+
+{% block base_content %}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="" align="center">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".top-navbar">
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/content">
+                <b>千丁</b>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="top-navbar navbar-collapse collapse" style="width:1024px;" align="left">
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <span>通行预约</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width:120px;">
+                        <li><a href="#/brake_qr_pass_data">通行数据</a></li>
+                        <li><a href="#/brake_app_order_data">预约数据</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <span>设备管理</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width:120px;">
+                        <li><a href="#/device_monitoring">设备监控</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <span>卡管理</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width:120px;">
+                        {% if request.session.web_user.user_type not in [30, 31, 32]  %}
+                            <li><a href="#/card_new">发新卡</a></li>
+                        {% endif %}
+                        <li><a href="#/card_user">用户卡</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <span>数据统计</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width:120px;">
+                        <li><a href="#/data_statistics">通行统计</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <span>数据查看</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width:120px;">
+                        <li><a href="#/search_data/by_phone">用户手机查询</a></li>
+                        <li><a href="#/search_data/by_card">门禁卡查询</a></li>
+                        <li><a href="#/search_data/failed_pass_data">失败日志</a></li>
+                        <!--<li><a href="#/search_data/by_machine">设备位置查询</a></li>-->
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right:0px;">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <img class="" style="width:20px;height:20px;margin-top:-3px;"
+                             src="/static/common/img/favicon.ico"/>
+                        <span>管理员</span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width:120px;">
+                        <li>
+                            <a href="#/modify_password">
+                                <span class="pull-left" style="width:20px;">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                                <span>修改密码</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <span class="pull-left" style="width:20px;">
+                                    <i class="fa fa-power-off text-muted"></i>
+                                </span>
+                                <span>退出帐号</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                {% if request.session.web_user.project_list %}
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <span id="communityName"></span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" id="selectCurrentCommunity" role="menu"
+                        style="min-width:400px;max-height:400px;">
+                        <li class="search_box_li search-li dropdown-header" role="presentation">
+                            <div class="input-group">
+                                <input type="text" value="" placeholder="请输入社区名" class="form-control" name="search_box_value"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default clear-search-box-btn">清空</button>
+                                </span>
+                            </div>
+                        </li>
+                        <li role="presentation" class="divider search-li"></li>
+                        <div style="min-width:400px;max-height:330px;overflow:auto">
+                            <ul>
+                                {% for item in request.session.web_user.project_list %}
+                                    <li class="community_li">
+                                        <a href="javascript:void(0);" data-province="{{item.province}}" data-city="{{item.city}}"
+                                           data-community="{{item.project}}", data-project-id="{{item.project_id}}",
+                                           data-outer-project-id="{{item.outer_project_id}}">
+                                            {{item.city}}-{{item.project}}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </ul>
+                </li>
+                {% endif %}
+                <input name="web-user-id" type="hidden" value="{{ request.session.web_user.id }}" />
+            </ul>
+            <div class="nav navbar-nav navbar-right" style="padding:15px 0; line-height: 20px; color:#777">当前社区:</div>
+
+            <!-- 省份,城市,小区信息 -->
+            <div style="display: none" id="areaInfo">
+                <span id="sProvince"></span>
+                <span id="sCity"></span>
+                <span id="sCommunity"></span>
+                <span id="sProjectId"></span>
+            </div>
+            <!-- 用户信息 -->
+            <div style="display: none" id="userInfo">
+                <span id="userId">{{request.session.web_user.id}}</span>
+                <span id="userName">{{request.session.web_user.username}}</span>
+                <span id="userType">{{request.session.web_user.user_type}}</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="" style="" align="center">
+    <div class="brake-content" style="width:1024px;padding:50px 10px;" align="left"></div>
+    <div id="view_templates" style="display: none"></div>
+</div>
+
+<div class="footer">
+    <div class="footer-con">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-9">
+                    <div class="row">
+                        <b class="" style="color:white;">关于千丁</b>
+                        <span class="text-muted" style="margin:0px 15px;">|</span>
+                        <b class="" style="color:white;">联系我们</b>
+                        <span class="text-muted" style="margin:0px 15px;">|</span>
+                        <b class="" style="color:white;">新浪微博</b>
+                        <span class="text-muted" style="margin:0px 15px;">|</span>
+                        <b class="" style="color:white;">下载二维码</b>
+                    </div>
+                </div>
+                <div class="col-xs-3" align="right">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/community/js/brake_qr_pass_data_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/brake_app_order_data_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/device_monitoring_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/device_binding_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/modify_password_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/monitor_manage_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/data_statistics_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/data_search_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/card_new_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/card_user_view.js?_v={{ CONST.base.version }}"></script>
+<script src="/static/community/js/community.js?_v={{ CONST.base.version }}"></script>
+
+<script type="text/javascript">
+    $('.popover-dl').popover({
+        html: true,
+        trigger: 'hover',
+        placement: 'top',
+        title: '微信 扫一扫',
+        content: '<center><img style="width:100px;height:100px;" src="http://tx.qdingnet.com/uploads/qrpng/tx_qr.png" /></center>'
+    });
+
+    $(window).resize(function () {
+        $('.brake-content').css('min-height', $(window).height() - 130);
+    });
+    $(window).resize();
+
+</script>
+
+
+{% include "community/components.html" %}
+
+{% endblock base_content %}
+

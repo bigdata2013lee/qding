@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>千丁互联</title>
+		<script type="text/javascript" src="/static/common/jquery-1.9.1.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/thirdparty/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/thirdparty/bootstrap-notify/js/bootstrap-notify.js"></script>
+		<script type="text/javascript" src="/static/common/qd.js" charset="utf-8"></script>
+		<link href="/static/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+        <style>
+            html{
+                padding: 0; margin: 0; height: 100%;
+            }
+            body{
+                padding: 0; margin: 0; height: 100%;
+                background: #2c3e50;
+            }
+
+            .center{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+
+            }
+
+            div.panel-login{
+                width: 600px;
+                margin-left: -300px;
+                margin-top: -180px;
+                box-shadow: 0 0 20px #000;
+            }
+        </style>
+
+	</head>
+
+	<body>
+
+
+            <div class="panel panel-primary panel-login center">
+                <div class="panel-heading"><h4 class="panel-title">超级管理员登陆社区</h4></div>
+                <div class="panel-body">
+                    <center style="color:red">{{msg_error}}</center>
+                    <form method="POST" action="" class="form">
+                        <input type="hidden" name="project_id" value="{{project_id}}"/>
+                        <h4 class="text-center text-primary">{{project_title}}</h4>
+                        <hr />
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="超级管理密码"/>
+                        </div>
+                        <div>
+                            <button class="btn btn-default btn-default btn-block">登 陆</button>
+                        </div>
+                    </form>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+
+
+
+	</body>
+
+</html>

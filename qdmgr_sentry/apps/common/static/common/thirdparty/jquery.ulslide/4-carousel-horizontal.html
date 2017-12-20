@@ -1,0 +1,70 @@
+<!--
+Copyright © Yevhen Kotelnitskyi
+More about ulSlide: http://4coder.info/en/code/jquery-plugins/ulslide/
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Horizontal Carousel / jQuery.ulslide plugin</title>
+
+        <!-- Including jQuery (required) -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+		
+        <!-- Including easing jQuery plugin -->
+        <script type="text/javascript" src="js/jquery.easing.js"></script>
+
+        <!-- Including Mousewheel jQuery plugin (optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		
+        <!-- Including ulslide jQuery plugin (required) -->
+        <script type="text/javascript" src="js/jquery.ulslide.js?v=4"></script>
+
+		<!-- Demo styles (optional) -->
+		<link rel='stylesheet' href='css/style.css?v=2' type='text/css' media='all' />
+    </head>
+    <body>	
+        <h2>Horizontal Carousel</h2> 
+        <p>Horizontal Carousel, with jQuery easing</p>
+		
+        <ul id="slide">
+            <li>
+                <img width="86" height="58" src="photos/image-1.jpg" alt="" />
+            </li>
+            <li>
+                <img width="86" height="58" src="photos/image-2.jpg" alt="" />
+            </li>
+            <li>
+                <img width="86" height="58" src="photos/image-3.jpg" alt="" />
+            </li>
+            <li>
+                <img width="86" height="58" src="photos/image-4.jpg" alt="" />
+            </li>
+            <li>
+                <img width="86" height="58" src="photos/image-5.jpg" alt="" />
+            </li>
+        </ul>
+		
+		<a href="#" id="slide_prev">&laquo; prev</a> | <a href="#" id="slide_next">next &raquo;</a>
+
+        <script type="text/javascript">
+            $(function() {						
+                $('#slide').ulslide({
+                    width: 86,
+                    height: 58,
+					effect: {
+						type: 'carousel', // slide or fade
+                        axis: 'x',        // x, y
+						showCount: 4
+					},
+                    nextButton: '#slide_next',
+                    prevButton: '#slide_prev',
+                    duration: 800,
+                    /*autoslide: 2000,*/
+					easing: 'easeOutBounce'
+                });
+            });
+        </script>
+		
+    </body>
+</html>

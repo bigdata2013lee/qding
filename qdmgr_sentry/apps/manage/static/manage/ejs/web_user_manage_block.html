@@ -1,0 +1,348 @@
+<style type="text/css">
+.del-project-btn,
+.edit-del-project-btn{ font-size: 32px; color: #f00; cursor: pointer; position: absolute; right: -40px; top: 1px}
+.area-item{ padding-right: 0; width:14%;}
+.area-project{width: 22%;}
+.area-item{ width: 125px; float: left; margin-right: 15px;}
+.area-project{ width: 200px; float: left;}
+.col-xs-offset-1{ margin-left: 0;}
+.mb15{ margin-bottom: 15px; clear: both; height: 34px}
+.relative{ position: relative;}
+.w200{ width: 200px;}
+
+ul.area_ul_list{padding:0; margin:0;}
+ul.area_ul_list>li{
+    list-style:none;
+    color:#46b8da;
+    border:1px solid #46b8da;
+    padding:.5em;
+    margin:.5em;
+    display:inline-block;
+    border-radius: 2px;
+}
+
+ul.area_ul_list>li>span{
+    margin-right:.5em;
+}
+
+ul.project_select_ul{
+    margin-top:2em;
+    box-shadow: 0 0 6px #333;
+}
+ul.project_select_ul>li{padding:0.5em;}
+
+ul.property_select_ul{
+    list-style:none;
+    padding:0;
+    box-shadow: 0 0 6px #333;
+}
+
+ul.property_select_ul>li{
+    padding:0.5em;
+    border-bottom: 1px solid #ccc;
+}
+ul.property_select_ul>li:hover{background-color:#e7e7e7}
+
+</style>
+
+<div class="page-header">
+    <b class="" style="font-size:18px;">web用户管理 - 人事管理</b>
+</div>
+
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <select class="form-control search-user-role">
+                <option value="">-- 角色 --</option>
+                <option value=2>物业管理</option>
+                <option value=3>配置管理</option>
+                <option value=4>数据查看</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control search-user-access">
+                <option value="">-- 权限 --</option>
+                <option value=1>普通</option>
+                <option value=2>城市</option>
+                <option value=3>集团</option>
+                <option value=4>超级</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <input name="username" class="form-control search-username" type='text' placeholder="用户名:sentry">
+        </div>
+        <div class="col-xs-3">
+            <input name="phone" class="form-control search-phone" type='number' placeholder="手机号:12345678901">
+        </div>
+        <div class="col-xs-1 search-user" data-page-no="1" data-page-size="10">
+            <a class="btn btn-info btn-user search-user-btn"
+               onclick="$('.add-web-user').addClass('hide');$('.web-user-list-block').removeClass('hide');">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <div class="col-xs-1">
+            <a class="btn btn-success btn-block"
+               onclick="$('.add-web-user').removeClass('hide');$('.web-user-list-block').addClass('hide');$('.add-role').change();">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+        <div class="col-xs-1 user_count">
+            <button type="button" class="btn btn-info">总数</button>
+        </div>
+    </div>
+</div>
+
+<div class="web-user-list-block"></div>
+
+<div class="pagination-wrap">
+    <div class="pagination-con" id="pagination"></div>
+</div>
+
+<div class="add-web-user hide">
+    <form class="form-horizontal" style="padding:20px 20px 5px 170px; background-color:#f7f8f9; margin:15px 0">
+        <table width="720">
+            <tr class="add-role-tr">
+                <td width="100" align="right" class="form-cell" valign="top"><span class="text-muted">角色</span></td>
+                <td class="cell-split">
+                    <select name="web-user-role" class="form-control add-role">
+                        <option value=2>物业管理</option>
+                        <option value=3>配置管理</option>
+                        <option value=4>数据查看</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="add-access-tr">
+                <td width="100" align="right" class="form-cell" valign="top"><span class="text-muted">权限</span></td>
+                <td class="cell-split">
+                    <select name="web-user-access" class="form-control add-access">
+                        <option value=1>普通</option>
+                        <option value=2>城市</option>
+                        <option value=3>集团</option>
+                        <option value=4>超级</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="add-web-user-username">
+                <td align="right" class="form-cell" valign="top"><span class="text-muted">名字</span></td>
+                <td class="cell-split">
+                    <input name="username" type="text" class="form-control add-username" placeholder="如brake,sentry等"/>
+                </td>
+            </tr>
+            <tr class="add-web-user-phone">
+                <td align="right" class="form-cell" valign="top"><span class="text-muted">手机</span></td>
+                <td class="cell-split">
+                    <input name="phone" type="number" class="form-control add-phone" placeholder="" maxlength="11"/>
+                </td>
+            </tr>
+            <tr class="add-web-user-password">
+                <td align="right" class="form-cell" valign="top"><span class="text-muted">密码</span></td>
+                <td class="cell-split">
+                    <input name="password" type="password" class="form-control add-password" autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="form-cell" valign="top"></td>
+                <td class="cell-split">
+                    <a class="btn btn-success btn-block add-web-user-btn" data-loading-text="正在提交">
+                        <i class="fa fa-check"></i>
+                        <span>添加用户</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="edit-user-modal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:830px; margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">修改用户</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input name="web_user_id" type="hidden" value=""/>
+                <input name="web_user_access" type="hidden" value=""/>
+                <div class="form-horizontal" style="margin-left:-20px;">
+                    <table width="780">
+                        <tr class="modify-operation-type-tr">
+                            <td width="100" align="right" class="form-cell" valign="top"><span
+                                    class="text-muted">操作类型</span></td>
+                            <td class="cell-split">
+                                <select name="operation-type" class="form-control modify-operation-type-select w200">
+                                    <option value="1">修改用户名</option>
+                                    <option value="2">重置密码</option>
+                                    <option value="3">修改用户状态</option>
+                                    <option value="4">更改手机号</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="modify-phone-tr">
+                            <td align="right" class="form-cell" valign="top"><span class="text-muted">手机号</span></td>
+                            <td class="cell-split">
+                                <input name="web_user_phone" type="number" value="" class="form-control w200">
+                            </td>
+                        </tr>
+                        <tr class="modify-username-tr">
+                            <td align="right" class="form-cell" valign="top"><span class="text-muted">用户名</span></td>
+                            <td class="cell-split">
+                                <input name="web_user_username" type="text" value="" class="form-control w200"/>
+                            </td>
+                        </tr>
+                        <tr class="reset-password-tr">
+                            <td align="right" class="form-cell" valign="top"><span class="text-muted">重置密码</span></td>
+                            <td class="cell-split">
+                                <input name="web_user_password" type="password" value=""
+                                       class="form-control w200 edit_web_user_password"/>
+                            </td>
+                        </tr>
+
+                        <tr class="user-forbidden-tr">
+                            <td align="right" class="form-cell" valign="top"><span class="text-muted">是否禁用</span></td>
+                            <td class="cell-split">
+                                <select name="forbbiden" class="form-control user-forbidden w200">
+                                    <option value="" selected="selected">请选择状态</option>
+                                    <option value="0">禁用</option>
+                                    <option value="1">启用</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info submit-web-user-btn"> 确定 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- type1-->
+<div id="user_access_type1_win" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:830px; margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">绑定区域</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="type1">
+
+                    <div class="form-group">
+                        <label>省份</label>
+                        <select name="province" class="form-control">
+                            <option value="">--省份--</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>城市</label>
+                        <select name="city" class="form-control">
+                            <option value="">--城市--</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label>楼盘</label>
+                        <select name="project" class="form-control project-area-project" style="display:none">
+                            <option value="">--楼盘--</option>
+                        </select>
+                        <input type="text" autocomplete="off" value="" placeholder="--楼盘--" class="form-control project_select_input"  name="search_box_value"/>
+                        <ul class="project_select_ul"></ul>
+                    </div>
+
+                </div>
+
+                <ul class="area_ul_list"></ul>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info bind_area_btn"> 确定 </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end  type1-->
+
+
+
+<!-- type2-->
+<div id="user_access_type2_win" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:830px; margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">绑定区域</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="type2">
+                    <div class="form-group">
+                        <label>省份</label>
+                        <select name="province" class="form-control city-area-province">
+                            <option value="">--省份--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>城市</label>
+                        <select name="city" class="form-control city-area-city">
+                            <option value="">--城市--</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul class="area_ul_list"></ul>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info bind_area_btn"> 确定 </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end  type2-->
+
+
+
+<!-- type3-->
+<div id="user_access_type3_win" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:830px; margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">绑定区域</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="type3">
+
+                    <div class="form-group" style="position: relative;">
+                        <label>物业公司</label>
+                        <input type="text" autocomplete="off" value="" placeholder="--物业公司--" class="form-control property"  name="search_box_value"/>
+                        <ul class="property_select_ul"></ul>
+                    </div>
+
+                </div>
+
+                <ul class="area_ul_list"></ul>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info bind_area_btn"> 确定 </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end  type3-->

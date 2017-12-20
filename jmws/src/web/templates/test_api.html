@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="/static/common/jquery-1.9.1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/jquery/jquery.form.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/common/common.js"></script>
+        <script type="text/javascript" src="/static/common/qd.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/backbonejs/underscore.min.js" charset="utf-8"></script>
+        <link href="/static/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/static/thirdparty/Font-Awesome-3.2.1/css/font-awesome.css" rel="stylesheet" />
+        <style>
+            .output{
+                margin-top: 2em;
+            }
+
+            .history_menu{max-height: 600px; min-height:300px;overflow: auto;}
+        </style>
+        <script>
+            $(document).ready(function () {
+
+                var api_history = JSON.parse(localStorage.getItem("api_history") || '{}');
+
+                var save_history = function (api, params_str) {
+                    api_history[api] = params_str;
+                    localStorage.setItem("api_history", JSON.stringify(api_history));
+                };
+
+                $('button.history_btn').bind('click', function (evt) {
+                    $('.history_menu').html("");
+                    for(var name in  api_history){
+                        $('.history_menu').append('<li data-api="' + name + '"><a href="#">' + name + '</a></li>');
+                    }
+                });
+
+                $(".history_menu").delegate("li", "click", function (evt) {
+                    var api_name = $(this).data("api");
+                    var params = api_history[api_name];
+                    $("#input001").val(api_name);
+                    $("#input002").val(params);
+
+                });
+
+                $(".remote_req").click(function (evt) {
+                    var api = $("#input001").val();
+                    var _params_str = $("#input002").val();
+
+                    try {
+                        JSON.parse(_params_str);
+
+                        $(".output>pre").html("loading...");
+                        qd.rpc(api, JSON.parse(_params_str), true)
+                        .error(function (XMLHttpRequest, textStatus, errorThrown) {
+                            $(".output>pre").html(XMLHttpRequest.responseText || "");
+                        }).success(function (result) {
+                            save_history(api, _params_str);
+                            $(".output>pre").html(JSON.stringify(result, null, "    "));
+                        })
+                    }
+                    catch (err) {
+
+                        alert(err);
+                        return false;
+                    }
+
+                });
+            })
+        </script>
+    </head>
+
+    <body>
+        <h2>Test Api Methods...<small>for cloud talk</small></h2>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle history_btn" data-toggle="dropdown">
+                Api History <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu history_menu" role="menu">
+            </ul>
+        </div>
+        <form role="form" style="max-width: 1200px; margin: 1em auto;">
+            <div class="form-group">
+                <label for="input001">module.Api.method</label>
+                <input type="email" class="form-control" id="input001" placeholder="Enter api etc: pcity.PCityApi.list_pcitys"/>
+            </div>
+            <div class="form-group">
+                <label for="input002">_params <small> json format </small></label>
+                <textarea class="form-control" id="input002" placeholder="{}">{}</textarea>
+            </div>
+
+            <button type="button" class="btn btn-default remote_req">Submit Remote Req</button>
+
+            <div class="output">
+                <pre>Output here.</pre>
+            </div>
+        </form>
+
+    </body>
+</html>

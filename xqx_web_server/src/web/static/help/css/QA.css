@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    /*-webkit-user-select: none;*/
+    -webkit-overflow-scrolling: touch;
+}
+
+/*弹窗提示*/
+.rules{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0 ,.7);
+    z-index: 10000000;
+}
+
+.cont{
+    position: relative;
+    margin: 0 .5rem;
+    max-height: 25rem;
+}
+
+.bg-line{
+    width: 2px;
+    height: 2.5rem;
+    position: absolute;
+    top: 2.2rem;
+    right: .78rem;
+}
+
+.conts{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border-radius: 8px;
+    text-align: left;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.conts .title{
+    margin: 1.04rem .8rem 0;
+    font-size: .79rem;
+    text-align: center;
+}
+
+.conts .tab1{
+    margin: .63rem .7rem .6rem .8rem;
+    /* border: 1px solid green;*/
+}
+
+.conts table.tab1 td:first-child {
+    vertical-align: top;
+    width: 16px;
+}
+
+.conts table td {
+    font-size: .55rem;
+    line-height: 1.44;
+}
+
+.rulesBtn{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.giftBtn{
+    width: 12rem;
+    height: 2rem;
+    line-height: 2rem;
+    position: absolute;
+    top: 20.14rem;
+    left: 50%;
+    margin-left: -6rem;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #FFF;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.share{
+    width: 3rem;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    opacity: 0;
+}
+
+.font-w{
+    font-weight: bold;
+}
+
+.fix-h{
+    height: 1.25rem;
+}
+
+td p{
+    margin: 8px 0;
+}
+
+td span{
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+td p{
+    font-size: .7rem;
+}
+
+td span{
+    color: #FF6F21;
+}
+
+p.fix-indent{
+    margin: 0;
+}
+
+.cont{
+    margin:  1.2rem .5rem 0;
+}
+
+.cont a{
+    display: block;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    text-indent: .8rem;
+    border-bottom: .1rem solid #e0e0e0;
+    font-size: .7rem;
+    font-family: "微软雅黑";
+}

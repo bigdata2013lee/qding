@@ -1,0 +1,92 @@
+
+<style>
+    div.qdui_autocomplete>.list_div{
+        position: relative;
+
+    }
+    .sss_input{overflow: hidden;}
+    .sss_input li{
+        border:none;
+        margin: 0;
+        padding: 0;
+    }
+    div.qdui_autocomplete>.list_div>ul{
+        max-height: 400px;
+        overflow: auto;
+        width: 100%;
+    }
+
+    div.qdui_autocomplete>.list_div>ul>li{
+        cursor: pointer;
+    }
+    div.qdui_autocomplete>.list_div>ul>li.unselected{
+        display: none;
+    }
+    div.qdui_autocomplete>.list_div>ul>li:hover{background-color: #f0f0f0;}
+</style>
+
+<div class="page-header clearfix">
+    <b class="" style="font-size:18px;">数据查询 - 门禁位置</b>
+</div>
+
+<div class="operate-box" style="padding: 1em;">
+    <div>
+        <div class="row">
+          <div class="col-md-5">
+              <div select_name="machine" class="form-control sss_input machine" title="请选择门禁位置">请选择门禁位置</div>
+          </div>
+          <div class="col-md-2">
+              <a class="btn btn-info btn-block search-brake-btn">
+                <i class="fa fa-search"></i> 查 询
+            </a>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="tab_box">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#tab_a1" aria-controls="home" role="tab" data-toggle="tab">最近通行记录</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tab_a1"></div>
+  </div>
+
+</div>
+
+
+<div class="template_div" style="display: none">
+
+</div>
+
+<div style="display: none" class="modals">
+
+
+</div>
+
+
+<div data-keyboard="false" data-backdrop="true" class="modal fade" id="machine_select_modal" style="display: none;" aria-hidden="true">
+    <div style="width:600px;margin:30px auto;" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button title="关闭" data-dismiss="modal" class="close">
+                    <i class="fa fa-times"></i>
+                </button>
+                <b class="text-muted">选择门禁位置</b>
+            </div>
+            <div class="modal-body">
+                <div class="qdui_autocomplete machine" data-select_for="machine">
+                  <input type="text" name="local_a" class="form-control s_input" placeholder="请输门禁位置关键字，空格隔开" />
+                  <div class="list_div">
+                    正在加载...
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

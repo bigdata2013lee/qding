@@ -1,0 +1,65 @@
+<!--
+Copyright © Yevhen Kotelnitskyi
+More about ulSlide: http://4coder.info/en/code/jquery-plugins/ulslide/
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Crossfade effect / jQuery.ulslide plugin</title>
+
+        <!-- Including jQuery (required) -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+
+        <!-- Including Mousewheel jQuery plugin (optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		
+        <!-- Including ulslide jQuery plugin (required) -->
+        <script type="text/javascript" src="js/jquery.ulslide.js?v=1.5.1"></script>
+
+		<!-- Demo styles (optional) -->
+		<link rel='stylesheet' href='css/style.css?v=2' type='text/css' media='all' />
+    </head>
+    <body>	
+        <h2>Crossfade effect</h2> 
+		<p>Crossfade effect, Print current index</p>
+		
+        <ul id="slide">
+            <li>
+                <img src="photos/image-1.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-2.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-3.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-4.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-5.jpg" alt="" />
+            </li>
+        </ul>
+		
+		Page <span id="slide_print_current">1</span> <a href="#" id="slide_prev">&laquo; Prev</a> | <a href="#" id="slide_next">Next &raquo;</a>
+		
+        <script type="text/javascript">
+            $(function() {						
+                $('#slide').ulslide({
+                    width: 433,
+                    height: 290,
+					statusbar: true,
+					effect: {
+						type: 'crossfade' // slide or fade
+					},
+                    nextButton: '#slide_next',
+                    prevButton: '#slide_prev',
+					printCurrentTo: '#slide_print_current',
+                    duration: 600
+                });
+            });
+        </script>
+		
+    </body>
+</html>

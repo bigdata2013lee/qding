@@ -1,0 +1,24 @@
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">报警邮件接收人</span></th>
+            <th width="80"><center><span class="text-muted">操作</span></center></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+        <tr data-item-id="<%= list[i].id %>" data-email="<%= list[i].alert_email %>">
+            <td><span> <%= list[i].alert_email %></span></td>
+            <td align="center">
+                <a class="edit-item-btn" href="javascript:void(0);">
+                    <i class="fa fa-edit text-muted"></i>
+                </a>
+                <span class="text-muted" style="margin:0px 5px;">|</span>
+                <a class="remove-item-btn" href="javascript:void(0);">
+                    <i class="fa fa-remove text-muted"></i>
+                </a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>

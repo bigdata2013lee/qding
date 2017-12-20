@@ -1,0 +1,116 @@
+
+<div class="containter-fluid">
+    <div class="" style="padding-top:50px;">
+        <div class="pull-left">
+            <div class="site-shadow" style="width:100px;height:100px;" data-toggle="modal" data-target="#avatar_modal">
+            </div>
+        </div>
+        <div class="" style="margin:40px 0px 0px 120px;">
+            <ul class="nav nav-tabs" style="padding:20px 20px 0px 0px;">
+                <li class="pull-left" style="padding-top:10px;">
+                    <b class="" style="font-size:18px;">编辑管理员信息</b>
+                </li>
+                <li class="pull-right">
+                    <a href="#password_tab" data-toggle="tab">
+                        <i class="fa fa-lock"></i>
+                        <span>密码</span>
+                    </a>
+                </li>
+                <li class="pull-right active">
+                    <a href="#profile_tab" data-toggle="tab">
+                        <i class="fa fa-th-list"></i>
+                        <span>资料</span>
+                    </a>
+                </li>
+            </ul>
+            <br>
+            <div class="tab-content" style="margin-top:30px;">
+                <div id="profile_tab" class="tab-pane active">
+                    <style>
+                        .bootstrap-switch-gender { width: 100%; }
+                    </style>
+                    <form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">性别</span>
+                            <div class="col-xs-4">
+                                <input name="gender" type="checkbox" class="form-control" checked 
+                                data-on-text="男" data-off-text="女" 
+                                data-on-color="primary" data-off-color="danger" 
+                                data-wrapper-class="gender" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">姓名</span>
+                            <div class="col-xs-4">
+                                <div class="" style="border-bottom:1px solid #e1e2e3;">
+                                    <input type="text" class="" style="width:100%;padding:7px;border:0px;" placeholder="真实姓名">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">手机</span>
+                            <div class="col-xs-4">
+                                <div class="" style="border-bottom:1px solid #e1e2e3;">
+                                    <input type="text" class="" style="width:100%;padding:7px;border:0px;" placeholder="手机号码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">邮箱</span>
+                            <div class="col-xs-4">
+                                <div class="" style="border-bottom:1px solid #e1e2e3;">
+                                    <input type="text" class="" style="width:100%;padding:7px;border:0px;" placeholder="邮箱地址">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-offset-1 col-xs-4">
+                                <a class="btn btn-info btn-block">
+                                    <i class="fa fa-check"></i>
+                                    <span>提交</span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="password_tab" class="tab-pane">
+                    <form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">旧密码</span>
+                            <div class="col-xs-4">
+                                <div class="" style="border-bottom:1px solid #e1e2e3;">
+                                    <input type="text" class="" style="width:100%;padding:7px;border:0px;" placeholder="旧密码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">新密码</span>
+                            <div class="col-xs-4">
+                                <div class="" style="border-bottom:1px solid #e1e2e3;">
+                                    <input type="text" class="" style="width:100%;padding:7px;border:0px;" placeholder="新密码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-xs-1 control-label text-muted">再确认</span>
+                            <div class="col-xs-4">
+                                <div class="" style="border-bottom:1px solid #e1e2e3;">
+                                    <input type="text" class="" style="width:100%;padding:7px;border:0px;" placeholder="再确认">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-offset-1 col-xs-4">
+                                <a class="btn btn-info btn-block">
+                                    <i class="fa fa-check"></i>
+                                    <span>提交</span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

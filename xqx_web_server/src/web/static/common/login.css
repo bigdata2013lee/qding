@@ -1,0 +1,117 @@
+*{
+    font-family: "Microsoft YaHei";
+    padding:0;
+    margin:0;
+    color: #333;
+}
+
+body{
+    background-image: url(imgs/bg.jpg);
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+.btn-primary {
+    color: #333;
+    background-color: #F3951B;
+    border: 0;
+}
+
+.btn-primary:hover,.btn-primary:focus, .btn:focus{
+    color: #000;
+    background-color: #F3951B;
+}
+
+.logo {
+    margin-top: -5px;
+}
+
+.logo a {
+    width: 166px;
+    height: 36px;
+    overflow: hidden;
+    font-size: 24px;
+    padding-left: 20px;
+    color: #FFF;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.login .page-heading {
+    text-align: center;
+}
+.thin-line, .heading-border, .page-heading {
+    border-bottom: 1px solid #e9f3f4;
+}
+.page-heading {
+    color: rgba(87,108,132,0.8);
+}
+
+.heading-border, .page-heading {
+    padding-bottom: 10px;
+}
+
+.login-form {
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+.input-group-lg>.form-control{
+    font-size: 14px;
+}
+
+input.form-control{
+    height: 40px;
+}
+
+input:-webkit-autofil{
+    background-color: #FFF;
+}
+
+.tip{
+    font-size: 14px;
+    color: #D84C29;
+}
+
+.fix-p{
+    width: 340px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #FFF;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin: -150px 0 0 -170px;
+}
+
+.input-group-addon{
+    color: #666;
+}
+
+.input-group{
+    margin-bottom: 25px;
+}
+
+.btn-login{
+    background: #F3951B;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42857143;
+}
+
+button.btn-login:hover,button.btn-login:focus{
+    color: #f8f8f8;
+}
+
+.vright{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}

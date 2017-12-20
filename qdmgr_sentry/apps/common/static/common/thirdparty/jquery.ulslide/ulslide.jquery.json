@@ -1,0 +1,40 @@
+{
+    "name": "ulslide",
+    "title": "jQuery.ulSlide",
+    "description": "Slider (or carousel) that supports HTML5 (CSS3) \"3D Flip\", \"3D Cube\", \"Rotate\", \"Scale\", \"Slide\", \"Crossfade\", \"Fade\" and \"Carousel\" effects. Flexible, secure for html layout (do not changes structure of HTML) and very simple to use. The plugin supports Responsive design, images Preloading, Lazy Load and Ajax. Any HTML can be used as slide content (not only images). If the Mousewheel plugin has been included on the page then the slider will also respond to the mouse wheel. (Set \"mousewheel\" option as \"true\")",
+    "keywords": [
+        "slider",
+        "3d",
+        "flip",
+        "cube",
+        "carousel",
+        "effects",
+        "slide",
+        "fade",
+        "crossfade",
+        "HTML5",
+        "CSS3",
+        "rotate",
+        "scale"
+    ],
+    "version": "1.5.5",
+    "author": {
+        "name": "Yevhen",
+		"email" : "evgennniy@gmail.com",
+        "url": "http://4coder.info/en/author/"		
+    },
+    "licenses": [
+        {
+			"type": "GPLv2",
+			"url": "http://www.gnu.org/licenses/gpl-2.0.html"
+        }
+    ],
+    "bugs": "http://4coder.info/en/code/jquery-plugins/ulslide/comments/",
+    "homepage": "http://4coder.info/en/code/jquery-plugins/ulslide/",
+    "demo": "http://4coder.info/en/code/jquery-plugins/ulslide/demo/",
+    "docs": "http://4coder.info/en/code/jquery-plugins/ulslide/",
+    "download": "http://4coder.info/en/code/jquery-plugins/ulslide/download/",
+    "dependencies": {
+        "jquery": ">=1.4"
+    }
+}

@@ -1,0 +1,99 @@
+<div class="page-header clearfix">
+    <b class="" style="font-size:18px;">基础数据 - 数据管理</b>
+</div>
+
+<div class="form-horizontal" style="padding: 20px 20px 5px 20px;background-color:#f7f8f9">
+    <div class="form-group">
+        <div class="col-xs-3">
+            <select class="form-control base-data-manage-type">
+                <option value="1" selected="selected">数据查询</option>
+                <option value="2">数据同步</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="form-horizontal base-data-search" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+ 	<div class="form-group">
+       <div class="col-xs-offset-1 col-xs-3">
+            <select class="form-control search-status">
+                <option value="0" selected="selected">楼盘</option>
+                <option value="1">房屋</option>
+                <option value="2">用户</option>
+            </select>
+        </div>
+        <div class="col-xs-1 base-data-count"></div>
+    </div>
+    <div class="form-group search-project-div">
+        <div class="col-xs-offset-1 col-xs-3">
+            <select class="form-control search-province"></select>
+        </div>
+        <div class="col-xs-3">
+            <select class="form-control search-city"></select>
+        </div>
+        <div class="col-xs-3">
+            <select class="form-control search-project" style="display:none">
+            </select>
+            <input type="text" value="" autocomplete="off" placeholder="--楼盘--" class="form-control project_select_input"  name="search_box_value"/>
+            <ul class="project_select_ul"></ul>
+        </div>
+        <div class="col-xs-1 base-data-search-project-div">
+            <a class="btn btn-info btn-block search-base-data-btn">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+ 	</div>
+    <div class="form-group search-apartment-div hide">
+        <div class="col-xs-offset-1 col-xs-2 search-group-div">
+            <select class="form-control search-group">
+                <option value="">-- 组团 --</option>
+            </select>
+        </div>
+        <div class="col-xs-2 search-build-div">
+            <select class="form-control search-build">
+                <option value="">-- 楼栋 --</option>
+            </select>
+        </div>
+        <div class="col-xs-2 search-unit-div">
+            <select class="form-control search-unit">
+                <option value="">-- 单元 --</option>
+            </select>
+        </div>
+        <div class="col-xs-2 search-room-div">
+            <input type="text" class="form-control search-room-text" placeholder="房间：101"/>
+        </div>
+        <div class="col-xs-2 search-room-id-div">
+            <input type="text" class="form-control search-room-id-text" placeholder="房间id：713001"/>
+        </div>
+    </div>
+    <div class="form-group search-app-user-div hide">
+        <div class="col-xs-offset-1 col-xs-3 search-outer-app-user-id-div">
+            <input type="text" class="form-control search-outer-app-user-id-text" placeholder="outer app user id：ffff"/>
+        </div>
+        <div class="col-xs-3 search-app-user-id-div">
+            <input type="text" class="form-control search-app-user-id-text" placeholder="app user id：123"/>
+        </div>
+        <div class="col-xs-3 search-phone-div">
+            <input type="text" class="form-control search-app-user-phone-text" placeholder="phone：12345678901"/>
+        </div>
+    </div>
+</div>
+<div class="base-data-list-block" style="margin-top:10px"></div>
+
+<div class="form-horizontal base-data-sync hide" style="padding: 20px 20px 5px 20px;background-color: #f7f7f9">
+    <div class="form-group">
+        <div class="col-xs-6">
+            <input type="text" class="form-control sync-project-name" placeholder="项目名">
+        </div>
+        <div class="col-xs-1 base-data-sync-search">
+            <a class="btn btn-info btn-block sync-base-data-search-btn">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="base-data-sync-block hide" style="margin-top: 10px;"></div>
+
+<div class="pagination-wrap">
+    <div class="pagination-con" id="pagination"></div>
+</div>

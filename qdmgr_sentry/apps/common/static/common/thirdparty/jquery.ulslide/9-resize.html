@@ -1,0 +1,99 @@
+<!--
+Copyright © Yevhen Kotelnitskyi
+More about ulSlide: http://4coder.info/en/code/jquery-plugins/ulslide/
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
+        
+        <title>Responsive / jQuery.ulslide plugin</title>        
+
+        <!-- Including jQuery (required) -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+
+        <!-- Including Mousewheel jQuery plugin (optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		
+        <!-- Including ulslide jQuery plugin (required) -->
+        <script type="text/javascript" src="js/jquery.ulslide.js?v=1.5.2"></script>
+
+		<!-- Demo styles (optional) -->
+		<link rel='stylesheet' href='css/style.css?v=2' type='text/css' media='all' />
+        
+        <style>
+        #slide {
+            width: 433px;
+            height: 290px;
+        }
+            
+        @media only screen and (max-width: 448px) {
+            #slide {
+                width: 376px;
+                height: 252px;
+            }
+        }
+        
+        @media only screen and (max-width: 388px) {
+            #slide {
+                width: 216px;
+                height: 145px;
+            }
+        }
+        
+        #slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        </style>
+    </head>
+    <body>	
+        <h2>Responsive</h2> 
+		<p>Responsive, Horizontal Sliding, Pager</p>
+		
+        <ul id="slide">
+            <li>
+                <img src="photos/image-1.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-2.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-3.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-4.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-5.jpg" alt="" />
+            </li>
+        </ul>
+		
+        <ul id="slide-pager">
+            <li><a href="#1">1</a></li>
+            <li><a href="#2">2</a></li>
+            <li><a href="#3">3</a></li>
+            <li><a href="#4">4</a></li>
+            <li><a href="#5">5</a></li>
+        </ul>
+		
+        <script type="text/javascript">
+            $(function() {						
+                $('#slide').ulslide({
+                    width: 433,
+                    height: 290,
+                    canResize: true,
+					duration: 400,
+					effect: {
+						//type: 'flip3D', // slide or fade
+						type: 'slide', // slide or fade
+						axis: 'x'      // x, y
+					},
+                    pager: '#slide-pager a'
+                });
+            });
+        </script>
+
+    </body>
+</html>

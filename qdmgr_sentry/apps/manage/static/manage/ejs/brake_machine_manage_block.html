@@ -1,0 +1,249 @@
+<div class="page-header">
+    <b class="" style="font-size:18px;">机器管理 - 智能门禁</b>
+    <div class="col-xs-2 brake_machine_dump_out" style="float:right;">
+        <a class="btn btn-info btn-block dump-brake-btn">导出数据</a>
+    </div>
+</div>
+
+
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <select class="form-control search-brake-province"></select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control search-brake-city"></select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control search-brake-project" style="display:none"></select>
+
+            <input type="text" value="" autocomplete="off" placeholder="--楼盘--" class="form-control project_select_input"  name="search_box_value"/>
+
+            <ul class="project_select_ul"></ul>
+        </div>
+
+        <div class="col-xs-2">
+            <select class="form-control search-brake-group">
+                <option value="">-- 组团 --</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control search-brake-build">
+                <option value="">--楼栋--</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control search-brake-unit">
+                <option value="">--单元--</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <input class="form-control search-brake-firmware" type="text" placeholder="固件版本">
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control search-brake-hardware" type="text" placeholder="硬件版本">
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control search-brake-mac" type="text" placeholder="mac">
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control search-brake-pass">
+                <option value="">--最近无通行--</option>
+                <option value="1">最近1天无通行</option>
+                <option value="3">最近3天无通行</option>
+                <option value="7">最近7天无通行</option>
+                <option value="30">最近30天无通行</option>
+            </select>
+        </div>
+        <div class="col-xs-1 search-brake">
+            <a class="btn btn-info btn-block search-brake-btn" onclick="$('.add-brake').addClass('hide');$('.brake-list-block').removeClass('hide');">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <div class="col-xs-1">
+            <a class="btn btn-success btn-block" onclick="$('.add-brake').removeClass('hide');$('.brake-list-block').addClass('hide');">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+        <div class="col-xs-2 brake_machine_count"></div>
+    </div>
+</div>
+
+
+<!--<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9">-->
+    <!--<div class="form-group">-->
+        <!--<div class="col-xs-12 brake_machine_dump_out">-->
+            <!--<a class="btn btn-info btn-block dump-brake-btn">导出</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div class="brake-list-block"></div>
+
+
+<div class="pagination-wrap">
+    <div class="pagination-con" id="pagination"></div>
+</div>
+
+
+<div class="add-brake hide">
+    <hr>
+    <form class="form-horizontal" style="padding:20px 20px 5px 0px;background-color:#f7f8f9;">
+        <div class="form-group">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">地区</span>
+            <div class="col-xs-3">
+                <select name="province" class="form-control add-brake-province"></select>
+            </div>
+            <div class="col-xs-3">
+                <select name="city" class="form-control add-brake-city"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">楼盘</span>
+            <div class="col-xs-6">
+                <select name="project" class="form-control add-brake-project" style="display:none">
+                </select>
+                <input type="text" autocomplete="off" value="" placeholder="--楼盘--" class="form-control project_select_input"  name="search_box_value"/>
+                <ul class="project_select_ul"></ul>
+            </div>
+        </div>
+
+        <div class="form-group group-block hide">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">组团</span>
+            <div class="col-xs-6">
+                <select name="group" class="form-control add-brake-group">
+                    <option value="">-- 组团 --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group build-block hide">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">楼栋</span>
+            <div class="col-xs-6">
+                <select name="build" class="form-control add-brake-build">
+                    <option value="">-- 楼栋 --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group unit-block hide">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">单元</span>
+            <div class="col-xs-6">
+                <select name="unit" class="form-control add-brake-unit">
+                    <option value="">-- 单元 --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">mac</span>
+            <div class="col-xs-6">
+                <input name="mac" type="text" class="form-control" placeholder="11:22:33:44:55:66"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">位置</span>
+            <div class="col-xs-6">
+                <input name="gate_name" type="text" class="form-control" placeholder="三重门"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-2 col-xs-1 control-label text-muted">方向</span>
+            <div class="col-xs-6">
+                <select name="direction" class="form-control add-brake-direction">
+                    <option value="">-- 方向 --</option>
+                    <option value="I" selected>入</option>
+                    <option value="O">出</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-1 col-xs-2 control-label text-muted">蓝牙 RSI</span>
+            <div class="col-xs-6">
+                <input name="bluetooth" type="number" class="form-control" placeholder="-73"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-1 col-xs-2 control-label text-muted">WiFi RSI</span>
+            <div class="col-xs-6">
+                <input name="wifi" type="number" class="form-control" placeholder="-73"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-xs-offset-1 col-xs-2 control-label text-muted">开门时间</span>
+            <div class="col-xs-6">
+                <input name="opentime" type="number" class="form-control" placeholder="5"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-6">
+                <a class="btn btn-success btn-block add-brake-btn" data-loading-text="正在提交">
+                    <i class="fa fa-check"></i>
+                    <span>添加机器</span>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+<br>
+
+
+<div id="edit_brake_modal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:600px;margin-top:120px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">修改机器</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input name="edit-brake_id" type="hidden" value=""/>
+                <input name="edit-command" type="hidden" value=""/>
+                <div class="form-horizontal" style="margin-left:20px">
+                    <div class="form-group">
+                        <span class="col-xs-2 control-label text-muted">蓝牙 RSI</span>
+                        <span class="col-xs-8">
+                            <input name="bluetooth" class="form-control" type="number"/>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-xs-2 control-label text-muted">WiFi RSI</span>
+                        <span class="col-xs-8">
+                            <input name="wifi" class="form-control" type="number"/>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-xs-2 control-label text-muted">开门时间</span>
+                        <span class="col-xs-8">
+                            <input name="opentime" class="form-control" type="number"/>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-xs-2 control-label text-muted">门级别</span>
+                        <span class="col-xs-8">
+                            <input name="level" class="form-control" type="number"/>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-xs-2 control-label text-muted">版本</span>
+                        <span class="col-xs-8">
+                            <select name="version" class="form-control change-brake-version" autocomplete="off"></select>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info submit-brake-btn">
+                    <span>确定</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

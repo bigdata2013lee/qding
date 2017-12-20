@@ -1,0 +1,144 @@
+<script type="text/template" name="tx_rec_template">
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th><span class="text-muted">地区</span></th>
+            <th class="sortable sortable-pass" data-field='pass_info.brake_machine.position.project_list.project'
+                data-direction="<%= sort_direction %>">
+                <span class="text-muted">小区</span>
+                <% if(sort_field == 'pass_info.brake_machine.position.project_list.project') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th style="with:3em;" class="sortable sortable-pass" data-field="user_type"
+                data-direction="<%= sort_direction %>">
+                <span class="text-muted">类型</span>
+                <% if(sort_field == 'user_type') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th class="sortable sortable-pass" data-field="updated_time" data-direction="<%= sort_direction %>">
+                <span class="text-muted">时间</span>
+                <% if(sort_field == 'updated_time') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th class="sortable sortable-pass" data-field="pass_info.brake_machine.position"
+                data-direction="<%= sort_direction %>">
+                <span class="text-muted">通行位置</span>
+                <% if(sort_field == 'pass_info.brake_machine.position') {%>
+                <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th style="with:3em;"><span class="text-muted">进/出</span></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <%=qd.render_empty_tr(data.user_pass_list)%>
+        <%for(var i=0; i < data.user_pass_list.length; i++){ var obj = data.user_pass_list[i];%>
+        <tr>
+            <td><%=obj.city%></td>
+            <td><%=obj.community%></td>
+            <% if(obj.user_type=="0") {%>
+            <td>业主</td>
+            <%} else {%>
+            <td>访客</td>
+            <% } %>
+            <td><%=obj.created_time_str%></td>
+            <td><%=obj.position%></td>
+            <% if(obj.direction=="I") {%>
+            <td>入</td>
+            <% }else{ %>
+            <td>出</td>
+            <% } %>
+        </tr>
+        <%}%>
+        </tbody>
+    </table>
+
+</script>
+
+
+<script type="text/template" name="brake_device_template">
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th class="sortable sortable-brake" data-field="city" data-direction="<%= sort_direction %>">
+                <span class="text-muted">城市</span>
+                <% if(sort_field=='city') {%>
+                <i class="fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th class="sortable sortable-brake" data-field="position_str" data-direction="<%= sort_direction %>">
+                <span class="text-muted">位置</span>
+                <% if(sort_field == 'position_str') {%>
+                <i class="fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up' %>"></i>
+                <% } %>
+            </th>
+            <th class="sortable sortable-brake" data-field="mac" data-direction="<%= sort_direction %>">
+                <span class="text-muted">MAC</span>
+                <% if(sort_field == 'mac') {%>
+                <i class="fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up' %>"></i>
+                <% } %>
+            </th>
+            <th class="sortable sortable-brake" data-field="version" data-direction="<%= sort_direction %>">
+                <span class="text-muted">版本</span>
+                <% if(sort_field == 'version') {%>
+                <i class="fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up' %>"></i>
+                <% } %>
+            </th>
+            <th class="sortable sortable-brake" data-field="level" data-direction="<%= sort_direction %>">
+                <span class="text-muted">门级别</span>
+                <% if(sort_field == 'level') {%>
+                <i class="fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up' %>"></i>
+                <% } %>
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <%= qd.render_empty_tr(data.door_list)%>
+        <%for(var i=0;i
+        <data.door_list.length
+                ;i++){var obj=data.door_list[i];%>
+            <tr>
+                <td><%=obj.position.city%></td>
+                <td><%=obj.position_str%></td>
+                <td><%=obj.mac%></td>
+                <td><%=obj.version%></td>
+                <td><%=obj.position.level%></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+</script>
+
+<script type="text/template" name="bind_rooms_template">
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th class="sortable sortable-room" data-direction="<%= sort_direction %>">
+                <span class="text-muted">房屋信息</span>
+                <i class="fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up' %>"></i>
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <%=qd.render_empty_tr(data.room_list)%>
+        <%for(var i=0;i
+        <data.room_list.length
+                ;i++){%>
+            <tr>
+                <td><%=data.room_list[i]%></td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+
+</script>

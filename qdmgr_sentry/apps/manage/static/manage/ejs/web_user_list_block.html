@@ -1,0 +1,90 @@
+
+<table class="table table-hover" style="margin:0px;">
+    <thead>
+        <tr>
+            <th><span class="text-muted">名字</span></th>
+            <th><span class="text-muted">角色</span></th>
+            <th><center><span class="text-muted">权限</span></center></th>
+            <th><center><span class="text-muted">区域</span></center></th>
+            <th><center><span class="text-muted">手机</span></center></th>
+            <th><center><span class="text-muted">用户状态</span></center></th>
+            <th><center><span class="text-muted">操作</span></center></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<web_user_list.length;i++) { %>
+        <tr class="web-user-item" data-web-user-id="<%= web_user_list[i].id %>" data-index="<%= i %>">
+            <td>
+                <span><%= web_user_list[i].username %></span>
+            </td>
+
+            <td>
+                <% for(var j=0;j<web_user_list[i].role_list.length;j++) {%>
+                    <% if (web_user_list[i].role_list[j] == 1) { %>
+	                    <span>系统管理</span>
+                    <% } %>
+                    <% if (web_user_list[i].role_list[j] == 2) { %>
+	                    <span>物业管理</span>
+                    <% } %>
+                    <% if (web_user_list[i].role_list[j] == 3) { %>
+	                    <span>配置管理</span>
+                    <% } %>
+                    <% if (web_user_list[i].role_list[j] == 4) { %>
+	                    <span>数据查看</span>
+                    <% } %>
+                <% } %>
+            </td>
+
+            <td>
+                <% if (web_user_list[i].access == 1) { %>
+                    <span>普通</span>
+                <% } %>
+                <% if (web_user_list[i].access == 2) { %>
+                    <span>城市</span>
+                <% } %>
+                <% if (web_user_list[i].access == 3) { %>
+                    <span>集团</span>
+                <% } %>
+                <% if (web_user_list[i].access == 4) { %>
+                    <span>超级</span>
+                <% } %>
+            </td>
+
+            <td>
+                <% for (var j=0;j<web_user_list[i].area_str_list.length;j++) { %>
+                    <div><span><%= web_user_list[i].area_str_list[j] %> </span></div>
+                <% } %>
+	        </td>
+
+	        <td>
+	        	<div><span><%= web_user_list[i].phone %></span></div>
+	        </td>
+
+            <td>
+            	<% if(web_user_list[i].status==1) { %>
+            	<span>启用</span>
+            	<% } %>
+            	<% if(web_user_list[i].status==0) { %>
+            	<span>禁用</span>
+            	<% } %>
+            </td>
+            <td align="center">
+                <% if(web_user_list[i].access !=4) {%>
+                <a class="access_btn" data-access="<%=web_user_list[i].access%>" href="#user_access_type<%=web_user_list[i].access%>_win" data-toggle="modal">绑定区域</a>
+                <% } %>
+
+                <a class="site-a edit-web-user-btn" href="javascript:void(0);">
+                    修改用户
+                </a>
+
+                <span class="text-muted" style="margin:0px 5px;">|</span>
+
+                <a class="site-a remove-web-user-btn" href="javascript:void(0);">
+                    <span style="color:red">删除</span>
+                </a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+

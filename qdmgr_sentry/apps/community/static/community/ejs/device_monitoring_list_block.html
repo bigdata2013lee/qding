@@ -1,0 +1,93 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th data-field="position", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">位置</span>
+                <% if(sort_field == 'position') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th data-field="updated_time", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">最近通行</span>
+                <% if(sort_field == 'updated_time') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th data-field="status", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">状态</span>
+                <% if(sort_field == 'status') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th data-field="position.level", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">级别</span>
+                <% if(sort_field == 'position.level') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th data-field="mac", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">mac</span>
+                <% if(sort_field == 'mac') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th data-field="firmware_version", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">固件版本</span>
+                <% if(sort_field == 'firmware_version') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th data-field="hardware_version", data-direction="<%= sort_direction %>" class="sortable">
+                <span class="text-muted">硬件版本</span>
+                <% if(sort_field == 'hardware_version') {%>
+                    <i class="sort-btn fa <%= sort_direction=='-' ? 'fa-arrow-down' : 'fa-arrow-up'%>"></i>
+                <% } %>
+            </th>
+            <th class="check-usertype"><span class="text-muted">监控</span></th>
+            <th><span class="text-muted">配置时间</span></th>
+            <th><span class="text-muted">配置账户</span></th>
+            <th class="check-usertype"><center><span class="text-muted">操作</span></center></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+        <tr class="brake-item" data-device-id="<%= list[i].id %>" data-heart-time="<%= list[i].heart_time %>" data-device-status="<%= list[i].status %>">
+            <td><span> <%= list[i].position_str %></span></td>
+            <td><span><%= new Date(list[i].updated_time*1000).format("yyyy-MM-dd hh:mm:ss") %></span></td>
+            <td><% if (list[i].online_status === 1) { %>
+                    <span class="status_online" title="在线"></span>
+                <% } else { %>
+                    <span class="status_offline" title="掉线"></span>
+                <% } %>
+            </td>
+            <td><span><%= list[i].position.level %></span></td>
+            <td><span> <%= list[i].mac %></span></td>
+            <td><span><%= list[i].firmware_version %></span></td>
+            <td><span><%= list[i].hardware_version %></span></td>
+            <td class="check-usertype">
+                <input name="switch" type="checkbox" class="form-control"
+                <% if (list[i].is_monit !== 0) { %> checked <% } %>
+                                data-on-text="开" data-off-text="关" 
+                                data-on-color="primary" data-off-color="danger" 
+                                data-wrapper-class="mini" />
+            </td>
+            <td><span><%= new Date(list[i].configure_time*1000).format("yyyy-MM-dd hh:mm:ss") %></span></td>
+            <td><span><%= list[i].configure_user %></span></td>
+            <td class="check-usertype" align="center">
+                <a class="operate-edit <% if (list[i].is_monit !== 0) { %> edit-item-btn <% } %>" href="javascript:void(0);">
+                    <i class="fa fa-edit text-muted"></i>
+                </a>
+                <% if(user_type == 21) {%>
+                    <span class="text-muted" style="margin:0px 5px;">|</span>
+                    <a class="site-a remove-brake-btn" href="javascript:void(0);">
+                        <i class="fa fa-remove text-muted"></i>
+                    </a>
+                <% } %>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,45 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">地区</span></th>
+            <th><span class="text-muted">小区</span></th>
+            <th><span class="text-muted">房号</span></th>
+            <th class="bind-phone"><span class="text-muted">对应绑定手机</span></th>
+            <th><span class="text-muted">发起预约时间</span></th>
+            <th><span class="text-muted">失效时间</span></th>
+            <th><span class="text-muted">来访目的</span></th>
+            <th><span class="text-muted">有效次数</span></th>
+            <th><span class="text-muted">已来访</span></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<app_data_list.length;i++) { %>
+        <tr class="app-data-item" data-brake-id="<%= app_data_list[i].id %>">
+            <td><span> <%= app_data_list[i].city %></span></td>
+            <td><span><%= app_data_list[i].community %></span></td>
+            <td><span title="<%= app_data_list[i].room %>"><%= app_data_list[i].room.truncate(13)  %></span></td>
+            <td class="bind-phone"><span><%= app_data_list[i].phone %></span></td>
+            <td><span><%= app_data_list[i].start_time %></span></td>
+            <td><span><%= app_data_list[i].end_time %></span></td>
+            <td><span><%= app_data_list[i].reason %></span></td>
+            <td>
+            	<% if(app_data_list[i].valid_num=="-1") {%>
+            		<span>无限次</span>
+            	<%} else {%>
+            		<span><%= app_data_list[i].valid_num %>次</span>
+            	<% } %>
+            </td>
+            <td>
+            	<% if(app_data_list[i].status=="1") {%>
+            		<span>是</span>
+            	<%} else {%>
+            		<span>否</span>
+            	<% } %>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

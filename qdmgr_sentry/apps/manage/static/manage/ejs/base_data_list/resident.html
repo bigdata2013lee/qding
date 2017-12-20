@@ -1,0 +1,35 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">省份</span></th>
+            <th><span class="text-muted">城市</span></th>
+            <th><span class="text-muted">楼盘</span></th>
+            <th><span class="text-muted">组团</span></th>
+            <th><span class="text-muted">房间id</span></th>
+            <th><span class="text-muted">业主名</span></th>
+            <th><span class="text-muted">手机号</span></th>
+            <th><center><span class="text-muted">操作</span></center></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+        <tr data-base-id="<%= list[i].id %>">
+            <td><span><%= list[i].province %></span></td>
+            <td><span><%= list[i].city %></span></td>
+            <td><span><%= list[i].project %></span></td>
+            <td><span><%= list[i].group %></span></td>
+            <td><span><%= list[i].outer_room_id %></span></td>
+            <td><span><%= list[i].name %></span></td>
+            <td><span><%= list[i].phone %></span></td>
+            <td align="center">
+                <a class="remove-item-btn" href="javascript:void(0);">
+                    <i class="fa fa-remove text-muted"></i>
+                </a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

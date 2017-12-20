@@ -1,0 +1,101 @@
+<div class="page-header">
+    <b class="" style="font-size:18px;">升级管理 - 智能门禁</b>
+</div>
+<div class="form-horizontal operate-box">
+    <div class="form-group">
+    	<div class="col-xs-2">
+	        <select name="type" class="form-control change-type">
+                <option value="0">门禁</option>
+                <option value="1">门禁配置工具</option>  
+            </select>
+	    </div>
+    </div>
+</div>
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+	<div class="upload-file">
+	    <form class="form-horizontal brake-upgrade-form operate-box">
+			<div class="form-group lowest-version">
+			    <span class="col-xs-offset-1 col-xs-2 control-label text-muted">最低版本</span>
+			    <div class="col-xs-8">
+			        <input name="lowest_version" type="text" class="form-control brake-upgrade-lowest-version" placeholder="1.0"/>
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <span class="col-xs-offset-1 col-xs-2 control-label text-muted">旧版本号</span>
+			    <div class="col-xs-8">
+			        <input name="former_version" type="text" class="form-control brake-upgrade-former-version" placeholder="1.0"/>
+			    </div>
+			</div> 
+			
+			<div class="form-group">
+			    <span class="col-xs-offset-1 col-xs-2 control-label text-muted">新版本号</span>
+			    <div class="col-xs-8">
+			        <input name="version" type="text" class="form-control brake-upgrade-version" placeholder="1.1"/>
+			    </div>
+			</div> 
+			
+			<div class="form-group">
+			    <span class="col-xs-offset-1 col-xs-2 control-label text-muted">升级文件</span>
+			    <div class="col-xs-8">
+			        <input name="upload_file" type="file" class="form-control brake-upgrade-file" data-filename-placement="inside">
+			    </div>
+			</div>
+
+			<div class="form-group" id="versionInfo">
+			    <span class="col-xs-offset-1 col-xs-2 control-label text-muted">版本描述</span>
+			    <div class="col-xs-8">
+			        <textarea class="form-control" rows="3" name="message"></textarea>
+			    </div>
+			</div>
+
+
+			<input name="project_list" type="hidden" class="form-control version-project-list" />
+
+
+			<div class="form-group target-project">
+                <span class="col-xs-offset-1 col-xs-2 control-label text-muted">指定小区</span>
+				<div id="bindingProject" class="col-xs-8">
+					<div class="mb15 relative select-project-list">
+						<div class="col-xs-3">
+							<select class="form-control version-target-province" name="province" id="userProvince">
+								<option value="">--省份--</option>
+							</select>
+						</div>
+						<div class="col-xs-3">
+							<select class="form-control version-target-city" name="city">
+								<option value="">--城市--</option>
+							</select>
+						</div>
+						<div class="col-xs-3">
+							<select class="form-control version-target-project" name="project" style="display:none">
+								<option value="">--楼盘--</option>
+							</select>
+							<input type="text" data-outer_project_id="" autocomplete="off" value="" placeholder="--楼盘--" class="form-control project_select_input"  name="search_box_value"/>
+							<ul class="project_select_ul"></ul>
+						</div>
+						<div class="col-xs-3">
+							<a class="btn btn-info btn-xs add-project-btn" style="margin-top: 6px">
+								<i class="fa fa-plus" title=""></i> <span>添加小区</span>
+							</a>
+						</div>
+					</div>
+				</div>
+            </div>
+
+			<div class="form-group">
+	            <div class="col-xs-offset-3 col-xs-8">
+	                <a class="btn btn-success btn-block brake-upgrade-btn" data-loading-text="正在提交" >
+	                    <i class="fa fa-check"></i>
+	                    <span>发布版本</span>
+	                </a>
+	            </div>
+	        </div>
+	    </form>
+	</div>
+</div>
+
+<div class="upgrade-list"></div>
+
+	
+

@@ -1,0 +1,46 @@
+1. 获取工程qdmgr_sentry_web所有代码
+2. 修改qdmgr_sentry_web/settings/const.py文件
+CONST = {
+    'base':{
+        'host':'主机名，测试环境为qatx.qdignet.com, 正式环境为tx.qdingnet.com',
+        'version': '1.0.0',
+        'env': 'dev',
+        'log': True,
+    },
+
+    'domain': {
+        'default': 'qdingnet.com',
+    },
+    'email': {
+        'smtp': 'smtp.qding.me',
+        'sender': {
+            'noreply': {
+                'display_name': u'千丁互联 - 自动回复', 
+                'username': 'smart@qding.me',
+                'password': 'Qd@2014',
+            },  
+            'contact': {
+                'display_name': '千丁互联 - 联系我们', 
+                'username': 'contact@qding.me',
+                'password': 'qding',
+            },  
+        },
+    },
+    'mysql': {
+        'host': 'mysql server ip',
+        'dbname': 'db name',
+        'user': 'db username',
+        'password': 'db password',
+        'port':db port,
+    },
+    'static_url': 测试环境: '/static/', 正式环境：'http://tx.qdingnet.com/static/'
+    'api_root':sentry工程的地址，测试环境为：'http://127.0.0.1:8014/', 正式环境为：'http://sentry工程的ip:8014/'
+
+    'debug':{'enabled':False},
+}
+
+3. 在qdmgr_sentry_web目录下执行: bash scripts/sentry_web.sh restart
+
+
+4. 正式环境还需执行如下操作
+   复制qdmgr_sentry_web目录下的static目录到nginx的静态目录

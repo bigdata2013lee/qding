@@ -1,0 +1,39 @@
+<div class="page-header clearfix">
+    <b class="" style="font-size:18px;">数据查询 - 门禁卡</b>
+    <div class="radio" style="display:inline-block;margin-left:20px;">
+        <label><input name="data_flag" type="radio" value="0" checked>当前数据</label>&nbsp;&nbsp;
+        <label><input name="data_flag" type="radio" value="1" >早期数据</label>
+    </div>
+</div>
+<div class="operate-box" style="padding: 1em;">
+    <div class="form-inline">
+        <div class="form-group">
+            <label>门禁卡号</label>
+            <input type="text" name="card_no" class="form-control" placeholder="请输入门禁卡号" maxlength="18"/>
+        </div>
+        <button type="button" class="btn btn-primary query">查 询</button>
+        <button type="button" class="btn btn-primary update">更 新</button>
+    </div>
+</div>
+
+
+<div class="tab_box">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#tab_a1" aria-controls="home" role="tab" data-toggle="tab">最近通行记录</a></li>
+    <li role="presentation"><a href="#tab_a3" aria-controls="tab_a3" role="tab" data-toggle="tab">可开启智能门禁</a></li>
+    <li role="presentation"><a href="#tab_a4" aria-controls="tab_a4" role="tab" data-toggle="tab">门禁卡信息</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tab_a1"></div>
+    <div role="tabpanel" class="tab-pane" id="tab_a3"></div>
+    <div role="tabpanel" class="tab-pane" id="tab_a4"></div>
+  </div>
+
+</div>
+
+
+<div class="template_div" style="display: none"></div>

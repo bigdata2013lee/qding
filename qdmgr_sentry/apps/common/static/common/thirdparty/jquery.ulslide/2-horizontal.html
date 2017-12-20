@@ -1,0 +1,70 @@
+<!--
+Copyright © Yevhen Kotelnitskyi
+More about ulSlide: http://4coder.info/en/code/jquery-plugins/ulslide/
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Pager, Horizontal / jQuery.ulslide plugin</title>
+
+        <!-- Including jQuery (required) -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+
+        <!-- Including Mousewheel jQuery plugin (optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		
+        <!-- Including ulslide jQuery plugin (required) -->
+        <script type="text/javascript" src="js/jquery.ulslide.js?v=4"></script>
+
+		<!-- Demo styles (optional) -->
+		<link rel='stylesheet' href='css/style.css?v=2' type='text/css' media='all' />
+    </head>
+    <body>	
+        <h2>Horizontal Sliding</h2> 
+		<p>Horizontal Sliding, Pager, Autoscrolling</p>
+		
+        <ul id="slide">
+            <li>
+                <img src="photos/image-1.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-2.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-3.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-4.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-5.jpg" alt="" />
+            </li>
+        </ul>
+		
+        <ul id="slide-pager">
+            <li><a href="#1">1</a></li>
+            <li><a href="#2">2</a></li>
+            <li><a href="#3">3</a></li>
+            <li><a href="#4">4</a></li>
+            <li><a href="#5">5</a></li>
+        </ul>
+		
+        <script type="text/javascript">
+            $(function() {						
+                $('#slide').ulslide({
+                    width: 433,
+                    height: 290,
+					duration: 400,
+					effect: {
+						type: 'slide', // slide or fade
+						axis: 'x'      // x, y
+					},
+                    pager: '#slide-pager a',
+                    autoslide: 3000
+                });
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,2413 @@
+ERROR 2016-12-16 12:57:13,284 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 89, in remoteView
+    raise Exception("Api Name name is illegal.")
+Exception: Api Name name is illegal.
+DEBUG 2016-12-16 12:58:26,377 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 12:58:26,382 ###===Params: {}
+ERROR 2016-12-16 12:58:26,583 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 152, in add_version
+    if not json_info_flag: return result.setmsg(json_file_ret, 3)
+UnboundLocalError: local variable 'json_info_flag' referenced before assignment
+DEBUG 2016-12-16 12:59:28,311 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 12:59:28,347 ###===Params: {}
+ERROR 2016-12-16 12:59:28,349 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 151, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8*1024*100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 466, in read_json_file
+    for chunk in file_handle.chuncks():
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'chuncks'
+DEBUG 2016-12-16 13:00:48,261 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:00:48,265 ###===Params: {}
+ERROR 2016-12-16 13:00:48,463 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 151, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8*1024*100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 466, in read_json_file
+    for chunk in file_handle.chuncks():
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'chuncks'
+DEBUG 2016-12-16 13:00:50,802 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:00:50,807 ###===Params: {}
+DEBUG 2016-12-16 13:00:50,809 result:{'err': 3, 'msg': '未检测到文件', 'data': {}}
+DEBUG 2016-12-16 13:01:02,359 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:01:02,367 ###===Params: {}
+DEBUG 2016-12-16 13:01:02,369 result:{'err': 3, 'msg': '未检测到文件', 'data': {}}
+DEBUG 2016-12-16 13:01:25,270 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:01:25,279 ###===Params: {}
+DEBUG 2016-12-16 13:01:25,474 result:{'msg': '未检测到json文件', 'err': 3, 'data': {}}
+DEBUG 2016-12-16 13:02:36,896 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:02:36,904 ###===Params: {}
+DEBUG 2016-12-16 13:02:36,907 result:{'msg': '未检测到json文件', 'err': 3, 'data': {}}
+DEBUG 2016-12-16 13:02:40,048 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:02:40,054 ###===Params: {}
+ERROR 2016-12-16 13:02:40,421 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 152, in add_version
+    pdb.settrace()
+AttributeError: 'module' object has no attribute 'settrace'
+DEBUG 2016-12-16 13:02:51,804 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:02:51,808 ###===Params: {}
+ERROR 2016-12-16 13:02:52,018 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 152, in add_version
+    pdb.trace()
+AttributeError: 'module' object has no attribute 'trace'
+DEBUG 2016-12-16 13:02:57,612 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:02:57,621 ###===Params: {}
+ERROR 2016-12-16 13:02:57,623 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 152, in add_version
+    pdb.trace()
+AttributeError: 'module' object has no attribute 'trace'
+DEBUG 2016-12-16 13:03:01,548 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:03:01,553 ###===Params: {}
+ERROR 2016-12-16 13:03:01,766 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 152, in add_version
+    pdb.setrace()
+AttributeError: 'module' object has no attribute 'setrace'
+DEBUG 2016-12-16 13:03:31,939 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:03:31,943 ###===Params: {}
+DEBUG 2016-12-16 13:06:23,661 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:06:23,666 ###===Params: {}
+ERROR 2016-12-16 13:06:23,863 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 151, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8*1024*100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 466, in read_json_file
+    for chunk in file_handle.chuncks():
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'chuncks'
+DEBUG 2016-12-16 13:08:02,318 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:08:02,323 ###===Params: {}
+DEBUG 2016-12-16 13:10:17,673 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:10:17,678 ###===Params: {}
+ERROR 2016-12-16 13:10:17,881 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 151, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8*1024*100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 470, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 359, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name enclosed in double quotes: line 6 column 1 (char 115)
+DEBUG 2016-12-16 13:11:02,059 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:11:02,066 ###===Params: {}
+ERROR 2016-12-16 13:12:54,646 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 151, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8*1024*100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 472, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 472, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+DEBUG 2016-12-16 13:13:23,998 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:13:24,040 ###===Params: {}
+ERROR 2016-12-16 13:13:53,926 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 151, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8*1024*100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 472, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 472, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+DEBUG 2016-12-16 13:14:01,547 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:14:01,553 ###===Params: {}
+ERROR 2016-12-16 13:14:01,753 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 154, in add_version
+    json_info_flag, json_info_str = validation.validate_version_json_file(json_info)
+  File "/mnt/code/qding/xqx_web_server/src/utils/validation.py", line 28, in validate_version_json_file
+    version_flag, version_str = validate_version(version_json_file['version'])
+  File "/mnt/code/qding/xqx_web_server/src/utils/validation.py", line 41, in validate_version
+    version_re = re.complile("[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}")
+AttributeError: 'module' object has no attribute 'complile'
+DEBUG 2016-12-16 13:14:29,666 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:14:29,671 ###===Params: {}
+ERROR 2016-12-16 13:14:29,864 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 158, in add_version
+    write_flag, write_ret = write_file(bin_file, qd_version_obj.bin_file, 100*1024*1024*8)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 449, in write_file
+    return False, "上传文件错误, 不能超过%sM" % max_size/8*1024*1024
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+DEBUG 2016-12-16 13:15:00,837 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:15:00,842 ###===Params: {}
+DEBUG 2016-12-16 13:15:01,043 result:{'msg': '上传文件错误, 不能超过109951162777600.0M', 'err': 3, 'data': {}}
+DEBUG 2016-12-16 13:15:31,306 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:15:31,311 ###===Params: {}
+DEBUG 2016-12-16 13:15:31,507 result:{'data': {}, 'err': 3, 'msg': '上传文件错误, 不能超过109951162777600.0M'}
+DEBUG 2016-12-16 13:17:09,728 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:17:09,733 ###===Params: {}
+DEBUG 2016-12-16 13:18:28,638 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:18:28,643 ###===Params: {}
+ERROR 2016-12-16 13:18:29,137 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 165, in add_version
+    qd_version_obj.add_version()
+  File "/mnt/code/qding/xqx_web_server/src/models/common.py", line 48, in add_version
+    db_version = self.get_one_version()
+  File "/mnt/code/qding/xqx_web_server/src/models/common.py", line 45, in get_one_version
+    return QDVersion.objects(component_type=self.component_type, version_code=version_code).first()
+NameError: name 'version_code' is not defined
+DEBUG 2016-12-16 13:19:39,771 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:19:39,775 ###===Params: {}
+DEBUG 2016-12-16 13:19:39,988 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:19:46,598 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:19:46,639 ###===Params: {}
+DEBUG 2016-12-16 13:19:46,657 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:19:48,706 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:19:48,748 ###===Params: {}
+DEBUG 2016-12-16 13:19:48,763 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:24:59,220 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:24:59,226 ###===Params: {}
+DEBUG 2016-12-16 13:24:59,633 result:{'msg': '版本发布成功，(*^__^*)', 'err': 0, 'data': {}}
+DEBUG 2016-12-16 13:25:01,486 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:25:01,527 ###===Params: {}
+DEBUG 2016-12-16 13:25:01,559 result:{'msg': '版本发布成功，(*^__^*)', 'err': 0, 'data': {}}
+DEBUG 2016-12-16 13:25:03,165 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:25:03,207 ###===Params: {}
+DEBUG 2016-12-16 13:25:03,222 result:{'msg': '版本发布成功，(*^__^*)', 'err': 0, 'data': {}}
+DEBUG 2016-12-16 13:34:00,815 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:34:00,819 ###===Params: {}
+DEBUG 2016-12-16 13:34:01,025 result:{'err': 0, 'data': {}, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 13:34:10,207 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:34:10,247 ###===Params: {}
+DEBUG 2016-12-16 13:34:49,217 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:34:49,222 ###===Params: {}
+DEBUG 2016-12-16 13:34:49,455 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 13:35:49,127 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:35:49,131 ###===Params: {}
+DEBUG 2016-12-16 13:35:49,344 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 13:36:08,526 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:36:08,563 ###===Params: {}
+DEBUG 2016-12-16 13:36:08,580 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 13:37:12,315 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:37:12,356 ###===Params: {}
+DEBUG 2016-12-16 13:37:12,358 result:{'err': 3, 'msg': "亲，component_type只能是['little_elephant']中之一", 'data': {}}
+DEBUG 2016-12-16 13:37:30,669 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:37:34,646 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:37:34,650 ###===Params: {}
+DEBUG 2016-12-16 13:37:34,861 result:{'msg': '版本发布成功，(*^__^*)', 'err': 0, 'data': {}}
+DEBUG 2016-12-16 13:47:35,925 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:47:35,930 ###===Params: {}
+DEBUG 2016-12-16 13:47:36,128 result:{'err': 3, 'msg': '亲, md5sum格式不正确，必须为32位16进制数', 'data': {}}
+DEBUG 2016-12-16 13:56:08,946 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:56:08,951 ###===Params: {}
+DEBUG 2016-12-16 13:56:09,151 result:{'data': {}, 'err': 3, 'msg': '亲, md5sum格式不正确，必须为32位16进制数'}
+DEBUG 2016-12-16 13:56:12,425 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:56:12,466 ###===Params: {}
+DEBUG 2016-12-16 13:56:12,470 result:{'data': {}, 'err': 3, 'msg': '亲, md5sum格式不正确，必须为32位16进制数'}
+DEBUG 2016-12-16 13:56:58,803 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:56:58,807 ###===Params: {}
+DEBUG 2016-12-16 13:56:59,028 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:57:01,280 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:57:01,323 ###===Params: {}
+DEBUG 2016-12-16 13:57:01,341 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:57:02,934 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:57:02,971 ###===Params: {}
+DEBUG 2016-12-16 13:57:02,989 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:57:04,331 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:57:04,371 ###===Params: {}
+DEBUG 2016-12-16 13:57:04,390 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:58:19,863 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:58:19,904 ###===Params: {}
+DEBUG 2016-12-16 13:58:19,936 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 13:58:23,559 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:58:23,563 ###===Params: {}
+DEBUG 2016-12-16 13:58:23,812 result:{'err': 0, 'data': {}, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 13:58:24,732 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 13:58:24,777 ###===Params: {}
+DEBUG 2016-12-16 13:58:24,796 result:{'err': 0, 'data': {}, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 14:01:45,161 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:01:45,203 ###===Params: {}
+DEBUG 2016-12-16 14:01:45,233 result:{'err': 0, 'data': {}, 'msg': '版本发布成功，(*^__^*)'}
+ERROR 2016-12-16 14:05:49,864 Internal Server Error: /remote/update.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 89, in remoteView
+    raise Exception("Api Name name is illegal.")
+Exception: Api Name name is illegal.
+DEBUG 2016-12-16 14:08:10,227 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:08:10,270 ###===Params: {}
+DEBUG 2016-12-16 14:08:10,295 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 14:09:05,722 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:09:05,759 ###===Params: {}
+DEBUG 2016-12-16 14:09:05,778 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+WARNING 2016-12-16 14:09:05,825 Not Found: /remote/remote/upgrade.ComponentUpgradeApi.check_upgrade/
+DEBUG 2016-12-16 14:09:25,089 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:09:25,131 ###===Params: {}
+DEBUG 2016-12-16 14:09:25,149 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+WARNING 2016-12-16 14:09:25,181 Not Found: /remote/remote/upgrade.ComponentUpgradeApi.check_upgrade/
+DEBUG 2016-12-16 14:09:41,094 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:09:41,135 ###===Params: {}
+DEBUG 2016-12-16 14:09:41,157 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 14:09:41,192 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:09:41,196 ###===Params: {'project_id': '', 'component_type': 'door_machine'}
+DEBUG 2016-12-16 14:09:41,204 result:{'err': 0, 'msg': 'project_id can not be empty', 'data': {}}
+DEBUG 2016-12-16 14:12:07,188 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:12:07,193 ###===Params: {}
+DEBUG 2016-12-16 14:12:07,410 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:12:07,452 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:12:07,456 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:12:07,463 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': '', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:12:23,840 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:12:23,884 ###===Params: {}
+DEBUG 2016-12-16 14:12:23,905 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:12:23,946 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:12:23,951 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:12:23,960 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': '', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:12:34,511 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:12:34,552 ###===Params: {}
+DEBUG 2016-12-16 14:12:34,577 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:12:34,621 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:12:34,625 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:12:34,632 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': '', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:12:43,502 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:12:43,547 ###===Params: {}
+DEBUG 2016-12-16 14:12:43,596 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:12:43,683 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:12:43,687 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:12:43,700 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': '', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:12:54,379 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:12:54,415 ###===Params: {}
+DEBUG 2016-12-16 14:12:54,441 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:12:54,484 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:12:54,488 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:12:54,495 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': '', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:13:24,452 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:13:24,496 ###===Params: {}
+DEBUG 2016-12-16 14:13:24,517 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:13:24,559 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:13:24,564 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:13:24,572 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': '', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:14:35,810 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:14:35,850 ###===Params: {}
+DEBUG 2016-12-16 14:14:35,893 result:{'msg': '版本发布成功，(*^__^*)', 'data': {}, 'err': 0}
+DEBUG 2016-12-16 14:14:35,948 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:14:35,954 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:14:35,964 result:{'msg': '', 'data': {'qd_version': {'filename': 'test.bin', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'url': ''}}, 'err': 0}
+DEBUG 2016-12-16 14:57:36,976 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:57:36,980 ###===Params: {}
+DEBUG 2016-12-16 14:57:37,214 result:{'data': {}, 'msg': '版本发布成功，(*^__^*)', 'err': 0}
+DEBUG 2016-12-16 14:57:37,248 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:57:37,253 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:57:37,264 result:{'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/<GridFSProxy: None>', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_desc': {}, 'filename': 'test.bin', 'component_type': 'little_elephant'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 14:58:01,429 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:58:01,472 ###===Params: {}
+DEBUG 2016-12-16 14:58:01,508 result:{'data': {}, 'msg': '版本发布成功，(*^__^*)', 'err': 0}
+DEBUG 2016-12-16 14:58:01,574 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:58:01,578 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:58:01,588 result:{'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/<GridFSProxy: None>', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_desc': {}, 'filename': 'test.bin', 'component_type': 'little_elephant'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 14:58:05,761 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:58:05,765 ###===Params: {}
+DEBUG 2016-12-16 14:58:05,992 result:{'err': 0, 'data': {}, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 14:58:06,029 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:58:06,032 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+ERROR 2016-12-16 14:58:06,043 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.check_upgrade/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 141, in check_upgrade
+    url = "%s/%s" % (CONF['host'], db_qd_version_obj.bin_file.id)
+  File "/usr/local/lib/python3.4/dist-packages/mongoengine/fields.py", line 1271, in __getattr__
+    raise AttributeError
+AttributeError
+DEBUG 2016-12-16 14:59:06,274 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:59:06,280 ###===Params: {}
+DEBUG 2016-12-16 14:59:06,506 result:{'err': 0, 'data': {}, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 14:59:06,575 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:59:06,585 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 14:59:46,212 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 14:59:46,220 ###===Params: {}
+DEBUG 2016-12-16 14:59:46,442 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 14:59:46,486 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 14:59:46,490 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 14:59:46,497 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/585390e2c0d207853dd8bdc7', 'component_type': 'little_elephant', 'version': '1.1.1', 'filename': 'test.bin', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'component_desc': {}}}}
+DEBUG 2016-12-16 15:07:40,073 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 15:07:40,078 ###===Params: {}
+DEBUG 2016-12-16 15:07:40,304 result:{'msg': '版本发布成功，(*^__^*)', 'err': 0, 'data': {}}
+DEBUG 2016-12-16 15:07:40,345 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 15:07:40,351 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 15:07:40,358 result:{'msg': '', 'err': 0, 'data': {'qd_version': {'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin', 'component_type': 'little_elephant', 'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/585392bcc0d20785cac0288c', 'component_desc': {}}}}
+DEBUG 2016-12-16 15:09:49,618 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 15:09:49,623 ###===Params: {}
+DEBUG 2016-12-16 15:09:49,852 result:{'data': {}, 'msg': '版本发布成功，(*^__^*)', 'err': 0}
+DEBUG 2016-12-16 15:09:49,892 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 15:09:49,896 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 15:09:49,902 result:{'data': {'qd_version': {'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'component_desc': {}, 'filename': 'test.bin', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'version': '1.1.1', 'component_type': 'little_elephant'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:05:16,015 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:05:16,018 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:05:16,251 result:{'msg': '', 'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_type': 'little_elephant', 'component_desc': {}, 'filename': 'test.bin'}}, 'err': 0}
+DEBUG 2016-12-16 20:05:20,876 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:05:20,880 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:05:20,886 result:{'msg': '', 'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_type': 'little_elephant', 'component_desc': {}, 'filename': 'test.bin'}}, 'err': 0}
+DEBUG 2016-12-16 20:07:12,011 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:07:12,054 ###===Params: {}
+ERROR 2016-12-16 20:07:12,056 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 150, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8 * 1024 * 100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 480, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+DEBUG 2016-12-16 20:07:12,186 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:07:12,190 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:07:12,197 result:{'msg': '', 'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_type': 'little_elephant', 'component_desc': {}, 'filename': 'test.bin'}}, 'err': 0}
+DEBUG 2016-12-16 20:07:43,872 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:07:43,913 ###===Params: {}
+ERROR 2016-12-16 20:07:43,915 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 150, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8 * 1024 * 100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 480, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+DEBUG 2016-12-16 20:07:43,964 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:07:43,968 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:07:43,976 result:{'msg': '', 'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_type': 'little_elephant', 'component_desc': {}, 'filename': 'test.bin'}}, 'err': 0}
+DEBUG 2016-12-16 20:08:12,742 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:08:12,786 ###===Params: {}
+ERROR 2016-12-16 20:08:12,788 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 150, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8 * 1024 * 100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 480, in read_json_file
+    return True, json.loads(file_data.decode('utf8'))
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+DEBUG 2016-12-16 20:08:12,835 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:08:12,839 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:08:12,846 result:{'msg': '', 'data': {'qd_version': {'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'component_type': 'little_elephant', 'component_desc': {}, 'filename': 'test.bin'}}, 'err': 0}
+DEBUG 2016-12-16 20:10:57,113 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:10:57,117 ###===Params: {}
+ERROR 2016-12-16 20:14:15,952 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 150, in add_version
+    json_file_flag, json_file_ret = read_json_file(json_file, 8 * 1024 * 100)
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 482, in read_json_file
+    return False, "json文件内容不能为空"
+  File "/mnt/code/qding/xqx_web_server/src/utils/tools.py", line 482, in read_json_file
+    return False, "json文件内容不能为空"
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+DEBUG 2016-12-16 20:14:20,978 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:14:20,982 ###===Params: {}
+DEBUG 2016-12-16 20:14:21,180 result:{'data': {}, 'msg': 'json文件内容不能为空', 'err': 3}
+DEBUG 2016-12-16 20:14:21,211 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:14:21,214 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:14:21,224 result:{'data': {'qd_version': {'component_type': 'little_elephant', 'component_desc': {}, 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'filename': 'test.bin'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:14:49,593 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:14:49,634 ###===Params: {}
+DEBUG 2016-12-16 20:14:49,635 result:{'data': {}, 'msg': 'version_json_file can only be dict', 'err': 3}
+DEBUG 2016-12-16 20:14:49,666 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:14:49,668 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:14:49,674 result:{'data': {'qd_version': {'component_type': 'little_elephant', 'component_desc': {}, 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'filename': 'test.bin'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:15:06,277 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:15:06,318 ###===Params: {}
+DEBUG 2016-12-16 20:15:06,319 result:{'data': {}, 'msg': 'version_json_file can only be dict', 'err': 3}
+DEBUG 2016-12-16 20:15:06,348 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:15:06,350 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:15:06,356 result:{'data': {'qd_version': {'component_type': 'little_elephant', 'component_desc': {}, 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'filename': 'test.bin'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:15:13,083 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:15:13,125 ###===Params: {}
+DEBUG 2016-12-16 20:15:13,128 result:{'data': {}, 'msg': 'version_json_file can only be dict', 'err': 3}
+DEBUG 2016-12-16 20:15:13,156 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:15:13,160 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:15:13,165 result:{'data': {'qd_version': {'component_type': 'little_elephant', 'component_desc': {}, 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'filename': 'test.bin'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:15:59,178 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:15:59,183 ###===Params: {}
+DEBUG 2016-12-16 20:15:59,386 result:{'data': {}, 'err': 3, 'msg': 'version_json_file can only be dict'}
+DEBUG 2016-12-16 20:15:59,438 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:15:59,441 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:15:59,452 result:{'data': {'qd_version': {'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'component_type': 'little_elephant', 'component_desc': {}, 'version': '1.1.1', 'filename': 'test.bin', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:18:01,704 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:18:01,708 ###===Params: {}
+DEBUG 2016-12-16 20:18:01,901 result:{'err': 3, 'data': {}, 'msg': '亲，json文件内容只能是字典'}
+DEBUG 2016-12-16 20:18:01,932 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:18:01,935 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:18:01,944 result:{'err': 0, 'data': {'qd_version': {'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'component_type': 'little_elephant', 'filename': 'test.bin', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'component_desc': {}}}, 'msg': ''}
+DEBUG 2016-12-16 20:18:35,057 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:18:35,098 ###===Params: {}
+DEBUG 2016-12-16 20:18:35,099 result:{'err': 3, 'data': {}, 'msg': '亲，json文件只能包含version, md5sum, component_type, component_desc四个描述'}
+DEBUG 2016-12-16 20:18:35,133 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:18:35,137 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:18:35,143 result:{'err': 0, 'data': {'qd_version': {'version': '1.1.1', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'component_type': 'little_elephant', 'filename': 'test.bin', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'component_desc': {}}}, 'msg': ''}
+DEBUG 2016-12-16 20:19:49,807 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:19:49,810 ###===Params: {}
+DEBUG 2016-12-16 20:19:50,015 result:{'data': {}, 'msg': '亲, md5sum格式不正确，必须为32位16进制数', 'err': 3}
+DEBUG 2016-12-16 20:19:50,061 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:19:50,066 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:19:50,078 result:{'data': {'qd_version': {'version': '1.1.1', 'filename': 'test.bin', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:20:10,660 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:20:10,702 ###===Params: {}
+ERROR 2016-12-16 20:20:10,703 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 156, in add_version
+    write_flag, write_ret = write_file(bin_file, qd_version_obj.bin_file, 100 * 1024 * 1024 * 8)
+UnboundLocalError: local variable 'qd_version_obj' referenced before assignment
+DEBUG 2016-12-16 20:20:10,758 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:20:10,762 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-16 20:20:10,769 result:{'data': {'qd_version': {'version': '1.1.1', 'filename': 'test.bin', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e'}}, 'msg': '', 'err': 0}
+DEBUG 2016-12-16 20:22:37,896 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:22:37,900 ###===Params: {}
+DEBUG 2016-12-16 20:22:38,104 result:{'err': 3, 'msg': 'md5值与文件不匹配', 'data': {}}
+DEBUG 2016-12-16 20:22:38,135 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:22:38,138 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:22:38,148 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'component_type': 'little_elephant', 'filename': 'test.bin', 'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'version': '1.1.1', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e'}}}
+DEBUG 2016-12-16 20:24:02,833 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:24:02,838 ###===Params: {}
+DEBUG 2016-12-16 20:24:02,854 result:{'data': {}, 'err': 3, 'msg': 'md5值与文件不匹配'}
+DEBUG 2016-12-16 20:24:02,892 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:24:02,895 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:24:02,903 result:{'data': {'qd_version': {'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'component_type': 'little_elephant', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin', 'version': '1.1.1'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:24:27,074 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:24:27,113 ###===Params: {}
+DEBUG 2016-12-16 20:24:27,161 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 20:24:27,190 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:24:27,193 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:24:27,198 result:{'data': {'qd_version': {'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853dcfbc0d2070e83db1ed4', 'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin', 'version': '1.1.2'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:24:34,000 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:24:34,043 ###===Params: {}
+DEBUG 2016-12-16 20:24:34,062 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 20:24:34,092 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:24:34,095 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:24:34,101 result:{'data': {'qd_version': {'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853dd02c0d2070e83db1ed7', 'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin', 'version': '1.1.2'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:25:01,871 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:25:01,911 ###===Params: {}
+DEBUG 2016-12-16 20:25:01,933 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 20:25:01,970 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:25:01,973 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:25:01,978 result:{'data': {'qd_version': {'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853dd1dc0d2070e83db1ed9', 'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin', 'version': '1.1.2'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:25:03,789 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:25:03,829 ###===Params: {}
+DEBUG 2016-12-16 20:25:03,847 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 20:25:03,875 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:25:03,880 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:25:03,886 result:{'data': {'qd_version': {'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853dd1fc0d2070e83db1edb', 'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin', 'version': '1.1.2'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:25:08,283 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:25:08,321 ###===Params: {}
+DEBUG 2016-12-16 20:25:08,343 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-16 20:25:08,378 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:25:08,382 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:25:08,387 result:{'data': {'qd_version': {'component_desc': {}, 'url': 'http://qatx.qdingnet.com/gridfs/5853dd24c0d2070e83db1edd', 'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin', 'version': '1.1.2'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-16 20:36:57,144 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:36:57,147 ###===Params: {}
+DEBUG 2016-12-16 20:36:57,366 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 20:36:57,399 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:36:57,402 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:36:57,408 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'url': 'http://qatx.qdingnet.com/gridfs/5853dfe9c0d2070f69c90f9a', 'filename': 'test.bin', 'version': '1.1.2', 'component_desc': {}}}}
+DEBUG 2016-12-16 20:37:06,490 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:37:06,529 ###===Params: {}
+DEBUG 2016-12-16 20:37:06,547 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 20:37:06,576 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:37:06,580 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:37:06,585 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'url': 'http://qatx.qdingnet.com/gridfs/5853dff2c0d2070f69c90f9c', 'filename': 'test.bin', 'version': '1.1.2', 'component_desc': {}}}}
+DEBUG 2016-12-16 20:37:09,517 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:37:09,558 ###===Params: {}
+DEBUG 2016-12-16 20:37:09,584 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 20:37:09,615 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:37:09,618 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:37:09,623 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'url': 'http://qatx.qdingnet.com/gridfs/5853dff5c0d2070f69c90f9e', 'filename': 'test.bin', 'version': '1.1.2', 'component_desc': {}}}}
+DEBUG 2016-12-16 20:37:16,253 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-16 20:37:16,294 ###===Params: {}
+DEBUG 2016-12-16 20:37:16,310 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-16 20:37:16,342 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-16 20:37:16,346 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-16 20:37:16,352 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'component_type': 'little_elephant', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'url': 'http://qatx.qdingnet.com/gridfs/5853dffcc0d2070f69c90fa0', 'filename': 'test.bin', 'version': '1.1.2', 'component_desc': {}}}}
+DEBUG 2016-12-17 10:23:06,111 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-17 10:23:06,116 ###===Params: {}
+DEBUG 2016-12-17 10:23:06,468 result:{'err': 0, 'msg': '版本发布成功，(*^__^*)', 'data': {}}
+DEBUG 2016-12-17 10:23:06,515 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-17 10:23:06,519 ###===Params: {'project_id': '', 'component_type': 'little_elephant'}
+DEBUG 2016-12-17 10:23:06,525 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'version': '1.1.2', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5854a18ac0d2070af44f3933', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin'}}}
+DEBUG 2016-12-17 10:23:06,554 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:23:06,557 ###===Params: {}
+DEBUG 2016-12-17 10:23:06,564 result:{'err': 0, 'msg': '', 'data': {'version_list': [{'version': '1.1.2', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5854a18ac0d2070af44f3933', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'door_machine', 'url': 'http://qatx.qdingnet.com/gridfs/58538604c0d207751ba1d921', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}]}}
+DEBUG 2016-12-17 10:28:25,777 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:28:25,780 ###===Params: {'version': '1.1.1'}
+DEBUG 2016-12-17 10:28:25,808 result:{'err': 0, 'msg': '', 'data': {'version_list': [{'version': '1.1.1', 'component_desc': {}, 'component_type': 'door_machine', 'url': 'http://qatx.qdingnet.com/gridfs/58538604c0d207751ba1d921', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}]}}
+DEBUG 2016-12-17 10:28:40,304 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:28:40,307 ###===Params: {'project_id': '1.1.1'}
+ERROR 2016-12-17 10:28:40,308 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.get_verison_by_filter/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+TypeError: get_verison_by_filter() got an unexpected keyword argument 'project_id'
+DEBUG 2016-12-17 10:28:57,703 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:28:57,708 ###===Params: {'component_type': '1.1.1'}
+DEBUG 2016-12-17 10:28:57,712 result:{'err': 0, 'msg': '', 'data': {'version_list': []}}
+DEBUG 2016-12-17 10:29:11,390 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:29:11,393 ###===Params: {'filename': '1.1.1'}
+DEBUG 2016-12-17 10:29:11,397 result:{'err': 0, 'msg': '', 'data': {'version_list': []}}
+DEBUG 2016-12-17 10:29:57,451 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:29:57,454 ###===Params: {'version': '1.1.1', 'filename': 'test.bin', 'component_type': 'little_elephant'}
+DEBUG 2016-12-17 10:29:57,462 result:{'err': 0, 'msg': '', 'data': {'version_list': [{'version': '1.1.1', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}]}}
+DEBUG 2016-12-17 10:30:07,447 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:30:07,452 ###===Params: {'filename': 'test.bin', 'component_type': 'little_elephant'}
+DEBUG 2016-12-17 10:30:07,461 result:{'err': 0, 'msg': '', 'data': {'version_list': [{'version': '1.1.2', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5854a18ac0d2070af44f3933', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}]}}
+DEBUG 2016-12-17 10:30:18,674 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:30:18,679 ###===Params: {'filename': 'test.bin', 'component_type': ''}
+DEBUG 2016-12-17 10:30:18,686 result:{'err': 0, 'msg': '', 'data': {'version_list': [{'version': '1.1.2', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5854a18ac0d2070af44f3933', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'door_machine', 'url': 'http://qatx.qdingnet.com/gridfs/58538604c0d207751ba1d921', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}]}}
+DEBUG 2016-12-17 10:30:29,473 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:30:29,476 ###===Params: {'version': '', 'filename': 'test.bin', 'component_type': 'little_elephant'}
+DEBUG 2016-12-17 10:30:29,486 result:{'err': 0, 'msg': '', 'data': {'version_list': [{'version': '1.1.2', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5854a18ac0d2070af44f3933', 'md5sum': 'ba1f2511fc30423bdbb183fe33f3dd0f', 'filename': 'test.bin'}, {'version': '1.1.1', 'component_desc': {}, 'component_type': 'little_elephant', 'url': 'http://qatx.qdingnet.com/gridfs/5853933dc0d207860de743ce', 'md5sum': 'd41d8cd98f00b204e9800998ecf8427e', 'filename': 'test.bin'}]}}
+DEBUG 2016-12-17 10:30:32,222 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-17 10:30:32,225 ###===Params: {'version': '1', 'filename': 'test.bin', 'component_type': 'little_elephant'}
+DEBUG 2016-12-17 10:30:32,229 result:{'err': 0, 'msg': '', 'data': {'version_list': []}}
+ERROR 2016-12-19 15:44:59,024 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 11, in <module>
+    from conf.api_conf import api_map
+  File "/mnt/code/qding/xqx_web_server/src/conf/api_conf.py", line 8, in <module>
+    from apis.gate_pass import GatePasswordPassApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 11, in <module>
+    class GatePasswordPassApi(BaseApi):
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 27, in GatePasswordPassApi
+    @app_user_login_required
+NameError: name 'app_user_login_required' is not defined
+DEBUG 2016-12-19 15:45:21,063 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 15:45:21,071 ###===Params: {'aptm_id': '1'}
+DEBUG 2016-12-19 15:45:21,077 result:{'msg': '用户未登录', 'data': {}, 'err': 2}
+DEBUG 2016-12-19 15:48:42,347 
+
+###===Api:<class 'apis.qduser.QdUserApi'>.login
+DEBUG 2016-12-19 15:48:42,353 ###===Params: {'mobile': '1', 'password_token': '123'}
+DEBUG 2016-12-19 15:48:42,570 result:{'data': {}, 'msg': '您的帐号已经在别处登陆', 'err': 5}
+DEBUG 2016-12-19 15:48:42,610 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 15:48:42,613 ###===Params: {'aptm_id': '1'}
+DEBUG 2016-12-19 15:48:42,615 result:{'data': {}, 'msg': '用户未登录', 'err': 2}
+DEBUG 2016-12-19 15:50:53,078 
+
+###===Api:<class 'apis.qduser.QdUserApi'>.login
+DEBUG 2016-12-19 15:50:53,081 ###===Params: {'mobile': '15112661927', 'password_token': 'a5aae4379df8cd9ef649c3be0f5ed9cd'}
+DEBUG 2016-12-19 15:50:53,089 result:{'data': {}, 'msg': '您的帐号已经在别处登陆', 'err': 5}
+DEBUG 2016-12-19 15:50:53,126 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 15:50:53,129 ###===Params: {'aptm_id': '1'}
+DEBUG 2016-12-19 15:50:53,131 result:{'data': {}, 'msg': '用户未登录', 'err': 2}
+DEBUG 2016-12-19 15:50:57,415 
+
+###===Api:<class 'apis.qduser.QdUserApi'>.login
+DEBUG 2016-12-19 15:50:57,419 ###===Params: {'mobile': '15112661927', 'password_token': 'a5aae4379df8cd9ef649c3be0f5ed9cd'}
+DEBUG 2016-12-19 15:50:57,424 result:{'data': {}, 'msg': '您的帐号已经在别处登陆', 'err': 5}
+DEBUG 2016-12-19 15:50:57,466 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 15:50:57,469 ###===Params: {'aptm_id': '1'}
+DEBUG 2016-12-19 15:50:57,471 result:{'data': {}, 'msg': '用户未登录', 'err': 2}
+DEBUG 2016-12-19 15:50:58,273 
+
+###===Api:<class 'apis.qduser.QdUserApi'>.login
+DEBUG 2016-12-19 15:50:58,278 ###===Params: {'mobile': '15112661927', 'password_token': 'a5aae4379df8cd9ef649c3be0f5ed9cd'}
+DEBUG 2016-12-19 15:50:58,284 result:{'data': {}, 'msg': '您的帐号已经在别处登陆', 'err': 5}
+DEBUG 2016-12-19 15:50:58,320 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 15:50:58,323 ###===Params: {'aptm_id': '1'}
+DEBUG 2016-12-19 15:50:58,325 result:{'data': {}, 'msg': '用户未登录', 'err': 2}
+DEBUG 2016-12-19 15:51:47,901 
+
+###===Api:<class 'apis.qduser.QdUserApi'>.login
+DEBUG 2016-12-19 15:51:47,904 ###===Params: {'mobile': '18520870599', 'password_token': '396ccceff13a6c91e83178048c6f2560'}
+ERROR 2016-12-19 15:51:48,018 Internal Server Error: /remote/qduser.QdUserApi.login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 133, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 122, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/sqlite3/base.py", line 374, in get_new_connection
+    conn = Database.connect(**conn_params)
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/qduser.py", line 124, in login
+    self._set_logined("app_user", user.id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/base.py", line 32, in _set_logined
+    self.request.session.flush()
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/base.py", line 271, in flush
+    self.create()
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/db.py", line 37, in create
+    self._session_key = self._get_new_session_key()
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/base.py", line 149, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/db.py", line 33, in exists
+    return Session.objects.filter(session_key=session_key).exists()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/query.py", line 606, in exists
+    return self.query.has_results(using=self.db)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/sql/query.py", line 457, in has_results
+    return compiler.has_results()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/sql/compiler.py", line 757, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/sql/compiler.py", line 784, in execute_sql
+    cursor = self.connection.cursor()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 165, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 138, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 133, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python3.4/dist-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 133, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 122, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/sqlite3/base.py", line 374, in get_new_connection
+    conn = Database.connect(**conn_params)
+django.db.utils.OperationalError: unable to open database file
+DEBUG 2016-12-19 15:51:48,197 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 15:51:48,202 ###===Params: {'aptm_id': '1'}
+DEBUG 2016-12-19 15:51:48,205 result:{'data': {}, 'msg': '用户未登录', 'err': 2}
+DEBUG 2016-12-19 15:52:57,156 
+
+###===Api:<class 'apis.qduser.QdUserApi'>.login
+DEBUG 2016-12-19 15:52:57,160 ###===Params: {'mobile': '18520870599', 'password_token': '396ccceff13a6c91e83178048c6f2560'}
+ERROR 2016-12-19 15:52:57,174 Internal Server Error: /remote/qduser.QdUserApi.login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 133, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 122, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/sqlite3/base.py", line 374, in get_new_connection
+    conn = Database.connect(**conn_params)
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/qduser.py", line 124, in login
+    self._set_logined("app_user", user.id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/base.py", line 32, in _set_logined
+    self.request.session.flush()
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/base.py", line 271, in flush
+    self.create()
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/db.py", line 37, in create
+    self._session_key = self._get_new_session_key()
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/base.py", line 149, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/usr/local/lib/python3.4/dist-packages/django/contrib/sessions/backends/db.py", line 33, in exists
+    return Session.objects.filter(session_key=session_key).exists()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/query.py", line 606, in exists
+    return self.query.has_results(using=self.db)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/sql/query.py", line 457, in has_results
+    return compiler.has_results()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/sql/compiler.py", line 757, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/usr/local/lib/python3.4/dist-packages/django/db/models/sql/compiler.py", line 784, in execute_sql
+    cursor = self.connection.cursor()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 165, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 138, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 133, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python3.4/dist-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 133, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/__init__.py", line 122, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python3.4/dist-packages/django/db/backends/sqlite3/base.py", line 374, in get_new_connection
+    conn = Database.connect(**conn_params)
+django.db.utils.OperationalError: unable to open database file
+DEBUG 2016-12-19 16:02:46,510 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:02:46,514 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+ERROR 2016-12-19 16:02:46,713 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 35, in user_get_password
+    result = get_default_result()
+NameError: name 'get_default_result' is not defined
+DEBUG 2016-12-19 16:03:08,063 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:03:08,068 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+ERROR 2016-12-19 16:03:08,070 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 35, in user_get_password
+    result = get_default_result()
+NameError: name 'get_default_result' is not defined
+DEBUG 2016-12-19 16:03:33,820 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:03:33,833 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+ERROR 2016-12-19 16:03:33,837 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 35, in user_get_password
+    result = get_default_result()
+NameError: name 'get_default_result' is not defined
+DEBUG 2016-12-19 16:04:31,616 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:04:31,620 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:04:42,123 result:{'data': {}, 'password': b'053230', 'msg': '', 'err': 0}
+ERROR 2016-12-19 16:04:42,126 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 114, in remoteView
+    return HttpResponse(json.dumps(result, ensure_ascii=False))
+  File "/usr/lib/python3.4/json/__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: b'053230' is not JSON serializable
+DEBUG 2016-12-19 16:05:37,345 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:05:37,350 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:05:37,585 result:{'data': {}, 'err': 0, 'password': "b'053230'", 'msg': ''}
+DEBUG 2016-12-19 16:05:48,937 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:05:48,941 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:05:48,951 result:{'data': {}, 'err': 0, 'password': "b'053230'", 'msg': ''}
+DEBUG 2016-12-19 16:06:08,149 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:06:08,153 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:06:08,394 result:{'password': "b'053230'", 'data': {}, 'msg': '', 'err': 0}
+DEBUG 2016-12-19 16:09:09,958 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:09:09,962 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:09:20,150 result:{'password': b'948300', 'data': {}, 'msg': '', 'err': 0}
+ERROR 2016-12-19 16:09:20,153 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 114, in remoteView
+    return HttpResponse(json.dumps(result, ensure_ascii=False))
+  File "/usr/lib/python3.4/json/__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: b'948300' is not JSON serializable
+DEBUG 2016-12-19 16:09:55,174 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:09:55,178 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:10:05,668 result:{'data': {}, 'password': '408448', 'err': 0, 'msg': ''}
+DEBUG 2016-12-19 16:11:05,014 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:05,021 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:05,234 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:11:06,366 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:06,370 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:06,382 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:11:07,231 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:07,234 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:07,243 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:11:07,894 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:07,900 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:07,910 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:11:08,433 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:08,436 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:08,448 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:11:08,990 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:08,998 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:09,007 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:11:09,526 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:11:09,533 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:11:09,543 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:33,353 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:33,356 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:33,367 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:33,929 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:33,933 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:33,943 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:34,429 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:34,432 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:34,446 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:34,891 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:34,894 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:34,904 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:35,391 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:35,395 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:35,405 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:35,906 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:35,909 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:35,919 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:36,409 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:36,412 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:36,426 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:36,858 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:36,862 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:36,875 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:37,303 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:37,310 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:37,319 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:12:37,765 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:12:37,768 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:12:37,778 result:{'msg': '', 'data': {}, 'err': 0, 'password': '408448'}
+DEBUG 2016-12-19 16:13:04,679 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:13:04,686 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:13:04,906 result:{'data': {}, 'err': 0, 'msg': '', 'password': b'870951'}
+ERROR 2016-12-19 16:13:04,909 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.user_get_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 114, in remoteView
+    return HttpResponse(json.dumps(result, ensure_ascii=False))
+  File "/usr/lib/python3.4/json/__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: b'870951' is not JSON serializable
+DEBUG 2016-12-19 16:13:50,034 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:13:50,038 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:13:50,252 result:{'password': "b'870951'", 'data': {}, 'msg': '', 'err': 0}
+DEBUG 2016-12-19 16:15:10,263 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:15:10,269 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:15:10,278 result:{'password': "b'870951'", 'data': {}, 'msg': '', 'err': 0}
+DEBUG 2016-12-19 16:16:05,306 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:05,310 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:15,835 result:{'password': '019633', 'err': 0, 'msg': '', 'data': {}}
+DEBUG 2016-12-19 16:16:19,442 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:19,447 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:19,459 result:{'password': '019633', 'err': 0, 'msg': '', 'data': {}}
+DEBUG 2016-12-19 16:16:20,130 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:20,135 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:20,144 result:{'password': '019633', 'err': 0, 'msg': '', 'data': {}}
+DEBUG 2016-12-19 16:16:20,686 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:20,689 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:20,702 result:{'password': '019633', 'err': 0, 'msg': '', 'data': {}}
+DEBUG 2016-12-19 16:16:29,313 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:29,317 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:29,539 result:{'err': 0, 'data': {}, 'password': '065434', 'msg': ''}
+DEBUG 2016-12-19 16:16:31,167 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:31,170 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:31,179 result:{'err': 0, 'data': {}, 'password': '065434', 'msg': ''}
+DEBUG 2016-12-19 16:16:31,793 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:31,797 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:31,806 result:{'err': 0, 'data': {}, 'password': '065434', 'msg': ''}
+DEBUG 2016-12-19 16:16:32,368 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:32,372 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:32,385 result:{'err': 0, 'data': {}, 'password': '065434', 'msg': ''}
+DEBUG 2016-12-19 16:16:37,087 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:37,091 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:37,099 result:{'err': 0, 'data': {}, 'password': '065434', 'msg': ''}
+DEBUG 2016-12-19 16:16:40,766 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:40,770 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:40,992 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:41,846 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:41,850 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:41,864 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:43,130 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:43,138 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:43,153 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:43,784 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:43,789 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:43,798 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:44,335 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:44,339 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:44,349 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:44,945 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:44,961 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:44,985 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:45,426 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:45,429 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:45,438 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:46,016 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:46,024 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:46,048 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:46,601 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:46,605 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:46,618 result:{'password': '460127', 'msg': '', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:16:53,278 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:16:53,288 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:16:53,525 result:{'err': 0, 'password': '065434', 'data': {}, 'msg': ''}
+DEBUG 2016-12-19 16:17:01,592 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:01,595 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:01,608 result:{'err': 0, 'password': '065434', 'data': {}, 'msg': ''}
+DEBUG 2016-12-19 16:17:02,194 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:02,198 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:02,211 result:{'err': 0, 'password': '065434', 'data': {}, 'msg': ''}
+DEBUG 2016-12-19 16:17:10,281 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:10,285 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:10,502 result:{'msg': '', 'password': '019633', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:17:11,533 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:11,538 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:11,550 result:{'msg': '', 'password': '019633', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:17:12,139 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:12,146 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:12,155 result:{'msg': '', 'password': '019633', 'err': 0, 'data': {}}
+DEBUG 2016-12-19 16:17:29,367 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:29,372 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:29,591 result:{'data': {}, 'err': 0, 'msg': '', 'password': '712352'}
+DEBUG 2016-12-19 16:17:37,987 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:37,990 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:38,000 result:{'data': {}, 'err': 0, 'msg': '', 'password': '712352'}
+DEBUG 2016-12-19 16:17:38,730 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:38,734 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:38,744 result:{'data': {}, 'err': 0, 'msg': '', 'password': '712352'}
+DEBUG 2016-12-19 16:17:39,568 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:39,576 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:39,589 result:{'data': {}, 'err': 0, 'msg': '', 'password': '712352'}
+DEBUG 2016-12-19 16:17:40,092 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:40,096 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:40,107 result:{'data': {}, 'err': 0, 'msg': '', 'password': '712352'}
+DEBUG 2016-12-19 16:17:45,554 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:45,559 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:45,572 result:{'data': {}, 'err': 0, 'msg': '', 'password': '712352'}
+DEBUG 2016-12-19 16:17:49,398 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:49,402 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:49,654 result:{'data': {}, 'password': '545814', 'msg': '', 'err': 0}
+DEBUG 2016-12-19 16:17:57,502 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:57,505 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:57,518 result:{'data': {}, 'password': '545814', 'msg': '', 'err': 0}
+DEBUG 2016-12-19 16:17:58,273 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.user_get_password
+DEBUG 2016-12-19 16:17:58,277 ###===Params: {'aptm_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-19 16:17:58,286 result:{'data': {}, 'password': '545814', 'msg': '', 'err': 0}
+DEBUG 2016-12-19 16:50:49,530 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:50:49,536 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 16:50:49,762 result:{'data': {}, 'err': 3, 'msg': '密码不存在'}
+DEBUG 2016-12-19 16:52:06,123 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:52:06,130 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 16:52:06,342 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 29, in gate_validate_password
+    password_key = "user_password:%s,%s,%s" % (password, gate.project.id, day_str)
+AttributeError: 'NoneType' object has no attribute 'project'
+DEBUG 2016-12-19 16:53:31,638 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:53:31,642 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 16:53:31,858 result:{'data': {}, 'msg': '密码不存在', 'err': 3}
+DEBUG 2016-12-19 16:53:58,513 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:53:58,518 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 16:53:58,743 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 42, in gate_validate_password
+    ga.report_open_lock(open_way="resident_pwd", opener_infos=opener_infos)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate.py", line 213, in report_open_lock
+    dev = self._get_login_device()
+  File "/mnt/code/qding/xqx_web_server/src/apis/base.py", line 74, in _get_login_device
+    raise Exception("Can not get login device, user_type:%s, user_id:%s" % (user_type, user_id))
+Exception: Can not get login device, user_type:, user_id:
+DEBUG 2016-12-19 16:54:14,613 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:54:14,618 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 16:54:14,635 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 42, in gate_validate_password
+    # ga.report_open_lock(open_way="resident_pwd", opener_infos=opener_infos)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate.py", line 213, in report_open_lock
+    dev = self._get_login_device()
+  File "/mnt/code/qding/xqx_web_server/src/apis/base.py", line 74, in _get_login_device
+    raise Exception("Can not get login device, user_type:%s, user_id:%s" % (user_type, user_id))
+Exception: Can not get login device, user_type:, user_id:
+DEBUG 2016-12-19 16:54:21,056 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:54:21,060 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 16:54:21,279 result:{'data': {}, 'flag': True, 'err': 0, 'msg': ''}
+DEBUG 2016-12-19 16:54:22,707 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:54:22,711 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 16:54:22,730 result:{'data': {}, 'flag': True, 'err': 0, 'msg': ''}
+DEBUG 2016-12-19 16:54:23,803 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:54:23,807 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 16:54:23,822 result:{'data': {}, 'flag': True, 'err': 0, 'msg': ''}
+DEBUG 2016-12-19 16:55:48,172 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 16:55:48,176 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 16:55:48,402 result:{'err': 0, 'data': {}, 'flag': True, 'msg': ''}
+DEBUG 2016-12-19 17:33:35,614 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 17:33:35,618 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 17:33:35,849 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 38, in gate_validate_password
+    if not self._check_open_gate(room_id, gate):return result("您无权限开此门", 3)
+TypeError: 'ResultDict' object is not callable
+DEBUG 2016-12-19 17:33:49,168 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 17:33:49,172 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 17:33:49,193 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 38, in gate_validate_password
+    if not self._check_open_gate(room_id, gate):return result("您无权限开此门", 3)
+TypeError: 'ResultDict' object is not callable
+DEBUG 2016-12-19 17:33:52,630 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 17:33:52,634 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 17:33:52,866 result:{'err': 3, 'data': {}, 'msg': '您无权限开此门'}
+DEBUG 2016-12-19 17:33:54,700 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 17:33:54,703 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 17:33:54,720 result:{'err': 3, 'data': {}, 'msg': '您无权限开此门'}
+DEBUG 2016-12-19 17:34:23,288 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 17:34:23,292 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 17:34:23,524 result:{'data': {}, 'err': 3, 'msg': '您无权限开此门'}
+DEBUG 2016-12-19 17:35:05,547 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 17:35:05,553 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 17:35:05,785 result:{'err': 3, 'data': {}, 'msg': '您无权限开此门'}
+DEBUG 2016-12-19 18:09:53,281 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 18:09:53,285 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 18:09:53,525 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 38, in gate_validate_password
+    if not self._check_open_gate(room_id, gate):return result.setmsg("您无权限开此门", 3)
+AttributeError: 'GatePasswordPassApi' object has no attribute '_check_open_gate'
+DEBUG 2016-12-19 18:10:03,644 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 18:10:03,653 ###===Params: {'password': '545814'}
+ERROR 2016-12-19 18:10:03,670 Internal Server Error: /remote/gate_pass.GatePasswordPassApi.gate_validate_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 106, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/gate_pass.py", line 38, in gate_validate_password
+    if not self._check_open_gate(room_id, gate):return result.setmsg("您无权限开此门", 3)
+AttributeError: 'GatePasswordPassApi' object has no attribute '_check_open_gate'
+DEBUG 2016-12-19 18:10:07,705 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 18:10:07,713 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 18:10:07,939 result:{'data': {}, 'err': 3, 'msg': '您无权限开此门'}
+DEBUG 2016-12-19 18:10:09,264 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 18:10:09,268 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 18:10:09,290 result:{'data': {}, 'err': 3, 'msg': '您无权限开此门'}
+DEBUG 2016-12-19 18:10:09,981 
+
+###===Api:<class 'apis.gate_pass.GatePasswordPassApi'>.gate_validate_password
+DEBUG 2016-12-19 18:10:09,985 ###===Params: {'password': '545814'}
+DEBUG 2016-12-19 18:10:10,006 result:{'data': {}, 'err': 3, 'msg': '您无权限开此门'}
+ERROR 2016-12-20 16:12:14,293 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 27, in index
+    return render(request, "login.html", context=context)
+  File "/usr/local/lib/python3.4/dist-packages/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+TypeError: render_to_string() got an unexpected keyword argument 'context'
+WARNING 2016-12-20 16:12:24,908 Not Found: /favicon.ico
+WARNING 2016-12-20 16:12:31,689 Not Found: /upgrade/58589fd03b75d57d85c783ce
+ERROR 2016-12-20 16:12:40,453 Internal Server Error: /gridfs/upgrade/58589fd03b75d57d85c783ce
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 199, in download_upgrade_file
+    response = HttpResponse(content_type="application/octet-stream")
+NameError: name 'HttpResponse' is not defined
+WARNING 2016-12-20 16:13:37,800 no version obj
+WARNING 2016-12-20 16:14:06,268 no version obj
+WARNING 2016-12-20 16:14:51,976 no version obj
+WARNING 2016-12-20 16:17:18,570 no version obj
+WARNING 2016-12-20 16:17:35,008 no version obj
+WARNING 2016-12-20 16:17:53,905 no version obj
+WARNING 2016-12-20 16:18:11,639 no version obj
+WARNING 2016-12-20 16:18:30,467 no version obj
+WARNING 2016-12-20 16:19:04,857 no version obj
+ERROR 2016-12-20 16:21:00,042 Internal Server Error: /gridfs/upgrade/58589fd03b75d57d85c783ce
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 199, in download_upgrade_file
+    qd_version = QDVersion.get_version_by_filter(bin_file=bin_file_id).first()
+  File "/mnt/code/qding/xqx_web_server/src/models/common.py", line 43, in get_version_by_filter
+    if v: raw_query.update({k: v})
+NameError: name 'raw_query' is not defined
+WARNING 2016-12-20 16:21:34,187 no version obj
+WARNING 2016-12-20 16:21:41,084 no version obj
+WARNING 2016-12-20 16:22:20,385 no version obj
+WARNING 2016-12-20 16:22:24,981 no version obj
+ERROR 2016-12-20 16:24:36,814 Internal Server Error: /gridfs/upgrade/58589fd03b75d57d85c783ce
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 207, in download_upgrade_file
+    log.warning("no version obj")
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 207, in download_upgrade_file
+    log.warning("no version obj")
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+DEBUG 2016-12-20 16:31:38,041 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-20 16:31:38,045 ###===Params: {'component_type': 'little_elephant', 'project_id': ''}
+DEBUG 2016-12-20 16:31:38,248 result:{'msg': '当前无任何版本信息', 'data': {}, 'err': 3}
+DEBUG 2016-12-20 16:32:04,213 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-20 16:32:04,219 ###===Params: {'component_type': 'gate', 'project_id': ''}
+DEBUG 2016-12-20 16:32:04,229 result:{'msg': 'project_id 不能为空', 'data': {}, 'err': 0}
+DEBUG 2016-12-20 16:32:27,107 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-20 16:32:27,111 ###===Params: {'component_type': 'gate', 'project_id': '123'}
+DEBUG 2016-12-20 16:32:27,119 result:{'msg': 'project_id 只能是24位16进制数', 'data': {}, 'err': 0}
+DEBUG 2016-12-20 16:32:39,895 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-20 16:32:39,898 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-20 16:32:39,914 result:{'msg': '', 'data': {'qd_version': {'md5sum': '4a1b136bbeb173640866da4856efa7a5', 'filename': 'gate_1.0.1.zip', 'component_type': 'gate', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/58589fd03b75d57d85c783ce', 'component_desc': {'version_code': 3}, 'version': '1.0.1'}}, 'err': 0}
+DEBUG 2016-12-20 16:45:26,385 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-20 16:45:26,388 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-20 16:45:26,414 result:{'msg': '', 'data': {'qd_version': {'md5sum': '4a1b136bbeb173640866da4856efa7a5', 'filename': 'gate_1.0.1.zip', 'component_type': 'gate', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/58589fd03b75d57d85c783ce', 'component_desc': {'version_code': 3}, 'version': '1.0.1'}}, 'err': 0}
+DEBUG 2016-12-21 13:22:46,660 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:22:46,664 ###===Params: {'version': '1', 'component_type': 'little_elephant', 'filename': 'test.bin'}
+DEBUG 2016-12-21 13:22:46,881 result:{'data': {'pagination': {'page_count': 1, 'has_pre': False, 'total_count': 0, 'page_size': 10, 'page_no': 1, 'has_next': False, 'end_no': 1, 'start_no': 1}, 'collection': []}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-21 13:24:13,368 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:24:13,373 ###===Params: {'version': '1', 'filename': 'test.bin', 'component_type': 'little_elephant'}
+DEBUG 2016-12-21 13:24:13,593 result:{'data': {'pagination': {'has_pre': False, 'page_count': 1, 'has_next': False, 'start_no': 1, 'page_no': 1, 'page_size': 10, 'total_count': 0, 'end_no': 1}, 'collection': []}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-21 13:26:30,893 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:26:30,899 ###===Params: {'component_type': 'little_elephant', 'version': '1', 'filename': 'test.bin'}
+DEBUG 2016-12-21 13:26:31,119 result:{'data': {'pagination': {'total_count': 0, 'page_count': 1, 'has_next': False, 'page_no': 1, 'end_no': 1, 'has_pre': False, 'page_size': 10, 'start_no': 1}, 'collection': []}, 'msg': '', 'err': 0}
+DEBUG 2016-12-21 13:26:59,855 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:26:59,859 ###===Params: {'component_type': 'little_elephant', 'version': '1', 'filename': 'test.bin'}
+DEBUG 2016-12-21 13:26:59,886 result:{'data': {'pagination': {'total_count': 0, 'page_count': 1, 'has_next': False, 'page_no': 1, 'end_no': 1, 'has_pre': False, 'page_size': 10, 'start_no': 1}, 'collection': []}, 'msg': '', 'err': 0}
+DEBUG 2016-12-21 13:27:05,132 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:27:05,135 ###===Params: {'component_type': 'little_elephant', 'version': '1', 'filename': 'test.bin'}
+DEBUG 2016-12-21 13:27:05,157 result:{'data': {'pagination': {'total_count': 0, 'page_count': 1, 'has_next': False, 'page_no': 1, 'end_no': 1, 'has_pre': False, 'page_size': 10, 'start_no': 1}, 'collection': []}, 'msg': '', 'err': 0}
+DEBUG 2016-12-21 13:27:15,068 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:27:15,072 ###===Params: {'component_type': 'little_elephant', 'version': '1', 'filename': 'test.bin'}
+DEBUG 2016-12-21 13:27:15,090 result:{'data': {'pagination': {'total_count': 0, 'page_count': 1, 'has_next': False, 'page_no': 1, 'end_no': 1, 'has_pre': False, 'page_size': 10, 'start_no': 1}, 'collection': []}, 'msg': '', 'err': 0}
+DEBUG 2016-12-21 13:27:33,511 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-21 13:27:33,515 ###===Params: {}
+ERROR 2016-12-23 16:28:21,856 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 11, in <module>
+    from apis.upgrade import ComponentUpgradeApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 13, in <module>
+    from utils import qd_cache
+  File "/mnt/code/qding/xqx_web_server/src/utils/qd_cache.py", line 2, in <module>
+    import time, thread
+ImportError: No module named 'thread'
+ERROR 2016-12-23 16:28:22,472 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.check_upgrade/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 11, in <module>
+    from apis.upgrade import ComponentUpgradeApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 13, in <module>
+    from utils import qd_cache
+  File "/mnt/code/qding/xqx_web_server/src/utils/qd_cache.py", line 2, in <module>
+    import time, thread
+ImportError: No module named 'thread'
+ERROR 2016-12-23 16:28:22,582 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.get_verison_by_filter/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 11, in <module>
+    from apis.upgrade import ComponentUpgradeApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 13, in <module>
+    from utils import qd_cache
+  File "/mnt/code/qding/xqx_web_server/src/utils/qd_cache.py", line 2, in <module>
+    import time, thread
+ImportError: No module named 'thread'
+DEBUG 2016-12-23 16:29:15,280 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:29:15,284 ###===Params: {}
+DEBUG 2016-12-23 16:29:15,286 result:{'err': 3, 'msg': '亲，json字典只能包含version, md5sum, component_type, component_desc, package_name五个key', 'data': {}}
+DEBUG 2016-12-23 16:29:15,322 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:29:15,327 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 16:29:15,350 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'filename': 'gate_1.0.2_20161221.zip', 'md5sum': '3b5ce749955704a181028b5012406aec', 'component_type': 'gate', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'name': '门口机升级包', 'component_desc': {'version_code': 5}}}}
+DEBUG 2016-12-23 16:29:15,389 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:29:15,392 ###===Params: {}
+DEBUG 2016-12-23 16:30:05,570 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:30:05,609 ###===Params: {}
+ERROR 2016-12-23 16:30:05,637 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 178, in add_version
+    qd_cache.set_upgrade_file_cache(file_data, qd_version_obj.bin_file.id)
+  File "/usr/local/lib/python3.4/dist-packages/mongoengine/fields.py", line 1271, in __getattr__
+    raise AttributeError
+AttributeError
+DEBUG 2016-12-23 16:30:05,732 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:30:05,737 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 16:30:05,751 result:{'err': 0, 'msg': '', 'data': {'qd_version': {'filename': 'gate_1.0.2_20161221.zip', 'md5sum': '3b5ce749955704a181028b5012406aec', 'component_type': 'gate', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'name': '门口机升级包', 'component_desc': {'version_code': 5}}}}
+DEBUG 2016-12-23 16:30:05,818 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:30:05,832 ###===Params: {}
+DEBUG 2016-12-23 16:43:35,046 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:43:35,051 ###===Params: {}
+ERROR 2016-12-23 16:44:14,911 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 180, in add_version
+    return result
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 180, in add_version
+    return result
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+DEBUG 2016-12-23 16:44:15,124 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:44:15,129 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 16:44:15,168 result:{'msg': '', 'err': 0, 'data': {'qd_version': {'component_desc': {'version_code': 5}, 'md5sum': '3b5ce749955704a181028b5012406aec', 'version': '1.0.2', 'component_type': 'gate', 'name': '门口机升级包', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'filename': 'gate_1.0.2_20161221.zip'}}}
+DEBUG 2016-12-23 16:44:15,235 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:44:15,244 ###===Params: {}
+DEBUG 2016-12-23 16:44:21,144 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:44:21,150 ###===Params: {}
+ERROR 2016-12-23 16:44:21,401 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 178, in add_version
+    qd_cache.set_upgrade_file_cache(file_data, str(qd_version_obj.bin_file.id))
+  File "/usr/local/lib/python3.4/dist-packages/mongoengine/fields.py", line 1271, in __getattr__
+    raise AttributeError
+AttributeError
+DEBUG 2016-12-23 16:44:21,475 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:44:21,482 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:44:21,499 result:{'err': 0, 'data': {'qd_version': {'filename': 'gate_1.0.2_20161221.zip', 'md5sum': '3b5ce749955704a181028b5012406aec', 'component_desc': {'version_code': 5}, 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_type': 'gate', 'name': '门口机升级包'}}, 'msg': ''}
+DEBUG 2016-12-23 16:44:21,539 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:44:21,546 ###===Params: {}
+DEBUG 2016-12-23 16:46:41,278 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:46:41,287 ###===Params: {}
+ERROR 2016-12-23 16:46:41,562 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 178, in add_version
+    qd_cache.set_upgrade_file_cache(file_data, str(qd_version_obj.bin_file.id))
+  File "/usr/local/lib/python3.4/dist-packages/mongoengine/fields.py", line 1271, in __getattr__
+    raise AttributeError
+AttributeError
+DEBUG 2016-12-23 16:46:41,636 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:46:41,644 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:46:41,663 result:{'data': {'qd_version': {'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_type': 'gate', 'component_desc': {'version_code': 5}, 'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:46:41,704 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:46:41,708 ###===Params: {}
+DEBUG 2016-12-23 16:48:12,907 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:48:12,914 ###===Params: {}
+ERROR 2016-12-23 16:48:13,155 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 177, in add_version
+    qd_cache.set_upgrade_file_cache(file_data, str(qd_version_obj.bin_file.id))
+  File "/usr/local/lib/python3.4/dist-packages/mongoengine/fields.py", line 1271, in __getattr__
+    raise AttributeError
+AttributeError
+DEBUG 2016-12-23 16:48:13,231 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:48:13,240 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:48:13,259 result:{'err': 0, 'data': {'qd_version': {'component_type': 'gate', 'version': '1.0.2', 'filename': 'gate_1.0.2_20161221.zip', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'component_desc': {'version_code': 5}, 'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec'}}, 'msg': ''}
+DEBUG 2016-12-23 16:48:13,312 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:48:13,317 ###===Params: {}
+DEBUG 2016-12-23 16:52:59,315 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:52:59,320 ###===Params: {}
+ERROR 2016-12-23 16:55:03,911 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.add_version/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 179, in add_version
+    qd_cache.set_upgrade_file_cache(file_data, str(qd_version_obj.bin_file.grid_id))
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 179, in add_version
+    qd_cache.set_upgrade_file_cache(file_data, str(qd_version_obj.bin_file.grid_id))
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+DEBUG 2016-12-23 16:55:04,007 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:55:04,013 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 16:55:04,028 result:{'err': 0, 'data': {'qd_version': {'version': '1.0.2', 'component_type': 'gate', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'name': '门口机升级包', 'component_desc': {'version_code': 5}, 'filename': 'gate_1.0.2_20161221.zip', 'md5sum': '3b5ce749955704a181028b5012406aec'}}, 'msg': ''}
+DEBUG 2016-12-23 16:55:04,070 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:55:04,074 ###===Params: {}
+DEBUG 2016-12-23 16:55:12,066 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:55:12,071 ###===Params: {}
+DEBUG 2016-12-23 16:55:12,318 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-23 16:55:12,360 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:55:12,363 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:55:12,378 result:{'data': {'qd_version': {'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_desc': {'version_code': 5}, 'component_type': 'gate', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:55:12,415 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:55:12,420 ###===Params: {}
+DEBUG 2016-12-23 16:55:19,811 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:55:19,855 ###===Params: {}
+DEBUG 2016-12-23 16:55:19,897 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-23 16:55:19,942 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:55:19,945 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:55:19,958 result:{'data': {'qd_version': {'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_desc': {'version_code': 5}, 'component_type': 'gate', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:55:19,997 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:55:20,004 ###===Params: {}
+DEBUG 2016-12-23 16:55:21,503 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:55:21,542 ###===Params: {}
+DEBUG 2016-12-23 16:55:21,587 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-23 16:55:21,631 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:55:21,635 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:55:21,653 result:{'data': {'qd_version': {'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_desc': {'version_code': 5}, 'component_type': 'gate', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:55:21,695 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:55:21,699 ###===Params: {}
+DEBUG 2016-12-23 16:55:22,792 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:55:22,835 ###===Params: {}
+DEBUG 2016-12-23 16:55:22,876 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-23 16:55:22,916 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:55:22,924 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:55:22,937 result:{'data': {'qd_version': {'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_desc': {'version_code': 5}, 'component_type': 'gate', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:55:22,976 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:55:22,980 ###===Params: {}
+DEBUG 2016-12-23 16:55:24,541 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.add_version
+DEBUG 2016-12-23 16:55:24,582 ###===Params: {}
+DEBUG 2016-12-23 16:55:24,626 result:{'data': {}, 'err': 0, 'msg': '版本发布成功，(*^__^*)'}
+DEBUG 2016-12-23 16:55:24,664 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:55:24,670 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:55:24,683 result:{'data': {'qd_version': {'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_desc': {'version_code': 5}, 'component_type': 'gate', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:55:24,726 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:55:24,733 ###===Params: {}
+DEBUG 2016-12-23 16:57:08,599 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 16:57:08,602 ###===Params: {'component_type': 'gate', 'project_id': '57ff2e3a7ff63b1661dd0fbf'}
+DEBUG 2016-12-23 16:57:08,615 result:{'data': {'qd_version': {'name': '门口机升级包', 'md5sum': '3b5ce749955704a181028b5012406aec', 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2', 'component_desc': {'version_code': 5}, 'component_type': 'gate', 'filename': 'gate_1.0.2_20161221.zip'}}, 'err': 0, 'msg': ''}
+DEBUG 2016-12-23 16:57:08,698 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 16:57:08,706 ###===Params: {}
+DEBUG 2016-12-23 16:57:08,783 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 16:57:08,788 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+ERROR 2016-12-23 16:57:08,797 Internal Server Error: /remote/upgrade.ComponentUpgradeApi.download_upgrade_file/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 107, in remoteView
+    result = exec_method(**params)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 207, in download_upgrade_file
+    qd_cache.clear_upgrade_file()
+  File "/mnt/code/qding/xqx_web_server/src/utils/qd_cache.py", line 11, in clear_upgrade_file
+    lock = threading.allocate_lock()
+AttributeError: 'module' object has no attribute 'allocate_lock'
+DEBUG 2016-12-23 17:00:15,855 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 17:00:15,860 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 17:00:16,087 result:{'msg': '', 'err': 0, 'data': {'qd_version': {'filename': 'gate_1.0.2_20161221.zip', 'name': '门口机升级包', 'component_type': 'gate', 'md5sum': '3b5ce749955704a181028b5012406aec', 'component_desc': {'version_code': 5}, 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2'}}}
+DEBUG 2016-12-23 17:00:16,124 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 17:00:16,130 ###===Params: {}
+DEBUG 2016-12-23 17:00:16,193 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 17:00:16,198 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+DEBUG 2016-12-23 17:00:19,752 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 17:00:19,756 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 17:00:19,770 result:{'msg': '', 'err': 0, 'data': {'qd_version': {'filename': 'gate_1.0.2_20161221.zip', 'name': '门口机升级包', 'component_type': 'gate', 'md5sum': '3b5ce749955704a181028b5012406aec', 'component_desc': {'version_code': 5}, 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2'}}}
+DEBUG 2016-12-23 17:00:19,805 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 17:00:19,810 ###===Params: {}
+DEBUG 2016-12-23 17:00:19,868 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 17:00:19,871 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+DEBUG 2016-12-23 17:00:21,150 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.check_upgrade
+DEBUG 2016-12-23 17:00:21,156 ###===Params: {'project_id': '57ff2e3a7ff63b1661dd0fbf', 'component_type': 'gate'}
+DEBUG 2016-12-23 17:00:21,168 result:{'msg': '', 'err': 0, 'data': {'qd_version': {'filename': 'gate_1.0.2_20161221.zip', 'name': '门口机升级包', 'component_type': 'gate', 'md5sum': '3b5ce749955704a181028b5012406aec', 'component_desc': {'version_code': 5}, 'url': 'http://120.24.210.126:8088/gridfs/upgrade/585a4bec3b75d512a0e839b8', 'version': '1.0.2'}}}
+DEBUG 2016-12-23 17:00:21,208 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.get_verison_by_filter
+DEBUG 2016-12-23 17:00:21,211 ###===Params: {}
+DEBUG 2016-12-23 17:00:21,269 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 17:00:21,277 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+DEBUG 2016-12-23 17:01:21,387 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 17:01:21,391 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+DEBUG 2016-12-23 17:01:22,593 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 17:01:22,596 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+DEBUG 2016-12-23 17:01:24,598 
+
+###===Api:<class 'apis.upgrade.ComponentUpgradeApi'>.download_upgrade_file
+DEBUG 2016-12-23 17:01:24,602 ###===Params: {'bin_file_id': '585a4bec3b75d512a0e839b8'}
+ERROR 2016-12-26 15:20:44,906 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 27, in index
+    return render(request, "login.html", context=context)
+  File "/usr/local/lib/python3.4/dist-packages/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+TypeError: render_to_string() got an unexpected keyword argument 'context'
+ERROR 2016-12-26 15:21:32,140 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 27, in index
+    return render(request, "login.html", context=context)
+  File "/usr/local/lib/python3.4/dist-packages/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+TypeError: render_to_string() got an unexpected keyword argument 'context'
+WARNING 2016-12-26 15:24:19,712 no version obj
+WARNING 2016-12-26 15:24:58,666 no version obj
+ERROR 2016-12-26 15:24:58,668 Internal Server Error: /gridfs/upgrade/58589fd03b75d57d85c783ce
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 245, in download_upgrade_file
+    return StreamingHttpResponse(b'404')
+NameError: name 'StreamingHttpResponse' is not defined
+WARNING 2016-12-26 15:25:50,569 no version obj
+ERROR 2016-12-26 15:25:50,576 Internal Server Error: /gridfs/upgrade/58589fd03b75d57d85c783ce
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 245, in download_upgrade_file
+    return StreamingHttpResponse(b'404')
+NameError: name 'StreamingHttpResponse' is not defined
+WARNING 2016-12-26 15:25:53,174 no version obj
+WARNING 2016-12-26 15:25:55,498 no version obj
+WARNING 2016-12-26 15:25:56,497 no version obj
+WARNING 2016-12-26 15:25:57,379 no version obj
+WARNING 2016-12-26 15:25:58,112 no version obj
+WARNING 2016-12-26 15:25:58,886 no version obj
+WARNING 2016-12-26 15:25:59,517 no version obj
+WARNING 2016-12-26 15:25:59,885 no version obj
+WARNING 2016-12-26 15:26:00,185 no version obj
+WARNING 2016-12-26 15:26:00,393 no version obj
+WARNING 2016-12-26 15:26:00,588 no version obj
+WARNING 2016-12-26 15:26:01,091 no version obj
+WARNING 2016-12-26 15:26:01,333 no version obj
+WARNING 2016-12-26 15:26:01,540 no version obj
+WARNING 2016-12-26 15:26:01,735 no version obj
+WARNING 2016-12-26 15:26:15,793 no version obj
+WARNING 2016-12-26 15:26:16,839 no version obj
+WARNING 2016-12-26 15:26:17,568 no version obj
+WARNING 2016-12-26 15:26:24,769 no version obj
+WARNING 2016-12-26 15:26:25,605 no version obj
+ERROR 2016-12-26 15:44:39,534 Internal Server Error: /gridfs/upgrade/585ce67cc0d2079b6374d675
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 239, in download_upgrade_file
+    response = StreamingHttpResponse(self._download_chunks(bin_file))
+NameError: name 'self' is not defined
+WARNING 2016-12-26 15:45:52,246 no version obj
+WARNING 2016-12-26 15:49:45,660 no version obj
+WARNING 2016-12-26 15:49:45,662 Not Found: /gridfs/upgrade/585ce67cc0d2079b6374d676
+ERROR 2016-12-29 11:41:29,711 Internal Server Error: /gridfs/upgrade/58622e1a3b75d57e67e7e10e
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.4/dist-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 12, in <module>
+    from conf.api_conf import api_map
+  File "/mnt/code/qding/xqx_web_server/src/conf/api_conf.py", line 2, in <module>
+    from apis.agw import AGWDeviceApi, AlarmApi, AGWDeviceQueryApi, RecordApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/agw.py", line 12, in <module>
+    from models.record import AlarmRecord, AgwBcfNotice, AgwOffLineNotice, WarningRecord, BrokenAlarmRecord
+ImportError: cannot import name 'BrokenAlarmRecord'
+ERROR 2016-12-29 11:41:36,841 Internal Server Error: /gridfs/upgrade/58622e1a3b75d57e67e7e10e
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.4/dist-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 12, in <module>
+    from conf.api_conf import api_map
+  File "/mnt/code/qding/xqx_web_server/src/conf/api_conf.py", line 2, in <module>
+    from apis.agw import AGWDeviceApi, AlarmApi, AGWDeviceQueryApi, RecordApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/agw.py", line 12, in <module>
+    from models.record import AlarmRecord, AgwBcfNotice, AgwOffLineNotice, WarningRecord, BrokenAlarmRecord
+ImportError: cannot import name 'BrokenAlarmRecord'
+ERROR 2016-12-29 11:42:29,562 Internal Server Error: /gridfs/upgrade/58622e1a3b75d57e67e7e10e
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.4/dist-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 224, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 231, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/lib/python3.4/functools.py", line 428, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python3.4/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 12, in <module>
+    from conf.api_conf import api_map
+  File "/mnt/code/qding/xqx_web_server/src/conf/api_conf.py", line 2, in <module>
+    from apis.agw import AGWDeviceApi, AlarmApi, AGWDeviceQueryApi, RecordApi
+  File "/mnt/code/qding/xqx_web_server/src/apis/agw.py", line 12, in <module>
+    from models.record import AlarmRecord, AgwBcfNotice, AgwOffLineNotice, WarningRecord, BrokenAlarmRecord
+ImportError: cannot import name 'BrokenAlarmRecord'
+ERROR 2016-12-29 11:49:16,087 Internal Server Error: /gridfs/upgrade/58622e1a3b75d57e67e7e10e
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/code/qding/xqx_web_server/src/web/views/common_view.py", line 126, in downloadView
+    return ComponentUpgradeApi.download_upgrade_file(bin_file_id)
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 242, in download_upgrade_file
+    import pdb
+  File "/mnt/code/qding/xqx_web_server/src/apis/upgrade.py", line 242, in download_upgrade_file
+    import pdb
+  File "/usr/lib/python3.4/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.4/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

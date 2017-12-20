@@ -1,0 +1,91 @@
+<div class="page-header clearfix" xmlns="http://www.w3.org/1999/html">
+    <b class="" style="font-size:18px;">通行数据 - 通行预约</b>
+    <div class="radio" style="display:inline-block;margin-left:20px;">
+        <label><input name="data_flag" type="radio" value="0" checked>当前数据</label>&nbsp;&nbsp;
+        <label><input name="data_flag" type="radio" value="1" >早期数据</label>
+    </div>
+    <div class="qr-block" style="float:right">
+        <a class="btn btn-info brake-dump-excel-btn export-btn" style="float:right; margin-right: 10px">
+            <i class="fa"></i>
+            <span>通行数据导出</span>
+        </a>
+    </div>
+
+</div>
+
+<div class="form-horizontal" style="padding:20px 20px 5px 20px;background-color:#f7f8f9;">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <select class="form-control pass-data-type">
+            	<option value="">通行类型</option> 
+                <option value="0">蓝牙</option>
+                <option value="1">wifi</option>
+                <option value="2">密码</option>
+                <option value="4">卡</option>
+                <option value="6">拆除</option>
+                <option value="11">调试</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-brake-level">
+            	<option value="">门类型</option>
+                <option value="2">大门</option>
+                <option value="3">非大门</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-group">
+            	<option value="">组团</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-build">
+            	<option value="">楼栋</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control pass-data-unit">
+            	<option value="">单元</option>
+            </select>
+        </div>
+    </div>
+</div>
+<br>
+<div class="qr-pass-data-list-block"></div>
+<div class="pagination-wrap">
+    <div class="pagination-con" id="pagination"></div>
+</div>
+
+<!--<div id="dump-data-option" class="modal fade" data-backdrop="static" data-keyboard="false">-->
+	    <!--<div class="modal-dialog" style="width:600px;margin-top:100px;">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<b class="text-muted">选择时间</b>-->
+                <!--<button class="close" data-dismiss="modal" title="关闭">-->
+                    <!--<i class="fa fa-times"></i>-->
+                <!--</button>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--<div class="form-horizontal" style="margin-left:-20px;">-->
+                    <!--<div class="form-group" style="margin:0px;">-->
+                        <!--<span class="col-xs-2 control-label text-muted">开始时间</span>-->
+                        <!--<span class="col-xs-4 form-control-static">-->
+                            <!--<input type="text" class="dump-excel-date start-time"  placeholder="&#45;&#45; 时间 &#45;&#45;" readonly="">-->
+                        <!--</span>-->
+                    <!--</div>-->
+                  <!--<div class="form-group" style="margin:0px;">-->
+                        <!--<span class="col-xs-2 control-label text-muted">结束时间</span>-->
+                        <!--<span class="col-xs-2 form-control-static">-->
+                            <!--<input type="text" class="dump-excel-date end-time"  placeholder="&#45;&#45; 时间 &#45;&#45;" readonly="">-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<a class="btn btn-info submit-dump-excel-btn">-->
+                    <!--<span>确定</span>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

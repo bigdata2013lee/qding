@@ -1,0 +1,76 @@
+<script type="text/template" name="tx_rec_template">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><span class="text-muted">地区</span></th>
+                <th><span class="text-muted">小区</span></th>
+                <th style="with:3em;"><span class="text-muted">类型</span></th>
+                <th><span class="text-muted">时间</span></th>
+                <th><span class="text-muted">通行位置</span></th>
+                <th style="with:3em;"><span class="text-muted">进/出</span></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <%=qd.render_empty_tr(data.brake_pass_list)%>
+            <%for(var i=0; i < data.brake_pass_list.length; i++){ var obj = data.brake_pass_list[i];%>
+            <tr>
+                <td><%=obj.city%></td>
+                <td><%=obj.community%></td>
+                <% if(obj.user_type=="0") {%>
+                    <td>业主</td>
+                <%} else {%>
+                    <td>访客</td>
+                <% } %>
+                <td><%=obj.created_time_str%></td>
+                <td><%=obj.position%></td>
+                <% if(obj.direction=="I") {%>
+                    <td>入</td>
+                <% }else{ %>
+                    <td>出</td>
+                <% } %>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+
+</script>
+
+<script type="text/template" name="tx_log_template">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><span class="text-muted">位置</span></th>
+                <th><span class="text-muted">原因</span></th>
+                <th><span class="text-muted">时间</span></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <%=qd.render_empty_tr(data.err_log_list)%>
+            <% for(var i=0; i<data.err_log_list.length; i++){ var obj = data.err_log_list[i];%>
+                <tr>
+                    <td><%=obj.brake_position%></td>
+                    <td><%=obj.reason%></td>
+                    <td><%=new Date(obj.occur_time*1000).format("yyyy-MM-dd hh:mm:ss")%></td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+
+</script>
+
+
+
+<script type="text/template" name="machine_list_template">
+    <ul class="list-group">
+        <%for(var i=0; i< data.brake_machine_list.length; i++){ var obj = data.brake_machine_list[i]; %>
+        <li class="list-group-item" data-obj_mac="<%=obj.mac%>">
+            <span style="color:#002a80;"><%=obj.position_str%></span>
+        </li>
+        <%}%>
+    </ul>
+
+</script>

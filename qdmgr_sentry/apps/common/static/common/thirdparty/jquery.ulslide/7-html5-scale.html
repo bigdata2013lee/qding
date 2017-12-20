@@ -1,0 +1,71 @@
+<!--
+Copyright © Yevhen Kotelnitskyi
+More about ulSlide: http://4coder.info/en/code/jquery-plugins/ulslide/
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>HTML5 Scale transform / jQuery.ulslide plugin</title>
+
+        <!-- Including jQuery (required) -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+		
+        <!-- Including easing jQuery plugin -->
+        <script type="text/javascript" src="js/jquery.easing.js"></script>
+
+        <!-- Including Mousewheel jQuery plugin (optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		
+		<!-- Including QTransform jQuery plugin -->
+		<script type="text/javascript" src="js/QTransform.js"></script>	
+		
+        <!-- Including ulslide jQuery plugin (required) -->
+        <script type="text/javascript" src="js/jquery.ulslide.js?v=4"></script>
+
+		<!-- Demo styles (optional) -->
+		<link rel='stylesheet' href='css/style.css?v=2' type='text/css' media='all' />
+    </head>
+    <body>	
+        <h2>HTML5 Scale, Autoscrolling</h2> 
+        <p>HTML5 Scale transform (using jQuery.QTransform)</p>
+		
+        <ul id="slide">
+            <li>
+                <img src="photos/image-1.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-2.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-3.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-4.jpg" alt="" />
+            </li>
+            <li>
+                <img src="photos/image-5.jpg" alt="" />
+            </li>
+        </ul>
+		
+		<a href="#" id="slide_prev">&laquo; prev</a> | <a href="#" id="slide_next">next &raquo;</a>
+
+        <script type="text/javascript">
+            $(function() {						
+                $('#slide').ulslide({
+                    statusbar: true,
+                    width: 433,
+                    height: 290,
+                    nextButton: '#slide_next',
+                    prevButton: '#slide_prev',
+					effect: {
+						type: 'scale'// slide or fade
+					},
+                    duration: 400,
+                    mousewheel: true
+                });
+            });
+        </script>
+		
+    </body>
+</html>

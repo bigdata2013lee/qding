@@ -1,0 +1,344 @@
+
+<!-- 底部消息框 -->
+<div class="notifications" style="width:100%;bottom:0px;" align="center"></div>
+
+<!-- 处理过程模态遮罩层 -->
+<div id="process_modal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:600px;margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">提示</b>
+            </div>
+            <div class="modal-body">
+                <div class="post-loading container-fluid">
+                    <div class="row">
+                        <div class="col-xs-offset-3 col-xs-6">
+                            <div>
+                                <span>网页正在处理您的提交操作，请耐心等待</span>
+                                <span class="text-muted">(如需取消当前处理，可点击右下方按钮)</span>
+                            </div>
+                            <br>
+                            <div class="progress">
+                                <div id="progress_bar" class="progress-bar progress-bar-striped active" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-result-msg">加载中...</div>
+                <br>
+                <div class="post-result-log">
+                    <div class="">
+                        <a class="accordion-toggle" data-toggle="collapse" href="#post_result_log_content">
+                            <span>异常详细</span>
+                        </a>
+                    </div>
+                    <div id="post_result_log_content" class="collapse">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <textarea class="col-xs-12 form-control" style="margin:0px;resize:vertical;" rows="5" disabled="disabled"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="post-loading-btn btn btn-danger" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    <span>终止处理</span>
+                </a>
+                <a class="post-result-btn btn btn-info" data-dismiss="modal" onclick="$('#post_result_log_content textarea').val('');">
+                    <i class="fa fa-check"></i>
+                    <span>确定</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+.site-avatar {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+</style>
+
+
+<!-- 编辑头像 -->
+<div id="avatar_modal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:600px;margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+                <b class="text-muted">编辑头像</b>
+            </div>
+            <div class="modal-body" style="padding:30px 50px;background-color:#f6f7f8;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="fileinput fileinput-new" style="margin:0px;" data-provides="fileinput">
+                                <div class="" style="background-color:white;"> 
+                                    <div class="fileinput-new" data-trigger="fileinput">
+                                        <div class="thumbnail site-avatar">
+                                            <img data-src="holder.js/200x200/#000:#fff/text:点击选择" style="width:200px;height:200px;"/>
+                                        </div>
+                                    </div>
+                                    <div class="fileinput-exists" data-trigger="fileinput">
+                                        <div class="fileinput-preview thumbnail lyx-avatar" style="display:table-cell;"></div>
+                                    </div>
+                                    <div class="btn-file clearfix">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                                <div class="" style="width:200px;margin-top:10px;">
+                                    <a class="btn btn-success btn-block">
+                                        <i class="fa fa-cloud-upload"></i>
+                                        <span class="">上传</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <p>
+                                <b class="text-muted">【说明】</b>
+                            </p>
+                            <ul class="" style="padding-left:25px;">
+                                <li>
+                                    <span class="text-muted">点击左侧图片区域进行选择</span>
+                                </li>
+                                <li>
+                                    <span class="text-muted">禁止上传含有违法内容的图片</span>
+                                </li>
+                                <li>
+                                    <span class="text-muted">图片文件大小不得超过 3M</span>
+                                </li>
+                                <li>
+                                    <span class="text-muted">建议尺寸 200 x 200 像素</span>
+                                </li>
+                                <li>
+                                    <span class="text-muted">支持 jpg、png、bmp、gif</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 百度地图 -->
+<div id="location_map_modal" class="modal fade" data-backdrop="true" data-keyboard="true">
+    <div class="modal-dialog" style="width:800px;margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+                <b class="text-muted">地点：</b>
+                <span class="match-location-text">加载中...</span>
+            </div>
+            <div class="modal-body map-body" data-loaded="N">
+                <div class="container-fluid">
+                    <div class="map-canvas row">
+                        <center>
+                            <div class="" style="line-height:50px;">
+                                <span>正在努力的加载地图，请稍候...</span>
+                            </div>
+                            <div class="progress" style="width:60%;">
+                                <div class="progress-bar progress-bar-striped active" style="width:80%"></div>
+                            </div>
+                            <p>如仍未正常显示，可尝试以下操作</p>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-6" style="padding-right:10px;">
+                                        <div class="row">
+                                            <div class="col-xs-offset-5 col-xs-7">
+                                                <a class="btn btn-success btn-block" onclick="window.location.reload();">
+                                                    <b style="margin:5px 0px;">刷新</b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6" style="padding-left:10px;">
+                                        <div class="row">
+                                            <div class="col-xs-7">
+                                                <a class="btn btn-default btn-block">
+                                                    <b style="margin:5px 0px;">默认</b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div class="map-marker hide" style="position:absolute;">
+                    <img src="/static/common/img/map_marker.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style type="text/css">
+    ul.project_ul_list{padding:0; margin:0;}
+    ul.project_ul_list>li{
+        list-style:none;
+        color:#46b8da;
+        border:1px solid #46b8da;
+        padding:.5em;
+        margin:.5em;
+        display:inline-block;
+        border-radius: 2px;
+    }
+
+    ul.project_ul_list>li>span{
+        margin-right:.5em;
+    }
+</style>
+
+<!-- 数据导出 -->
+<div id="dump_data_modal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:850px; margin-top:50px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <b class="text-muted">数据导出</b>
+                <button class="close" data-dismiss="modal" title="关闭">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% if request.session.web_user.project_list %}
+                    <ul id="selectDumpProjects" style="min-width:450px;max-height:330px;">
+                        <li class="dump-search-li dropdown-header">
+                            <div class="input-group">
+                                <input type="text" value="" placeholder="请输入社区名" class="form-control"
+                                       name="dump_search_box_value"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default clear-dump-search-box-btn">清空</button>
+                                </span>
+                            </div>
+                        </li>
+                        <div style="min-width:450px;max-height:280px;margin-top:10px;overflow:auto">
+                            <ul>
+                                {% for item in request.session.web_user.project_list %}
+                                    <li class="divider project_li">
+                                        <a href="javascript:void(0);" data-project-id="{{item.outer_project_id}}">
+                                            {{item.city}}-{{item.project}}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </ul>
+                {% else %}
+                    <div><span>尚无绑定社区，请联系管理员</span></div>
+                {% endif %}
+                <ul class="project_ul_list" style="margin-top:10px;"></ul>
+                <div style="display:none">
+                    <span class="dump_data_type"></span>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info dump_data_btn"> 确定 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function add_project_li(target_ul, name, project_id){
+        var temp = '<li data-project_id=<%=project_id%>><span><%=name%></span> <i class="fa fa-remove" onclick="remove_project_id_li(this)"></i> </li>';
+        var co = _.template(temp);
+        var html = co({name:name, project_id:project_id});
+
+        var exist_project_id_list = []
+        target_ul.find("li").each(function(){
+            exist_project_id_list.push($(this).data("project_id") + "");
+        })
+
+        if(project_id == ""){return}
+        if(qd.utils.memberInList(project_id + "", exist_project_id_list)){return}
+        $(target_ul).append($(html));
+    }
+
+    function get_project_id_list(target_ul){
+        var exist_project_id_list = []
+        target_ul.find("li").each(function(){
+            exist_project_id_list.push($(this).data("project_id") + "");
+        })
+
+        return exist_project_id_list;
+    }
+
+    function remove_project_id_li(i_obj){
+	    var i_el = $(i_obj);
+		i_el.closest("li").remove();
+	}
+
+    $("#selectDumpProjects input[name=dump_search_box_value]").on('keyup',function(){
+        console.info("keyup");
+        var search_box_value = $(this).val();
+        var li_list = $("#selectDumpProjects li.project_li");
+        li_list.each(function(){
+            var project = $(this).text();
+            if(project.indexOf(search_box_value) == -1){
+                $(this).hide();
+            }else{
+                $(this).show();
+            }
+        });
+    });
+
+    $("#selectDumpProjects .clear-dump-search-box-btn").on("click", function(){
+        $("#selectDumpProjects input[name=dump_search_box_value]").val("");
+        $("#selectDumpProjects input[name=dump_search_box_value]").keyup();
+    });
+
+    $("#selectDumpProjects").on("click", "a", function () {
+        if($(".project_ul_list").find("li").length<5){
+            var project_name = $(this).text();
+            var project_id = $(this).attr("data-project-id");
+            var project_ul = $(this).closest(".modal-body").find(".project_ul_list");
+            self.add_project_li(project_ul, project_name, project_id);
+        }else{
+            UI.showTips('danger',"最多可选5个社区");
+        }
+    });
+
+    $("#selectDumpProjects .dump-search-li").on("click",function(event){
+        event.stopPropagation();
+    });
+
+    $(".dump_data_btn").on("click",function(){
+        var $project_ul = $(".project_ul_list");
+        var data_type = $(".dump_data_type").text();
+        var project_list = get_project_id_list($project_ul);
+        if(project_list.length>0){
+            var str_project_list = project_list.join(",");
+            var data = {
+                "project_id_list": str_project_list,
+            }
+            var get_str = $.param(data);
+
+            if(data_type=="brake_machine"){
+                var url = '/dump_brake_machine_to_excel?' + get_str;
+                window.location.href = url;
+            }
+        }
+        $project_ul.empty();
+        $("#dump_data_modal").modal('hide');
+    });
+</script>

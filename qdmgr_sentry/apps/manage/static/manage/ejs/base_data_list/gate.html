@@ -1,0 +1,31 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><span class="text-muted">省份</span></th>
+            <th><span class="text-muted">城市</span></th>
+            <th><span class="text-muted">小区</span></th>
+            <th><span class="text-muted">位置</span></th>
+            <th><span class="text-muted">ID</span></th>
+            <th><center><span class="text-muted">操作</span></center></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<list.length;i++) { %>
+        <tr data-base-id="<%= list[i].id %>">
+            <td><span><%= list[i].province %></span></td>
+            <td><span><%= list[i].city %></span></td>
+            <td><span><%= list[i].community %></span></td>
+            <td><span><%= list[i].position %></span></td>
+            <td><span><%= list[i].id %></span></td>
+            <td align="center">
+                <a class="remove-item-btn" href="javascript:void(0);">
+                    <i class="fa fa-remove text-muted"></i>
+                </a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+

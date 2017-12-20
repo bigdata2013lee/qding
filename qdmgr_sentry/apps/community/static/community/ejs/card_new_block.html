@@ -1,0 +1,133 @@
+<div class="page-header">
+    <b class="" style="font-size:18px;">卡管理 - 发新卡</b>
+</div>
+
+<div class="form-group clearfix">
+    <div class="col-xs-6">
+        <input class="form-control card-new-no" disabled placeholder="卡号">
+        <input class="hide card-new-enc-no">
+        <input class="hide card-new-enc-no-count">
+    </div>
+    <div class="col-xs-6">
+        <select class="form-control card-new-type">
+            <option value="5">业主卡</option>
+            <option value="1">物业卡</option>
+        </select>
+    </div>
+</div>
+
+<div id="edit-room">
+    <div class="form-group clearfix basedata-group">
+        <div class="col-xs-3">
+            <select class="form-control card-new-group">
+                <option value="">组团</option>
+            </select>
+        </div>
+        <div class="col-xs-3">
+            <select class="form-control card-new-build">
+                <option value="">楼栋</option>
+            </select>
+        </div>
+        <div class="col-xs-3">
+            <select class="form-control card-new-unit">
+                <option value="">单元</option>
+            </select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control card-new-room" name="room">
+                <option value="">房间</option>
+            </select>
+        </div>
+        <div class="col-xs-1">
+            <a class="btn btn-info btn-xs edit-add-room-btn" style="margin-top: 6px">
+                <i class="fa fa-plus" title=""></i> <span>添加房屋</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="form-group clearfix">
+    <div class="col-xs-3">
+        <div class="input-group date card-new-validity-div">
+            <input class="form-control card-new-validity" size="16" type="text" value="" readonly placeholder="永久/长期有效" />
+            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <select class="form-control card-new-gender">
+            <option value="">性别</option>
+            <option value="M">男</option>
+            <option value="F">女</option>
+        </select>
+    </div>
+    <div class="col-xs-3">
+        <input class="form-control card-new-username" type="text" placeholder="姓名">
+    </div>
+    <div class="col-xs-3">
+        <input class="form-control card-new-phone" type="text" placeholder="手机号">
+    </div>
+</div>
+
+
+<div class="form-group clearfix">
+    <div class="col-xs-3">
+        <select class="form-control card-new-owner-type">
+            <option value="">类型</option>
+            <option value="1">租户</option>
+            <option value="2">业主</option>
+            <option value="3">家人</option>
+            <option value="4">商家</option>
+            <option value="5">物业</option>
+        </select>
+    </div>
+    <div class="col-xs-3">
+        <select class="form-control card-new-owner-role">
+            <option value="">角色</option>
+            <option value="1">祖辈</option>
+            <option value="2">父辈</option>
+            <option value="3">子辈</option>
+            <option value="4">孙辈</option>
+            <option value="5">亲戚</option>
+            <option value="6">朋友</option>
+            <option value="7">家政</option>
+            <option value="8">其他</option>
+        </select>
+    </div>
+    <div class="col-xs-3">
+        <select class="form-control card-new-owner-age">
+            <option value="">年龄</option>
+            <option value="1">10岁以下</option>
+            <option value="2">11~20岁</option>
+            <option value="3">21~30岁</option>
+            <option value="4">31~40岁</option>
+            <option value="5">41~50岁</option>
+            <option value="6">51~60岁</option>
+            <option value="7">61~70岁</option>
+            <option value="8">71~80岁</option>
+            <option value="9">81岁以上</option>
+        </select>
+    </div>
+    <div class="col-xs-3">
+        <select class="form-control card-new-owner-family-structure">
+            <option value="">家庭结构</option>
+            <option value="1">单人独居</option>
+            <option value="2">二人世界</option>
+            <option value="3">两世之选</option>
+            <option value="4">三世齐居</option>
+            <option value="5">四世同堂</option>
+        </select>
+    </div>
+</div>
+
+
+
+<div class="form-group clearfix">
+    <div class="col-xs-4">
+        <button class="form-control btn btn-info read-card-btn">读卡</button>
+    </div>
+    <div class="col-xs-offset-4 col-xs-4">
+        <button class="form-control btn btn-info write-card-btn">发卡</button>
+    </div>
+</div>

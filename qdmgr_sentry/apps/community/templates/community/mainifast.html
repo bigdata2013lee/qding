@@ -1,0 +1,5 @@
+<product name="{{ product_name }}" full_package_path="null" rkimage_path="null">
+    {% for upgrade_item in upgrade_list %}
+    <version name="{{ upgrade_item.version }}" package_path="{{ upgrade_item.file_uri }}" md5sum="{{ upgrade_item.md5sum }}" />
+    {% endfor %}
+</product>

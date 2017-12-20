@@ -1,0 +1,48 @@
+
+        <script type="text/template" name="pagination_template">
+        <% if (pagination && pagination.total_count>0) { %>
+        <nav class="pull-right">
+            <ul class="pagination pagination-sm">
+                <% if (pagination.page_no != pagination.start_no) { %>
+                    <li class="n" data-page_no="<%= pagination.page_no-1 %>" data-page_size="<%= pagination.page_size %>">
+                        <a class="pager-btn" href="javascript:void(0);">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                        </a>
+                    </li>
+                <% } %>
+                <% for (var i=pagination.start_no;i<=pagination.end_no;i++) { %>
+                    <% if (i==pagination.page_no) { %>
+                    <li class="active n" data-page_no="<%= i %>" data-page_size="<%= pagination.page_size %>"><a href="javascript:void(0);"><%= i %></a></li>
+                    <% } else { %>
+                    <li class="n" data-page_no="<%= i %>" data-page_size="<%= pagination.page_size %>">
+                        <a class="pager-btn" href="javascript:void(0);">
+                            <span><%= i %></span>
+                        </a>
+                    </li>
+                    <% } %>
+                <% } %>
+                <% if (pagination.page_no != pagination.end_no) { %>
+                    <li class="n" data-page_no="<%= pagination.page_no+1 %>" data-page_size="<%= pagination.page_size %>">
+                        <a class="pager-btn" href="javascript:void(0);">
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                    </li>
+                <% } %>
+                <li class="disabled"><span style="">每页: <%=pagination.page_size%> 总记录条目: <%=pagination.total_count%></span></li>
+                <% if(page_size_bar){%>
+                <li role="" class="dropup">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:">
+                      页大小: <%= pagination.page_size %>  <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right page_size_bar" role="menu" style="bottom: 20%;">
+                      <li data-page_size="100"><a href="javascript:">100</a></li>
+                      <li data-page_size="50"><a href="javascript:">50</a></li>
+                      <li data-page_size="20"><a href="javascript:">20</a></li>
+                      <li data-page_size="10"><a href="javascript:">10</a></li>
+                    </ul>
+                </li>
+                <%}%>
+            </ul>
+        </nav>
+        <% } %>
+        </script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<script src="/static/common/thirdparty/zepto/zepto.min.js" charset="utf-8"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+function run() {
+	$.post("/user_api/App_Download_Api/download_app/", { agent: window.navigator.userAgent } );
+    window.location.href = "http://s.eqxiu.com/s/i562rSzO?eqrcode=1";
+}
+window.onload = function () {
+    run();
+};
+
+</script>
+</body>
+</html>
+
+

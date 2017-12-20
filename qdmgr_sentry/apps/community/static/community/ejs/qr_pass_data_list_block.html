@@ -1,0 +1,26 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="bind-phone"><span class="text-muted">用户ID</span></th>
+            <th><span class="text-muted">类型</span></th>
+            <th><span class="text-muted">时间</span></th>
+            <th><span class="text-muted">通行位置</span></th>
+            <th><span class="text-muted">MAC</span></th>
+        <tr>
+    </thead>
+    <tbody>
+        <% for (var i=0;i<pass_list.length;i++) { %>
+        <tr class="app-data-item" >
+            <td class="bind-phone"><span><%= pass_list[i].phone %></span></td>
+            <td><span><%= pass_list[i].dump_user_type %></span></td>
+            <td><span><%= pass_list[i].created_time_str %></span></td>
+            <td><span><%= pass_list[i].position %></span></td>
+            <td><span><%= pass_list[i].mac %></span></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,user-scalable=no, minimum-scale=1, initial-scale=1,target-densitydpi=low-dpi" />
+        <meta charset="utf-8">
+        <title>Face identification</title>
+        <script src="/static/common/jquery-1.9.1.min.js"></script>
+        <script src="/static/thirdparty/ccc.js"></script>
+
+        <link href="/static/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/static/thirdparty/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+        <link href="/static/thirdparty/Font-Awesome-3.2.1/css/font-awesome.css" rel="stylesheet" />
+        <link href="/static/common/common.css" rel="stylesheet" />
+
+
+        <script type="text/javascript" src="/static/thirdparty/jquery/jquery.form.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/bootstrap-notify/js/bootstrap-notify.js"></script>
+        <script type="text/javascript" src="/static/thirdparty/backbonejs/underscore.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/backbonejs/backbone.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/static/thirdparty/ejs.js" charset="utf-8"></script>
+
+
+		<script type="text/javascript" src="/static/common/common.js"></script>
+		<script type="text/javascript" src="/static/common/qd.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/qdui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/common/validator.js" charset="utf-8"></script>
+
+
+
+        <style>
+
+            html,body{
+                margin: 0; padding: 0;
+                height: 100%;
+            }
+
+            .container{
+                padding: 0.5em;
+                max-width: 1000px;
+            }
+
+            #show-picture{
+                max-width: 60%;
+                box-shadow: 6px 6px 8px #666;
+                border-radius: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h2>Face identification</h2>
+            <div>
+                <button type="button" data-toggle="modal" data-target="#maker_win">Append to picture library</button>
+                <button id="take_picture" type="button">take a picture</button>
+            </div>
+            <section class="main-content">
+                <p style="display: none;">
+                    <input id="file_input1" type="file" accept="image/*;capture=camera" />
+                </p>
+
+                <h4>Preview:</h4>
+                <p style="text-align: center">
+                    <img src="about:blank" alt="" id="show-picture" />
+                </p>
+
+                <p id="error"></p>
+
+            </section>
+
+
+        </div>
+
+
+
+        <div id="maker_win" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加图库</h4>
+              </div>
+              <div class="modal-body">
+                <p><input name="name" class="form-control" placeholder="请输入你的姓名"/></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-save">保存</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+        <div class="notifications" align="center" style="width:100%;top:0px;z-index: 1060;"> </div>
+
+        <div>
+            <audio id="audio_speek" src="" controls="controls" autoplay="autoplay" style="opacity:0" preload="auto" hidden="true">
+            Your browser does not support the audio element.
+            </audio>
+        </div>
+    </body>
+
+
+</html>
